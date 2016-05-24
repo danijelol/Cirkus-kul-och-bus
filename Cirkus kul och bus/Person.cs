@@ -8,15 +8,15 @@ namespace Cirkus_kul_och_bus
 {
     class Person
     {
-        public int PersonNr { get; set; }
-        public string Fornamn { get; set; }
-        public string Efternamn { get; set; }
-        public string PostNr { get; set; }
-        public string Adress { get; set; }
-        public string Email { get; set; }
-        public string TelefonNr { get; set; }
-        public string Kon { get; set; }
-        public bool Foto { get; set; }
+        public int PersonNr { get; set; }           //person_nr
+        public string Fornamn { get; set; }         //förnamn
+        public string Efternamn { get; set; }       //efternamn
+        public string PostNr { get; set; }          //post_nr
+        public string Adress { get; set; }          //adress
+        public string Email { get; set; }           //email
+        public string TelefonNr { get; set; }       //telenr
+        public string Kon { get; set; }             //kön
+        public bool Foto { get; set; }              //foto_ok
 
     }
 }
