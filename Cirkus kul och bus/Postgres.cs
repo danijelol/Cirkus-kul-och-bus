@@ -36,7 +36,7 @@ namespace Cirkus_kul_och_bus
             }
           catch (NpgsqlException ex)
           {
-          System.Windows.Forms.MessageBox.Show("FEL");
+          System.Windows.Forms.MessageBox.Show(ex.Message);
 
           return _tabell;
           }
@@ -54,13 +54,14 @@ namespace Cirkus_kul_och_bus
         /// <returns>Lista med medlemmar</returns>
         /// 
 
+ 
+
         public List<Person> HämtaPerson() 
         {
         string medlem = "select personnummer as\"person.person_nr\",förnamn as\"person.förnamn\",efternamn as\"person.efternamn\" from person";
         _tabell = sqlFråga(medlem);
 
-           List<Person> personer = new List<Person>();
-         
+        List<Person> personer = new List<Person>(); 
                 Person nyperson = new Person();
 
                personer.Add(nyperson);
