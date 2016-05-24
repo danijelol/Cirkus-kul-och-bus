@@ -19,7 +19,7 @@ namespace Cirkus_kul_och_bus
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Hejsan");
         }
     }
 }
