@@ -8,5 +8,7 @@ namespace Cirkus_kul_och_bus
 {
     class Ledare:Person
     {
+        public int Id { get; set; }
+        
     }
 }
