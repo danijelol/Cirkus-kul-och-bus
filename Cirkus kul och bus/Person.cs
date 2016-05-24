@@ -8,5 +8,6 @@ namespace Cirkus_kul_och_bus
 {
     class Person
     {
+        public int MyProperty { get; set; })
     }
 }
