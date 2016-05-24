@@ -24,14 +24,48 @@ namespace Cirkus_kul_och_bus
             _tabell = new DataTable();
         
         }
+        private DataTable sqlFråga(string medlem) 
+        {
+        
+          try
+            {
+                _cmd = new NpgsqlCommand(medlem, _conn);
+                _dr = _cmd.ExecuteReader();
+                _tabell.Load(_dr);
+                return _tabell;
+            }
+          catch (NpgsqlException ex)
+          {
+          System.Windows.Forms.MessageBox.Show("FEL");
+
+          return _tabell;
+          }
+          finally 
+          {
+              _conn.Close();
+          
+          }
+        
+        }
+
         /// <summary>
         /// Hämtar från medlem
         /// </summary>
         /// <returns>Lista med medlemmar</returns>
-        public List<Medlem> HämtaMedlem() 
+        /// 
+
+        public List<Person> HämtaPerson() 
         {
-        
-        
+        string medlem = "select personnummer as\"person.person_nr\",förnamn as\"person.förnamn\",efternamn as\"person.efternamn\" from person";
+        _tabell = sqlFråga(medlem);
+
+           List<Person> personer = new List<Person>();
+         
+                Person nyperson = new Person();
+
+               personer.Add(nyperson);
+
+               return personer;
         }
     }
     
