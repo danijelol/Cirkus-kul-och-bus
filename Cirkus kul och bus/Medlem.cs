@@ -12,5 +12,7 @@ namespace Cirkus_kul_och_bus
         public string Kontaktperson { get; set; }
         public string KontaktpersonTelenr { get; set; }
         public int Medlemstyp { get; set; }
+
+     
     }
 }
