@@ -9,7 +9,7 @@ using System.Data;
 
 namespace Cirkus_kul_och_bus
 {
-    class Postgres
+   public class Postgres
     {
         private NpgsqlConnection _conn;
         private NpgsqlCommand _cmd;
