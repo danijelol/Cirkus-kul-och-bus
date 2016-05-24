@@ -8,5 +8,11 @@ namespace Cirkus_kul_och_bus
 {
     class Träningstillfälle
     {
+        public int Id { get; set; }
+        public int Datum { get; set; }
+        public string Plats { get; set; }
+        public int StartTid { get; set; }
+        public int StopTid { get; set; }
+        public string Sammanfattning { get; set; }
     }
 }
