@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,31 @@ namespace Cirkus_kul_och_bus
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hejsan");
+            NpgsqlConnection conn = new NpgsqlConnection("Server=localhost;Port=5432;User Id=webuser;Password=test123;Database=cirkus;");
+
+            try
+            {
+
+                string sqlfraga = "SELECT * FROM person";
+                conn.Open();
+                NpgsqlCommand cmd = new NpgsqlCommand(sqlfraga, conn);
+                NpgsqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+
+                    listboxPersoner.Items.Add(dr["förnamn"].ToString());
+
+                }
+            }
+            catch (NpgsqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
     }
 }
