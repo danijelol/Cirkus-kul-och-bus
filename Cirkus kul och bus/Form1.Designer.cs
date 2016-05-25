@@ -47,7 +47,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cBoxJa = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // listboxPersoner
@@ -205,22 +205,22 @@
             this.label9.TabIndex = 18;
             this.label9.Text = "Telefonnummer:";
             // 
-            // checkBox1
+            // cBoxJa
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(658, 215);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(38, 17);
-            this.checkBox1.TabIndex = 19;
-            this.checkBox1.Text = "JA";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cBoxJa.AutoSize = true;
+            this.cBoxJa.Location = new System.Drawing.Point(658, 215);
+            this.cBoxJa.Name = "cBoxJa";
+            this.cBoxJa.Size = new System.Drawing.Size(38, 17);
+            this.cBoxJa.TabIndex = 19;
+            this.cBoxJa.Text = "JA";
+            this.cBoxJa.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1150, 668);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.cBoxJa);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -268,7 +268,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox cBoxJa;
     }
 }
 

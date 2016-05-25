@@ -31,7 +31,20 @@ namespace Cirkus_kul_och_bus
             listboxPersoner.DataSource = personlista;
             listboxPersoner.DisplayMember = "FullständigtNamn";
 
-            
+            string fnamn,enamn,postAdress,email,kon,postNr;
+            int personNr;
+            bool fotoOk;
+
+            fnamn = tbx_fornamn.Text;
+            enamn = tbx_efternamn.Text;
+            postAdress = tbx_adress.Text;
+            email = tbx_email.Text;
+            postNr = tbx_fornamn.Text;          
+            kon= tbx_kon.Text;
+
+            personNr = int.Parse(tbx_personNr.Text);
+            fotoOk = cBoxJa.Checked;
+
         }
 
 
