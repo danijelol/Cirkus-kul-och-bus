@@ -38,12 +38,14 @@ namespace Cirkus_kul_och_bus
           {
           System.Windows.Forms.MessageBox.Show(ex.Message);
 
+
+
           return _tabell;
           }
-          finally 
+          finally
           {
               _conn.Close();
-          
+
           }
         
         }
@@ -58,15 +60,22 @@ namespace Cirkus_kul_och_bus
 
         public List<Person> HämtaPerson() 
         {
-        string medlem = "select personnummer as\"person.person_nr\",förnamn as\"person.förnamn\",efternamn as\"person.efternamn\" from person";
-        _tabell = sqlFråga(medlem);
+
 
         List<Person> personer = new List<Person>(); 
-                Person nyperson = new Person();
+            
 
-               personer.Add(nyperson);
+
+               {
+       
+                       string medlem = "select person_nr as\"person.person_nr\",förnamn as\"person.förnamn\",efternamn as\"person.efternamn\" from person";
+                      _tabell = sqlFråga(medlem);
+                      Person nyperson = new Person();
+                   personer.Add(nyperson);
+               }
 
                return personer;
+               
         }
     }
     
