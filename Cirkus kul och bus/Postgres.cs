@@ -95,11 +95,11 @@ namespace Cirkus_kul_och_bus
          return personlista;                                       
         }
 
-       public void LäggTillPerson()
+       public void LäggTillPerson(int personnummer, string fornamn, string efternamn, string postnummer, string adress, string email, string telefonnummer, string kon, bool foto)
         {
             string fråga;
             sqlNonQuery("begin");
-            fråga = "insert into person values(person_nr, förnamn, efternamn, post_nr, adress, email, telenr, kön, foto_ok)";
+            fråga = "insert into person values(" + personnummer + "," + fornamn + "," + efternamn + ","  + postnummer + ","  + adress + ","  + email + ","  + telefonnummer + ","  + kon + ",)";
             sqlNonQuery(fråga);
             fråga = "select förnamn as\"förnamn\", efternamn as \"efternamn\", person_nr as \"personnummer\"  from person";
             _dr = sqlFråga(fråga);
