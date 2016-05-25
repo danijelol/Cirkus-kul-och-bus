@@ -24,6 +24,21 @@ namespace Cirkus_kul_och_bus
            
         
         }
+
+       private void sqlNonQuery(string fråga)
+        {
+           try
+           {
+               _cmd = new NpgsqlCommand(fråga, _conn);
+               _cmd.ExecuteNonQuery();
+           }
+
+           catch(NpgsqlException ex)
+           {
+               System.Windows.Forms.MessageBox.Show(ex.Message);
+           }
+        }
+
         private NpgsqlDataReader sqlFråga(string fråga) 
         {
         
@@ -51,13 +66,10 @@ namespace Cirkus_kul_och_bus
         }
 
         /// <summary>
-        /// Hämtar från medlem
+        /// Hämtar från person
         /// </summary>
-        /// <returns>Lista med medlemmar</returns>
+        /// <returns>Lista med personer</returns>
         /// 
-
- 
-
         public List<Person> HämtaPerson() 
         {
                      
@@ -80,11 +92,20 @@ namespace Cirkus_kul_och_bus
              personlista.Add(nyperson);
          }
 
-         return personlista;
-          
+         return personlista;                                       
+        }
 
-              
-               
+       public void LäggTillPerson()
+        {
+            string fråga;
+            sqlNonQuery("begin");
+            fråga = "insert into person values(person_nr, förnamn, efternamn, post_nr, adress, email, telenr, kön, foto_ok)";
+            sqlNonQuery(fråga);
+            fråga = "select förnamn as\"förnamn\", efternamn as \"efternamn\", person_nr as \"personnummer\"  from person";
+            _dr = sqlFråga(fråga);
+            sqlNonQuery("commit");
+            _conn.Close();
+            
         }
     }
     
