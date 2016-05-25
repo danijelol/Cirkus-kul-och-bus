@@ -97,25 +97,29 @@ namespace Cirkus_kul_och_bus
 
        public void LäggTillPerson(int personnummer, string fornamn, string efternamn, string postnummer, string adress, string email, string telefonnummer, string kon, bool foto)
         {
-            string fråga;
-            sqlNonQuery("begin");
-            fråga = ("insert into person (person_nr, förnamn, efternamn, post_nr, adress, email, telenr, kön, foto_ok) values(@person_nr, @fornamn, @efternamn, @postnummer, @adress, @email, @telefonnummer, @kon, @foto)");
-            
-            _cmd.Parameters.AddWithValue("@person_nr", personnummer);
-            _cmd.Parameters.AddWithValue("@fornamn", fornamn);
-            _cmd.Parameters.AddWithValue("@efternamn", efternamn);
-            _cmd.Parameters.AddWithValue("@postnummer", postnummer);
-            _cmd.Parameters.AddWithValue("@adress", adress);
-            _cmd.Parameters.AddWithValue("@email", email);
-            _cmd.Parameters.AddWithValue("@telefonnummer", telefonnummer);
-            _cmd.Parameters.AddWithValue("@kon", kon);
-            _cmd.Parameters.AddWithValue("@foto", foto);
-            sqlNonQuery(fråga);
-            //fråga = "select förnamn as\"förnamn\", efternamn as \"efternamn\", person_nr as \"personnummer\"  from person";
-            _dr = sqlFråga(fråga);
-            sqlNonQuery("commit");
-            _conn.Close();
-            
+            _conn = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["cirkus"].ConnectionString);
+            {
+                _conn.Open();
+                sqlNonQuery("begin");           
+                
+                _cmd = new NpgsqlCommand("insert into person (person_nr, förnamn, efternamn, post_nr, adress, email, telenr, kön, foto_ok) values(@person_nr, @fornamn, @efternamn, @postnummer, @adress, @email, @telefonnummer, @kon, @foto)", _conn);
+
+                _cmd.Parameters.AddWithValue("@person_nr", personnummer);
+                _cmd.Parameters.AddWithValue("@fornamn", fornamn);
+                _cmd.Parameters.AddWithValue("@efternamn", efternamn);
+                _cmd.Parameters.AddWithValue("@postnummer", postnummer);
+                _cmd.Parameters.AddWithValue("@adress", adress);
+                _cmd.Parameters.AddWithValue("@email", email);
+                _cmd.Parameters.AddWithValue("@telefonnummer", telefonnummer);
+                _cmd.Parameters.AddWithValue("@kon", kon);
+                _cmd.Parameters.AddWithValue("@foto", foto);
+
+
+                
+                _cmd.ExecuteNonQuery();
+                sqlNonQuery("commit");
+                _conn.Close();
+            }
         }
     }
     
