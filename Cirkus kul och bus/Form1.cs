@@ -18,12 +18,12 @@ namespace Cirkus_kul_och_bus
         {
             InitializeComponent();
         }
-
+        Postgres pg = new Postgres();   
         //public BindingList<Person> personlista = new BindingList<Person>();
 
         private void button1_Click(object sender, EventArgs e)
         {          
-            Postgres pg = new Postgres();           
+                    
 
             List<Person> personlista = new List<Person>();
             personlista = pg.HämtaPerson();
@@ -31,7 +31,14 @@ namespace Cirkus_kul_och_bus
             listboxPersoner.DataSource = personlista;
             listboxPersoner.DisplayMember = "FullständigtNamn";
 
-            string fnamn,enamn,postAdress,email,kon,postNr;
+            
+
+        }
+
+        private void btn_läggTillPers_Click(object sender, EventArgs e)
+        {
+            
+            string fnamn, enamn, postAdress, email, kon, postNr, teleNr;
             int personNr;
             bool fotoOk;
 
@@ -39,13 +46,17 @@ namespace Cirkus_kul_och_bus
             enamn = tbx_efternamn.Text;
             postAdress = tbx_adress.Text;
             email = tbx_email.Text;
-            postNr = tbx_fornamn.Text;          
-            kon= tbx_kon.Text;
+            postNr = tbx_fornamn.Text;
+            kon = tbx_kon.Text;
+            teleNr = tbx_teleNr.Text;
 
             personNr = int.Parse(tbx_personNr.Text);
             fotoOk = cBoxJa.Checked;
 
+            pg.LäggTillPerson(personNr, fnamn, enamn, postNr, postAdress, email, teleNr, kon, fotoOk);
         }
+
+       
 
 
     }

@@ -48,6 +48,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.cBoxJa = new System.Windows.Forms.CheckBox();
+            this.btn_läggTillPers = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listboxPersoner
@@ -215,11 +216,22 @@
             this.cBoxJa.Text = "JA";
             this.cBoxJa.UseVisualStyleBackColor = true;
             // 
+            // btn_läggTillPers
+            // 
+            this.btn_läggTillPers.Location = new System.Drawing.Point(634, 336);
+            this.btn_läggTillPers.Name = "btn_läggTillPers";
+            this.btn_läggTillPers.Size = new System.Drawing.Size(75, 23);
+            this.btn_läggTillPers.TabIndex = 20;
+            this.btn_läggTillPers.Text = "Lägg Till";
+            this.btn_läggTillPers.UseVisualStyleBackColor = true;
+            this.btn_läggTillPers.Click += new System.EventHandler(this.btn_läggTillPers_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1150, 668);
+            this.Controls.Add(this.btn_läggTillPers);
             this.Controls.Add(this.cBoxJa);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -269,6 +281,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.CheckBox cBoxJa;
+        private System.Windows.Forms.Button btn_läggTillPers;
     }
 }
 

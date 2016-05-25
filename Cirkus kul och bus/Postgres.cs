@@ -99,9 +99,19 @@ namespace Cirkus_kul_och_bus
         {
             string fråga;
             sqlNonQuery("begin");
-            fråga = "insert into person values(" + personnummer + "," + fornamn + "," + efternamn + ","  + postnummer + ","  + adress + ","  + email + ","  + telefonnummer + ","  + kon + ",)";
+            fråga = ("insert into person (person_nr, förnamn, efternamn, post_nr, adress, email, telenr, kön, foto_ok) values(@person_nr, @fornamn, @efternamn, @postnummer, @adress, @email, @telefonnummer, @kon, @foto)");
+            
+            _cmd.Parameters.AddWithValue("@person_nr", personnummer);
+            _cmd.Parameters.AddWithValue("@fornamn", fornamn);
+            _cmd.Parameters.AddWithValue("@efternamn", efternamn);
+            _cmd.Parameters.AddWithValue("@postnummer", postnummer);
+            _cmd.Parameters.AddWithValue("@adress", adress);
+            _cmd.Parameters.AddWithValue("@email", email);
+            _cmd.Parameters.AddWithValue("@telefonnummer", telefonnummer);
+            _cmd.Parameters.AddWithValue("@kon", kon);
+            _cmd.Parameters.AddWithValue("@foto", foto);
             sqlNonQuery(fråga);
-            fråga = "select förnamn as\"förnamn\", efternamn as \"efternamn\", person_nr as \"personnummer\"  from person";
+            //fråga = "select förnamn as\"förnamn\", efternamn as \"efternamn\", person_nr as \"personnummer\"  from person";
             _dr = sqlFråga(fråga);
             sqlNonQuery("commit");
             _conn.Close();
