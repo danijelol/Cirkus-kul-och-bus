@@ -14,25 +14,25 @@ namespace Cirkus_kul_och_bus
         private NpgsqlConnection _conn;
         private NpgsqlCommand _cmd;
         private NpgsqlDataReader _dr;
-        private DataTable _tabell;
+        
 
 
         public Postgres() 
         {
             _conn = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["cirkus"].ConnectionString);
             _conn.Open();
-            _tabell = new DataTable();
+           
         
         }
-        private DataTable sqlFråga(string medlem) 
+        private NpgsqlDataReader sqlFråga(string fråga) 
         {
         
           try
             {
-                _cmd = new NpgsqlCommand(medlem, _conn);
+                _cmd = new NpgsqlCommand(fråga, _conn);
                 _dr = _cmd.ExecuteReader();
-                _tabell.Load(_dr);
-                return _tabell;
+                
+                return _dr;
             }
           catch (NpgsqlException ex)
           {
@@ -40,11 +40,11 @@ namespace Cirkus_kul_och_bus
 
 
 
-          return _tabell;
+          return null;
           }
           finally
           {
-              _conn.Close();
+             // _conn.Close();
 
           }
         
@@ -60,21 +60,30 @@ namespace Cirkus_kul_och_bus
 
         public List<Person> HämtaPerson() 
         {
+                     
+         string fråga = "select förnamn as\"förnamn\", efternamn as \"efternamn\", person_nr as \"personnummer\"  from person";
 
+         _dr = sqlFråga(fråga);
 
-        List<Person> personer = new List<Person>(); 
-            
+         Person nyperson;
 
+         List<Person> personlista = new List<Person>();       
 
-               {
-       
-                       string medlem = "select person_nr as\"person.person_nr\",förnamn as\"person.förnamn\",efternamn as\"person.efternamn\" from person";
-                      _tabell = sqlFråga(medlem);
-                      Person nyperson = new Person();
-                   personer.Add(nyperson);
-               }
+         while (_dr.Read())
+         {
+             nyperson = new Person()
+             {
+                 Fornamn = _dr["förnamn"].ToString(),
+                 Efternamn = _dr["efternamn"].ToString(),
+                 PersonNr = (int)_dr["personnummer"]
+             };
+             personlista.Add(nyperson);
+         }
 
-               return personer;
+         return personlista;
+          
+
+              
                
         }
     }

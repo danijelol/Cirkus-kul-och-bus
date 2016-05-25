@@ -22,49 +22,16 @@ namespace Cirkus_kul_och_bus
         //public BindingList<Person> personlista = new BindingList<Person>();
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            NpgsqlConnection conn = new NpgsqlConnection("Server=localhost;Port=5432;User Id=webuser;Password=test123;Database=cirkus;");
-            Postgres pg = new Postgres();
+        {          
+            Postgres pg = new Postgres();           
+
+            List<Person> personlista = new List<Person>();
+            personlista = pg.HämtaPerson();
+                                          
+            listboxPersoner.DataSource = personlista;
+            listboxPersoner.DisplayMember = "FullständigtNamn";
 
             
-
-
-            //try
-            //{
-
-                //string sqlfraga = "SELECT * FROM person";
-                //conn.Open();
-                //NpgsqlCommand cmd = new NpgsqlCommand(sqlfraga, conn);
-                //NpgsqlDataReader dr = cmd.ExecuteReader();
-
-                //Person p;
-
-                //while (dr.Read())
-                //{
-                    //p=new Person()
-                    //{
-                    //    Fornamn = dr["förnamn"].ToString(),
-                    //    Efternamn = dr["efternamn"].ToString(),
-                    //    PostNr = dr["post_nr"].ToString(),
-                    //    Adress = dr["adress"].ToString(),
-                    //    Email = dr["email"].ToString(),
-                    //    TelefonNr = dr["telenr"].ToString(),
-                    //    Kon = dr["kön"].ToString(),
-                    //    //Foto = dr["TRUE"]
-                    //};
-
-                    listboxPersoner.DataSource = pg.HämtaPerson();
-
-            //    }
-            //}
-            //catch (NpgsqlException ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
-            //finally
-            //{
-            //    conn.Close();
-            //}
         }
     }
 }

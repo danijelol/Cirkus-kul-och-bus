@@ -17,6 +17,15 @@ namespace Cirkus_kul_och_bus
         public string TelefonNr { get; set; }       //telenr
         public string Kon { get; set; }             //kön
         public bool Foto { get; set; }              //foto_ok
+        
+
+        public string FullständigtNamn 
+        {
+            get 
+            {
+                return Fornamn + " " + Efternamn + " " + PersonNr.ToString();
+            }
+        }
 
     }
 }
