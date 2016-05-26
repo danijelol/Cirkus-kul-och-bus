@@ -125,6 +125,30 @@ namespace Cirkus_kul_och_bus
                 _conn.Close();
             }
         }
+
+       public void UppdateraPerson (string fornamn, string efternamn, string postnummer, string adress, string email, string telefonnummer, bool foto, int personnummer)
+       {
+           _conn = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["cirkus"].ConnectionString);
+           {
+               _conn.Open();
+               sqlNonQuery("begin");
+
+               _cmd = new NpgsqlCommand("update person set förnamn = @fornamn, efternamn = @efternamn, post_nr = @postnummer, adress = @adress, email = @email, telenr = @telefonnummer, foto_ok = @foto WHERE person_nr = @personnummer", _conn);
+
+               _cmd.Parameters.AddWithValue("@personnummer", personnummer);
+               _cmd.Parameters.AddWithValue("@fornamn", fornamn);
+               _cmd.Parameters.AddWithValue("@efternamn", efternamn);
+               _cmd.Parameters.AddWithValue("@postnummer", postnummer);
+               _cmd.Parameters.AddWithValue("@adress", adress);
+               _cmd.Parameters.AddWithValue("@email", email);
+               _cmd.Parameters.AddWithValue("@telefonnummer", telefonnummer);
+               _cmd.Parameters.AddWithValue("@foto", foto);
+
+               _cmd.ExecuteNonQuery();
+               sqlNonQuery("commit");
+               _conn.Close();
+           }
+       }
    }
 }
     

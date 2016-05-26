@@ -50,6 +50,7 @@
             this.cBoxJa = new System.Windows.Forms.CheckBox();
             this.btn_läggTillPers = new System.Windows.Forms.Button();
             this.btn_tabort = new System.Windows.Forms.Button();
+            this.btn_ändraPerson = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listboxPersoner
@@ -238,11 +239,22 @@
             this.btn_tabort.UseVisualStyleBackColor = true;
             this.btn_tabort.Click += new System.EventHandler(this.btn_tabort_Click);
             // 
+            // btn_ändraPerson
+            // 
+            this.btn_ändraPerson.Location = new System.Drawing.Point(45, 467);
+            this.btn_ändraPerson.Name = "btn_ändraPerson";
+            this.btn_ändraPerson.Size = new System.Drawing.Size(75, 23);
+            this.btn_ändraPerson.TabIndex = 22;
+            this.btn_ändraPerson.Text = "Ändra";
+            this.btn_ändraPerson.UseVisualStyleBackColor = true;
+            this.btn_ändraPerson.Click += new System.EventHandler(this.btn_ändraPerson_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1150, 668);
+            this.Controls.Add(this.btn_ändraPerson);
             this.Controls.Add(this.btn_tabort);
             this.Controls.Add(this.btn_läggTillPers);
             this.Controls.Add(this.cBoxJa);
@@ -296,6 +308,7 @@
         private System.Windows.Forms.CheckBox cBoxJa;
         private System.Windows.Forms.Button btn_läggTillPers;
         private System.Windows.Forms.Button btn_tabort;
+        private System.Windows.Forms.Button btn_ändraPerson;
     }
 }
 
