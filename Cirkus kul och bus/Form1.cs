@@ -25,6 +25,7 @@ namespace Cirkus_kul_och_bus
         Postgres pg = new Postgres();   
        
 
+
         private void button1_Click(object sender, EventArgs e)
         {
             personlista = new List<Person>();  
@@ -56,12 +57,10 @@ namespace Cirkus_kul_och_bus
             
 
         }
-
-        private void btn_läggTillPers_Click(object sender, EventArgs e)
-        {
-            try
+        public int MedlemsTyp()
             {
-                int medlemstyp;
+            
+                int medlemstyp =0;
                 Person nymedlemstyp = new Person();
                 medlemstyp = nymedlemstyp.Medlemstyp;
 
@@ -97,7 +96,17 @@ namespace Cirkus_kul_och_bus
                 {
                     MessageBox.Show("Välj en medlemstyp!");
                 }
+            return medlemstyp;
+            }
 
+
+
+        private void btn_läggTillPers_Click(object sender, EventArgs e)
+        {
+            
+            try
+            {
+                
 
                 personlista = new List<Person>();
                 listboxPersoner.DataSource = null;
@@ -117,7 +126,7 @@ namespace Cirkus_kul_och_bus
                 fotoOk = cBoxJa.Checked;
                 kontaktperson = tbx_kontaktperson.Text;
                 kontaktpersonNr = tbx_kontakpersonnr.Text;
-                pg.LäggTillPerson(personNr, fnamn, enamn, postNr, postAdress, email, teleNr, kon, fotoOk, kontaktperson, kontaktpersonNr, medlemstyp);
+                pg.LäggTillPerson(personNr, fnamn, enamn, postNr, postAdress, email, teleNr, kon, fotoOk, kontaktperson, kontaktpersonNr, MedlemsTyp());
 
                 personlista = pg.HämtaPerson();
 
@@ -161,7 +170,7 @@ namespace Cirkus_kul_och_bus
 
         private void btn_ändraPerson_Click(object sender, EventArgs e)
         {
-            string fnamn, enamn, postAdress, email, kon, postNr, teleNr;
+            string fnamn, enamn, postAdress, email, kon, postNr, teleNr,kontaktNamn,kontaktTele;
             int personNr;
             bool fotoOk;
 
@@ -177,11 +186,13 @@ namespace Cirkus_kul_och_bus
             postNr = tbx_postNr.Text;
             kon = tbx_kon.Text;
             teleNr = tbx_teleNr.Text;
-
+            kontaktNamn = tbx_kontaktperson.Text;
+            kontaktTele = tbx_kontakpersonnr.Text;
+           
             personNr = int.Parse(tbx_personNr.Text);
             fotoOk = cBoxJa.Checked;
 
-            pg.UppdateraPerson(fnamn, enamn, postNr, postAdress, email, teleNr, fotoOk, personNr);
+            pg.UppdateraPerson(fnamn, enamn, postNr, postAdress, email, teleNr, fotoOk, personNr,kontaktNamn,kontaktTele,MedlemsTyp());
 
             personlista = pg.HämtaPerson();
 

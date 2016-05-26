@@ -176,14 +176,14 @@ namespace Cirkus_kul_och_bus
             }
         }
 
-       public void UppdateraPerson (string fornamn, string efternamn, string postnummer, string adress, string email, string telefonnummer, bool foto, int personnummer)
+       public void UppdateraPerson (string fornamn, string efternamn, string postnummer, string adress, string email, string telefonnummer, bool foto, int personnummer, string kontaktpersonNamn, string kontaktTele, int medlemstyp)
        {
            _conn = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["cirkus"].ConnectionString);
            {
                _conn.Open();
                sqlNonQuery("begin");
 
-               _cmd = new NpgsqlCommand("update person set förnamn = @fornamn, efternamn = @efternamn, post_nr = @postnummer, adress = @adress, email = @email, telenr = @telefonnummer, foto_ok = @foto WHERE person_nr = @personnummer", _conn);
+               _cmd = new NpgsqlCommand("update person set förnamn = @fornamn, efternamn = @efternamn, post_nr = @postnummer, adress = @adress, email = @email, telenr = @telefonnummer, foto_ok = @foto, kontaktperson_namn = @kontaktperson_namn, kontaktperson_tele = @kontaktperson_tele, medlemstyp= @medlemstyp WHERE person_nr = @personnummer", _conn);
 
                _cmd.Parameters.AddWithValue("@personnummer", personnummer);
                _cmd.Parameters.AddWithValue("@fornamn", fornamn);
@@ -193,7 +193,10 @@ namespace Cirkus_kul_och_bus
                _cmd.Parameters.AddWithValue("@email", email);
                _cmd.Parameters.AddWithValue("@telefonnummer", telefonnummer);
                _cmd.Parameters.AddWithValue("@foto", foto);
-
+               _cmd.Parameters.AddWithValue("@kontaktperson_namn", kontaktpersonNamn);
+               _cmd.Parameters.AddWithValue("@kontaktperson_tele", kontaktTele);
+               _cmd.Parameters.AddWithValue("@medlemstyp", medlemstyp);
+                
                _cmd.ExecuteNonQuery();
                sqlNonQuery("commit");
            }
