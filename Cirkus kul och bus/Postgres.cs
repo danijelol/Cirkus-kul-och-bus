@@ -130,32 +130,52 @@ namespace Cirkus_kul_och_bus
             }
             return träningsgrupp;
         }
-     
 
-        //public List<Träningstillfälle> HämtaNärvaro()
-        //{
-        //    Träningstillfälle närvarande;
-        //    string fråga = "select träningsgrupps_id as\"Träningsgrupp\", namn as \"Namn\" from träningsgrupp";
-        //    _dr = sqlFråga(fråga);
-        //    List<Träningstillfälle> närvarolista = new List<Träningstillfälle>();
 
-        //    while (_dr.Read())
-        //    {
-        //        närvarande= new Träningstillfälle()
-        //        {
-        //            PersonNr = (int)_dr["Personnummer"],
-        //            Id = (int)_dr["Träningstillfälle"],
-        //            Träningsgrupps_id= (int)_dr["Träningsgrupp"],
-        //            Datum = (int)_dr["Datum"],
-        //            StartTid = (int)_dr["Starttid"],
-        //            SlutTid = (int)_dr["Sluttid"],
-        //            Sammanfattning = _dr ["Sammanfattning"].ToString(),
-              
-        //        };
-        //        närvarolista.Add(närvarande);
-        //    }
-        //    return närvarolista;
-        //}
+        public List<Träningstillfälle> HämtaNärvaro()
+        {
+            Träningstillfälle närvarande;
+            string fråga = "select person_nr as\"Personnummer\", as \"Namn\" from träningsgrupp";
+            _dr = sqlFråga(fråga);
+            List<Träningstillfälle> närvarolista = new List<Träningstillfälle>();
+
+            while (_dr.Read())
+            {
+                närvarande = new Träningstillfälle()
+                {
+                    PersonNr = (int)_dr["Personnummer"],
+                    Id = (int)_dr["Träningstillfälle"],
+                    Träningsgrupps_id = (int)_dr["Träningsgrupp"],
+                    Datum = (int)_dr["Datum"],
+                    StartTid = (int)_dr["Starttid"],
+                    SlutTid = (int)_dr["Sluttid"],
+                    Sammanfattning = _dr["Sammanfattning"].ToString(),
+
+                };
+                närvarolista.Add(närvarande);
+            }
+            return närvarolista;
+        }
+
+
+        public void LäggTillPersonerTillTräningstillfällen(int träningstillfälle, int personnummer)
+        {
+            _conn = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["cirkus"].ConnectionString);
+            {
+                _conn.Open();
+                sqlNonQuery("begin");
+
+                _cmd = new NpgsqlCommand("insert into närvaro (träningstillfälles_id, person_nr) values(@T,@Personnummer)", _conn);
+
+                _cmd.Parameters.AddWithValue("@T", träningstillfälle);
+                _cmd.Parameters.AddWithValue("@Personnummer", personnummer);
+               
+                _cmd.ExecuteNonQuery();
+                sqlNonQuery("commit");
+
+            }
+        }
+
 
 
         public void LäggTillTräningstillfälle(int t, int datum, string plats, int starttid, int sluttid, string sammanfattning, int träningsgrupp)
@@ -166,15 +186,15 @@ namespace Cirkus_kul_och_bus
                 _conn.Open();
                 sqlNonQuery("begin");
                
-                _cmd = new NpgsqlCommand("insert into träningstillfälle (träningstillfälles_id, datum, plats, starttid, sluttid, sammanfattning, träningsgrupps_id) values(@id,@Datum, @Plats, @Starttid, @Sluttid, @Sammanfattning,@ba)", _conn);
+                _cmd = new NpgsqlCommand("insert into träningstillfälle (träningstillfälles_id, datum, plats, starttid, sluttid, sammanfattning, träningsgrupps_id) values(@Traningstillfalles,@Datum, @Plats, @Starttid, @Sluttid, @Sammanfattning,@Traningsgrupp)", _conn);
 
-                _cmd.Parameters.AddWithValue("@id", t);
-                _cmd.Parameters.AddWithValue("@datum", datum);
-                _cmd.Parameters.AddWithValue("@plats", plats);
-                _cmd.Parameters.AddWithValue("@starttid", starttid);
-                _cmd.Parameters.AddWithValue("@sluttid", sluttid);
-                _cmd.Parameters.AddWithValue("@sammanfattning", sammanfattning);
-                _cmd.Parameters.AddWithValue("@ba", träningsgrupp);
+                _cmd.Parameters.AddWithValue("@Traningstillfalles", t);
+                _cmd.Parameters.AddWithValue("@Datum", datum);
+                _cmd.Parameters.AddWithValue("@Plats", plats);
+                _cmd.Parameters.AddWithValue("@Starttid", starttid);
+                _cmd.Parameters.AddWithValue("@Sluttid", sluttid);
+                _cmd.Parameters.AddWithValue("@Sammanfattning", sammanfattning);
+                _cmd.Parameters.AddWithValue("@Traningsgrupp", träningsgrupp);
 
                 _cmd.ExecuteNonQuery();
                 sqlNonQuery("commit");

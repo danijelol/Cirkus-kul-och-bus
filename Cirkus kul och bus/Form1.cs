@@ -22,8 +22,8 @@ namespace Cirkus_kul_och_bus
         List<Person> personlista = new List<Person>();
         List<Träningstillfälle> träningstillfällen = new List<Träningstillfälle>();
         List<Träningsgrupp> träningsgrupper = new List<Träningsgrupp>();
-        Postgres pg = new Postgres();   
-       
+        Postgres pg = new Postgres();
+        List<Närvaro> närvarolista = new List<Närvaro>();
 
 
         private void button1_Click(object sender, EventArgs e)
@@ -199,11 +199,9 @@ namespace Cirkus_kul_och_bus
 
         private void btn_träningstillfälle_Click(object sender, EventArgs e)
         {
-            personlista = new List<Person>();
+           
             listboxPersoner.DataSource = null;
             träningstillfällen = new List<Träningstillfälle>();
-
-            listboxPersoner.DataSource = null;
 
             string plats, sammanfattning;
             int datum, starttid, sluttid, träningstillfälleid,träningsgrupp;
@@ -215,8 +213,7 @@ namespace Cirkus_kul_och_bus
             sluttid = int.Parse(tbx_sluttid.Text);
             träningsgrupp = int.Parse(tbx_träningsgruppsid.Text);
             träningstillfälleid = int.Parse(tbx_träningstillfälle.Text);
-
-            
+           
 
             pg.LäggTillTräningstillfälle(träningstillfälleid,datum,plats,starttid,sluttid,sammanfattning,träningsgrupp);
             
@@ -224,6 +221,23 @@ namespace Cirkus_kul_och_bus
 
             listboxPersoner.DataSource = träningstillfällen;
             listboxPersoner.DisplayMember = "TräningstillfällesInfo";
+
+        }
+
+        private void btn_närvaro_Click(object sender, EventArgs e)
+        {
+            
+            listboxPersoner.DataSource = null;
+            närvarolista = new List<Närvaro>();
+
+            int personnummer, träningstillfällesId;
+            personnummer = int.Parse(tbx_närvaroPers.Text);
+            träningstillfällesId = int.Parse(tbx_närvaroId.Text);
+
+            pg.LäggTillPersonerTillTräningstillfällen(träningstillfällesId, personnummer);
+
+            listboxPersoner.DataSource = närvarolista;
+            listboxPersoner.DisplayMember = "NärvaroInfo";
 
         }
     }

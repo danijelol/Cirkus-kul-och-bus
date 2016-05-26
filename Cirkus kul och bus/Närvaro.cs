@@ -6,8 +6,17 @@ using System.Threading.Tasks;
 
 namespace Cirkus_kul_och_bus
 {
-    class Närvaro: Person
+   public class Närvaro:Träningstillfälle
     {
-       
+        public int PersonNummer { get; set; }
+        public int Träningstillfälle_id { get; set; }
+
+        public string NärvaroInfo
+        {
+            get
+            {
+                return PersonNummer + "\t" + Träningstillfälle_id;
+            }
+        }
     }
 }
