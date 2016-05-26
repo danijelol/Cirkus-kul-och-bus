@@ -19,7 +19,7 @@ namespace Cirkus_kul_och_bus
         public bool Foto { get; set; }              //foto_ok
         private string Fotostring { get; set; } 
       
-        public string FullständigtNamn 
+        public string FullständigaPersonUpp
         {
             get 
             {

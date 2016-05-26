@@ -12,7 +12,7 @@ namespace Cirkus_kul_och_bus
         public int Datum { get; set; }
         public string Plats { get; set; }
         public int StartTid { get; set; }
-        public int StopTid { get; set; }
+        public int SlutTid { get; set; }
         public string Sammanfattning { get; set; }
     }
 }
