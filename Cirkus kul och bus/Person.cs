@@ -17,13 +17,23 @@ namespace Cirkus_kul_och_bus
         public string TelefonNr { get; set; }       //telenr
         public string Kon { get; set; }             //kön
         public bool Foto { get; set; }              //foto_ok
-
+        private string Fotostring { get; set; } 
       
         public string FullständigtNamn 
         {
             get 
             {
-                return Fornamn + "\t" + Efternamn + "\t" + PersonNr.ToString() + "\t" + PostNr + "\t" + Adress + "\t" + Email + "\t" + TelefonNr + "\t" + Kon;
+                if (Foto == true)
+                {
+                    Fotostring = "JA";
+                    return Fornamn + "\t" + Efternamn + "\t" + PersonNr.ToString() + "\t" + PostNr + "\t" + Adress + "\t" + Email + "\t" + TelefonNr + "\t" + Kon + "\t" + Fotostring;
+                }
+
+                else
+                {
+                    Fotostring = "NEJ";
+                    return Fornamn + "\t" + Efternamn + "\t" + PersonNr.ToString() + "\t" + PostNr + "\t" + Adress + "\t" + Email + "\t" + TelefonNr + "\t" + Kon + "\t" + Fotostring;
+                }
             }
         }
 
