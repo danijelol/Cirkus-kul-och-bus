@@ -20,20 +20,39 @@ namespace Cirkus_kul_och_bus
         }
 
         List<Person> personlista = new List<Person>();
-
+        List<Träningstillfälle> träningstillfällen = new List<Träningstillfälle>();
+        List<Träningsgrupp> träningsgrupper = new List<Träningsgrupp>();
         Postgres pg = new Postgres();   
        
 
         private void button1_Click(object sender, EventArgs e)
         {
             personlista = new List<Person>();  
-  
-         
-            personlista = pg.HämtaPerson();
-                                          
-            listboxPersoner.DataSource = personlista;
-            listboxPersoner.DisplayMember = "FullständigaPersonUpp";
+            träningstillfällen  = new List<Träningstillfälle>();                   
 
+            if (rbtn_Person.Checked) 
+            {
+                personlista = pg.HämtaPerson();
+
+                listboxPersoner.DataSource = personlista;
+                listboxPersoner.DisplayMember = "FullständigaPersonUpp";          
+            }
+            else if (rbtn_träning.Checked) 
+            {
+                pg.HämtaTräningsTillfälle();
+
+                listboxPersoner.DataSource = träningstillfällen;
+                listboxPersoner.DisplayMember = "FullständigaPersonUpp";
+            }
+            else if (rbtn_träningsgrupp.Checked) 
+            {
+                pg.HämtaTräningsgrupp();
+
+                listboxPersoner.DataSource = träningsgrupper;
+                listboxPersoner.DisplayMember = "FullständigaPersonUpp";
+            
+            
+            }
             
 
         }
@@ -135,6 +154,7 @@ namespace Cirkus_kul_och_bus
             
         }
 
+       
        
 
 

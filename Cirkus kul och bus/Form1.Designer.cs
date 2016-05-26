@@ -51,6 +51,11 @@
             this.btn_läggTillPers = new System.Windows.Forms.Button();
             this.btn_tabort = new System.Windows.Forms.Button();
             this.btn_ändraPerson = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbtn_träningsgrupp = new System.Windows.Forms.RadioButton();
+            this.rbtn_träning = new System.Windows.Forms.RadioButton();
+            this.rbtn_Person = new System.Windows.Forms.RadioButton();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // listboxPersoner
@@ -64,7 +69,7 @@
             // 
             // btnHämta
             // 
-            this.btnHämta.Location = new System.Drawing.Point(45, 507);
+            this.btnHämta.Location = new System.Drawing.Point(253, 387);
             this.btnHämta.Name = "btnHämta";
             this.btnHämta.Size = new System.Drawing.Size(75, 23);
             this.btnHämta.TabIndex = 1;
@@ -149,7 +154,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 351);
+            this.label3.Location = new System.Drawing.Point(20, 351);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 13);
             this.label3.TabIndex = 12;
@@ -158,7 +163,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 308);
+            this.label4.Location = new System.Drawing.Point(17, 308);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 13;
@@ -249,11 +254,57 @@
             this.btn_ändraPerson.UseVisualStyleBackColor = true;
             this.btn_ändraPerson.Click += new System.EventHandler(this.btn_ändraPerson_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rbtn_träningsgrupp);
+            this.groupBox1.Controls.Add(this.rbtn_träning);
+            this.groupBox1.Controls.Add(this.rbtn_Person);
+            this.groupBox1.Location = new System.Drawing.Point(253, 313);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(319, 68);
+            this.groupBox1.TabIndex = 23;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Välj vad du vill hämta";
+            // 
+            // rbtn_träningsgrupp
+            // 
+            this.rbtn_träningsgrupp.AutoSize = true;
+            this.rbtn_träningsgrupp.Location = new System.Drawing.Point(216, 28);
+            this.rbtn_träningsgrupp.Name = "rbtn_träningsgrupp";
+            this.rbtn_träningsgrupp.Size = new System.Drawing.Size(93, 17);
+            this.rbtn_träningsgrupp.TabIndex = 2;
+            this.rbtn_träningsgrupp.TabStop = true;
+            this.rbtn_träningsgrupp.Text = "Träningsgrupp";
+            this.rbtn_träningsgrupp.UseVisualStyleBackColor = true;
+            // 
+            // rbtn_träning
+            // 
+            this.rbtn_träning.AutoSize = true;
+            this.rbtn_träning.Location = new System.Drawing.Point(113, 28);
+            this.rbtn_träning.Name = "rbtn_träning";
+            this.rbtn_träning.Size = new System.Drawing.Size(89, 17);
+            this.rbtn_träning.TabIndex = 1;
+            this.rbtn_träning.TabStop = true;
+            this.rbtn_träning.Text = "Träningtillfälle";
+            this.rbtn_träning.UseVisualStyleBackColor = true;
+            // 
+            // rbtn_Person
+            // 
+            this.rbtn_Person.AutoSize = true;
+            this.rbtn_Person.Location = new System.Drawing.Point(6, 28);
+            this.rbtn_Person.Name = "rbtn_Person";
+            this.rbtn_Person.Size = new System.Drawing.Size(99, 17);
+            this.rbtn_Person.TabIndex = 0;
+            this.rbtn_Person.TabStop = true;
+            this.rbtn_Person.Text = "Personuppgifter";
+            this.rbtn_Person.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1150, 668);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_ändraPerson);
             this.Controls.Add(this.btn_tabort);
             this.Controls.Add(this.btn_läggTillPers);
@@ -279,6 +330,8 @@
             this.Controls.Add(this.listboxPersoner);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,6 +362,10 @@
         private System.Windows.Forms.Button btn_läggTillPers;
         private System.Windows.Forms.Button btn_tabort;
         private System.Windows.Forms.Button btn_ändraPerson;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton rbtn_träningsgrupp;
+        private System.Windows.Forms.RadioButton rbtn_träning;
+        private System.Windows.Forms.RadioButton rbtn_Person;
     }
 }
 

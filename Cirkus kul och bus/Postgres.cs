@@ -75,11 +75,56 @@ namespace Cirkus_kul_och_bus
                  Email = _dr["email"].ToString(),
                  //Foto = _dr["foto"]
              };
-
              personlista.Add(nyperson);
             }
             return personlista;
-        }        
+        }
+
+        public List<Träningstillfälle> HämtaTräningsTillfälle()
+        {
+           Träningstillfälle nyttTräningstillfälle;
+           string fråga = "select träningstillfälles_id as\"Träningstillfälle\", datum as \"Datum\", plats as \"Plats\", starttid as \"Starttid\", sluttid as \"Sluttid\", sammanfattning as \"Sammanfattning\", träningsgrupps_id as \"Träningsgrupp\" from träningstillfälle";
+            _dr = sqlFråga(fråga);
+            List<Träningstillfälle> träningstillfällen = new List<Träningstillfälle>();
+
+            while (_dr.Read())
+            {
+                nyttTräningstillfälle = new Träningstillfälle()
+                {
+                    Id = (int)_dr["Träningstillfälle"],
+                    Datum = (int)_dr["Datum"],
+                    Plats = _dr["Plats"].ToString(),
+                    StartTid = (int)_dr["Starttid"],
+                    SlutTid = (int)_dr["Sluttid"],
+                    Sammanfattning = _dr["Sammanfattning"].ToString(),
+                    Träningsgrupps_id = _dr["Träningsgrupp"].ToString(),
+                };
+                träningstillfällen.Add(nyttTräningstillfälle);
+            }
+            return träningstillfällen;
+        
+        }
+
+        public List<Träningsgrupp> HämtaTräningsgrupp()
+        {
+            Träningsgrupp nyträningsgrupp;
+            string fråga = "select träningsgrupps_id as\"Träningsgrupp\", namn as \"Namn\" from träningsgrupp";
+            _dr = sqlFråga(fråga);
+            List<Träningsgrupp> träningsgrupp = new List<Träningsgrupp>();
+
+            while (_dr.Read())
+            {
+                nyträningsgrupp = new Träningsgrupp()
+                {
+                    Id = (int)_dr["Träningsgrupp"],
+                    Namn= _dr["Namn"].ToString(),
+                
+                };
+                träningsgrupp.Add(nyträningsgrupp);
+            }
+            return träningsgrupp;
+        }
+
 
        public void LäggTillPerson(int personnummer, string fornamn, string efternamn, string postnummer, string adress, string email, string telefonnummer, string kon, bool foto)
         {
@@ -144,6 +189,7 @@ namespace Cirkus_kul_och_bus
            }
        }
    }
+
 }
     
 

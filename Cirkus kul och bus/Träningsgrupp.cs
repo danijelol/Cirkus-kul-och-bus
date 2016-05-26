@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cirkus_kul_och_bus
 {
-    class Träningsgrupp
+   public class Träningsgrupp
     {
         public int Id { get; set; }
         public string Namn { get; set; }
