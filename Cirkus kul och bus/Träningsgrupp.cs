@@ -10,5 +10,14 @@ namespace Cirkus_kul_och_bus
     {
         public int Id { get; set; }
         public string Namn { get; set; }
+
+        public string TräningsgruppsInfo
+        {
+            get
+            {
+                return Id + "\t" + Namn;
+            }
+        }
     }
+  
 }

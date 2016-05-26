@@ -39,17 +39,17 @@ namespace Cirkus_kul_och_bus
             }
             else if (rbtn_träning.Checked) 
             {
-                pg.HämtaTräningsTillfälle();
+               träningstillfällen= pg.HämtaTräningsTillfälle();
 
                 listboxPersoner.DataSource = träningstillfällen;
-                listboxPersoner.DisplayMember = "FullständigaPersonUpp";
+                listboxPersoner.DisplayMember = "TräningstillfällesInfo";
             }
             else if (rbtn_träningsgrupp.Checked) 
             {
-                pg.HämtaTräningsgrupp();
+               träningsgrupper = pg.HämtaTräningsgrupp();
 
                 listboxPersoner.DataSource = träningsgrupper;
-                listboxPersoner.DisplayMember = "FullständigaPersonUpp";
+                listboxPersoner.DisplayMember = "TräningsgruppsInfo";
             
             
             }

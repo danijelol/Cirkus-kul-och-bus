@@ -97,7 +97,7 @@ namespace Cirkus_kul_och_bus
                     StartTid = (int)_dr["Starttid"],
                     SlutTid = (int)_dr["Sluttid"],
                     Sammanfattning = _dr["Sammanfattning"].ToString(),
-                    Träningsgrupps_id = _dr["Träningsgrupp"].ToString(),
+                    Träningsgrupps_id = (int)_dr["Träningsgrupp"],
                 };
                 träningstillfällen.Add(nyttTräningstillfälle);
             }
