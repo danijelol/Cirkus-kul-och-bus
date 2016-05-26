@@ -32,7 +32,7 @@ namespace Cirkus_kul_och_bus
             personlista = pg.HämtaPerson();
                                           
             listboxPersoner.DataSource = personlista;
-            listboxPersoner.DisplayMember = "FullständigtNamn";
+            listboxPersoner.DisplayMember = "FullständigaPersonUpp";
 
             
 
@@ -64,7 +64,7 @@ namespace Cirkus_kul_och_bus
             personlista = pg.HämtaPerson();
 
             listboxPersoner.DataSource = personlista;
-            listboxPersoner.DisplayMember = "FullständigtNamn";
+            listboxPersoner.DisplayMember = "FullständigaPersonUpp";
 
         }
 
@@ -89,7 +89,7 @@ namespace Cirkus_kul_och_bus
             personlista = pg.HämtaPerson();
 
             listboxPersoner.DataSource = personlista;
-            listboxPersoner.DisplayMember = "FullständigtNamn";
+            listboxPersoner.DisplayMember = "FullständigaPersonUpp";
 
 
         }
@@ -121,7 +121,7 @@ namespace Cirkus_kul_och_bus
             personlista = pg.HämtaPerson();
 
             listboxPersoner.DataSource = personlista;
-            listboxPersoner.DisplayMember = "FullständigtNamn";
+            listboxPersoner.DisplayMember = "FullständigaPersonUpp";
 
         }
 
