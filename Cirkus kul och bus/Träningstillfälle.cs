@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cirkus_kul_och_bus
 {
-    public class Träningstillfälle
+    public class Träningstillfälle : Person
     {
         public int Id { get; set; }
         public int Datum { get; set; }
@@ -23,7 +23,7 @@ namespace Cirkus_kul_och_bus
                 return Id + "\t" + Datum + "\t" + Plats + "\t" + StartTid + "\t" + SlutTid + "\t" + Sammanfattning + "\t" + Träningsgrupps_id;
             }
         }
-    
+
   
     }
 }

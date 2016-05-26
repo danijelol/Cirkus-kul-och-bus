@@ -69,7 +69,7 @@
             this.tbx_efternamn = new System.Windows.Forms.TextBox();
             this.tbx_fornamn = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbx_sok = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
@@ -483,7 +483,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.tbx_sok);
             this.groupBox1.Controls.Add(this.rbtn_träning);
             this.groupBox1.Controls.Add(this.btnHämta);
             this.groupBox1.Controls.Add(this.rbtn_träningsgrupp);
@@ -494,12 +494,12 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
-            // textBox3
+            // tbx_sok
             // 
-            this.textBox3.Location = new System.Drawing.Point(31, 20);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 3;
+            this.tbx_sok.Location = new System.Drawing.Point(31, 20);
+            this.tbx_sok.Name = "tbx_sok";
+            this.tbx_sok.Size = new System.Drawing.Size(100, 20);
+            this.tbx_sok.TabIndex = 3;
             // 
             // tabPage3
             // 
@@ -511,7 +511,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(750, 647);
+            this.tabPage3.Size = new System.Drawing.Size(529, 592);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Närvaro";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -519,7 +519,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(228, 72);
+            this.checkBox1.Location = new System.Drawing.Point(223, 114);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(80, 17);
             this.checkBox1.TabIndex = 0;
@@ -529,7 +529,7 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(228, 119);
+            this.checkBox2.Location = new System.Drawing.Point(223, 161);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(80, 17);
             this.checkBox2.TabIndex = 1;
@@ -539,7 +539,7 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(228, 176);
+            this.checkBox3.Location = new System.Drawing.Point(223, 218);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(80, 17);
             this.checkBox3.TabIndex = 2;
@@ -549,7 +549,7 @@
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(228, 225);
+            this.checkBox4.Location = new System.Drawing.Point(223, 267);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(80, 17);
             this.checkBox4.TabIndex = 3;
@@ -559,7 +559,7 @@
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(228, 279);
+            this.checkBox5.Location = new System.Drawing.Point(223, 321);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(80, 17);
             this.checkBox5.TabIndex = 4;
@@ -649,7 +649,7 @@
         private System.Windows.Forms.TextBox tbx_efternamn;
         private System.Windows.Forms.TextBox tbx_fornamn;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbx_sok;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.CheckBox checkBox5;
         private System.Windows.Forms.CheckBox checkBox4;

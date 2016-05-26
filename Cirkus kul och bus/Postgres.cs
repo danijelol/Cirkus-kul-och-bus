@@ -132,6 +132,32 @@ namespace Cirkus_kul_och_bus
             return träningsgrupp;
         }
 
+        public List<Träningstillfälle> HämtaNärvaro()
+        {
+            Träningstillfälle närvarande;
+            string fråga = "select träningsgrupps_id as\"Träningsgrupp\", namn as \"Namn\" from träningsgrupp";
+            _dr = sqlFråga(fråga);
+            List<Träningstillfälle> närvarolista = new List<Träningstillfälle>();
+
+            while (_dr.Read())
+            {
+                närvarande= new Träningstillfälle()
+                {
+                    PersonNr = (int)_dr["Personnummer"],
+                    Id = (int)_dr["Träningstillfälle"],
+                    Träningsgrupps_id= (int)_dr["Träningsgrupp"],
+                    Datum = (int)_dr["Datum"],
+                    StartTid = (int)_dr["Starttid"],
+                    SlutTid = (int)_dr["Sluttid"],
+                    Sammanfattning = _dr ["Sammanfattning"].ToString(),
+              
+                };
+                närvarolista.Add(närvarande);
+            }
+            return närvarolista;
+        }
+
+
 
        public void LäggTillPerson(int personnummer, string fornamn, string efternamn, string postnummer, string adress, string email, string telefonnummer, string kon, bool foto, string kontaktpersonNamn, string kontaktTele, int medlemstyp)
         {
@@ -201,7 +227,8 @@ namespace Cirkus_kul_och_bus
                sqlNonQuery("commit");
            }
        }
-   }
+   } 
+  
 
 }
     
