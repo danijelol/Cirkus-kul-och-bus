@@ -36,20 +36,20 @@
             this.rbtn_träningsgrupp = new System.Windows.Forms.RadioButton();
             this.rbtn_träning = new System.Windows.Forms.RadioButton();
             this.rbtn_Person = new System.Windows.Forms.RadioButton();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rbt_styrelse = new System.Windows.Forms.RadioButton();
+            this.rbt_ledareansvarig = new System.Windows.Forms.RadioButton();
+            this.rbt_uppdrag = new System.Windows.Forms.RadioButton();
+            this.rbt_ledare = new System.Windows.Forms.RadioButton();
+            this.rbt_cirkusvan = new System.Windows.Forms.RadioButton();
+            this.rbt_provapa = new System.Windows.Forms.RadioButton();
+            this.rbt_medlem = new System.Windows.Forms.RadioButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbx_kontaktperson = new System.Windows.Forms.TextBox();
+            this.tbx_kontakpersonnr = new System.Windows.Forms.TextBox();
             this.cBoxJa = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -76,19 +76,21 @@
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // listboxPersoner
             // 
             this.listboxPersoner.FormattingEnabled = true;
-            this.listboxPersoner.Location = new System.Drawing.Point(536, 711);
+            this.listboxPersoner.Location = new System.Drawing.Point(555, 34);
             this.listboxPersoner.Name = "listboxPersoner";
-            this.listboxPersoner.Size = new System.Drawing.Size(797, 238);
+            this.listboxPersoner.Size = new System.Drawing.Size(797, 342);
             this.listboxPersoner.TabIndex = 0;
             this.listboxPersoner.SelectedIndexChanged += new System.EventHandler(this.listboxPersoner_SelectedIndexChanged);
             // 
@@ -165,103 +167,105 @@
             this.rbtn_Person.Text = "Personuppgifter";
             this.rbtn_Person.UseVisualStyleBackColor = true;
             // 
-            // radioButton7
+            // rbt_styrelse
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(238, 243);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(85, 17);
-            this.radioButton7.TabIndex = 6;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "radioButton7";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.rbt_styrelse.AutoSize = true;
+            this.rbt_styrelse.Location = new System.Drawing.Point(19, 237);
+            this.rbt_styrelse.Name = "rbt_styrelse";
+            this.rbt_styrelse.Size = new System.Drawing.Size(99, 17);
+            this.rbt_styrelse.TabIndex = 6;
+            this.rbt_styrelse.TabStop = true;
+            this.rbt_styrelse.Text = "Styrelseledamot";
+            this.rbt_styrelse.UseVisualStyleBackColor = true;
             // 
-            // radioButton6
+            // rbt_ledareansvarig
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(238, 210);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(85, 17);
-            this.radioButton6.TabIndex = 5;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "radioButton6";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.rbt_ledareansvarig.AutoSize = true;
+            this.rbt_ledareansvarig.Location = new System.Drawing.Point(19, 204);
+            this.rbt_ledareansvarig.Name = "rbt_ledareansvarig";
+            this.rbt_ledareansvarig.Size = new System.Drawing.Size(101, 17);
+            this.rbt_ledareansvarig.TabIndex = 5;
+            this.rbt_ledareansvarig.TabStop = true;
+            this.rbt_ledareansvarig.Text = "Ledare ansvarig";
+            this.rbt_ledareansvarig.UseVisualStyleBackColor = true;
             // 
-            // radioButton5
+            // rbt_uppdrag
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(238, 178);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(85, 17);
-            this.radioButton5.TabIndex = 4;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "radioButton5";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.rbt_uppdrag.AutoSize = true;
+            this.rbt_uppdrag.Location = new System.Drawing.Point(19, 171);
+            this.rbt_uppdrag.Name = "rbt_uppdrag";
+            this.rbt_uppdrag.Size = new System.Drawing.Size(114, 17);
+            this.rbt_uppdrag.TabIndex = 4;
+            this.rbt_uppdrag.TabStop = true;
+            this.rbt_uppdrag.Text = "Uppdrags ansvarig";
+            this.rbt_uppdrag.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // rbt_ledare
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(238, 138);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(85, 17);
-            this.radioButton4.TabIndex = 3;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "radioButton4";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rbt_ledare.AutoSize = true;
+            this.rbt_ledare.Location = new System.Drawing.Point(19, 138);
+            this.rbt_ledare.Name = "rbt_ledare";
+            this.rbt_ledare.Size = new System.Drawing.Size(58, 17);
+            this.rbt_ledare.TabIndex = 3;
+            this.rbt_ledare.TabStop = true;
+            this.rbt_ledare.Text = "Ledare";
+            this.rbt_ledare.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // rbt_cirkusvan
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(238, 104);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(85, 17);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "radioButton3";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rbt_cirkusvan.AutoSize = true;
+            this.rbt_cirkusvan.Location = new System.Drawing.Point(19, 105);
+            this.rbt_cirkusvan.Name = "rbt_cirkusvan";
+            this.rbt_cirkusvan.Size = new System.Drawing.Size(81, 17);
+            this.rbt_cirkusvan.TabIndex = 2;
+            this.rbt_cirkusvan.TabStop = true;
+            this.rbt_cirkusvan.Text = "Cirkus vänn";
+            this.rbt_cirkusvan.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbt_provapa
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(238, 67);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(85, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbt_provapa.AutoSize = true;
+            this.rbt_provapa.Location = new System.Drawing.Point(19, 72);
+            this.rbt_provapa.Name = "rbt_provapa";
+            this.rbt_provapa.Size = new System.Drawing.Size(68, 17);
+            this.rbt_provapa.TabIndex = 1;
+            this.rbt_provapa.TabStop = true;
+            this.rbt_provapa.Text = "Prova på";
+            this.rbt_provapa.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbt_medlem
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(238, 41);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbt_medlem.AutoSize = true;
+            this.rbt_medlem.Location = new System.Drawing.Point(19, 39);
+            this.rbt_medlem.Name = "rbt_medlem";
+            this.rbt_medlem.Size = new System.Drawing.Size(62, 17);
+            this.rbt_medlem.TabIndex = 0;
+            this.rbt_medlem.TabStop = true;
+            this.rbt_medlem.Text = "Medlem";
+            this.rbt_medlem.UseVisualStyleBackColor = true;
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(589, 5);
+            this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(758, 673);
+            this.tabControl1.Size = new System.Drawing.Size(537, 618);
             this.tabControl1.TabIndex = 30;
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.label11);
             this.tabPage1.Controls.Add(this.btn_ändraPerson);
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.btn_tabort);
-            this.tabPage1.Controls.Add(this.textBox2);
+            this.tabPage1.Controls.Add(this.tbx_kontaktperson);
             this.tabPage1.Controls.Add(this.btn_läggTillPers);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.tbx_kontakpersonnr);
             this.tabPage1.Controls.Add(this.cBoxJa);
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.label8);
@@ -280,20 +284,12 @@
             this.tabPage1.Controls.Add(this.tbx_personNr);
             this.tabPage1.Controls.Add(this.tbx_efternamn);
             this.tabPage1.Controls.Add(this.tbx_fornamn);
-            this.tabPage1.Controls.Add(this.radioButton7);
-            this.tabPage1.Controls.Add(this.radioButton1);
-            this.tabPage1.Controls.Add(this.radioButton2);
-            this.tabPage1.Controls.Add(this.radioButton6);
-            this.tabPage1.Controls.Add(this.radioButton3);
-            this.tabPage1.Controls.Add(this.radioButton4);
-            this.tabPage1.Controls.Add(this.radioButton5);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(750, 647);
+            this.tabPage1.Size = new System.Drawing.Size(529, 592);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Skapa medlem";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
@@ -301,7 +297,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(750, 647);
+            this.tabPage2.Size = new System.Drawing.Size(529, 592);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Hämta uppgifter";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -324,19 +320,19 @@
             this.label10.TabIndex = 49;
             this.label10.Text = "Kontaktperson:";
             // 
-            // textBox2
+            // tbx_kontaktperson
             // 
-            this.textBox2.Location = new System.Drawing.Point(15, 416);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 48;
+            this.tbx_kontaktperson.Location = new System.Drawing.Point(15, 416);
+            this.tbx_kontaktperson.Name = "tbx_kontaktperson";
+            this.tbx_kontaktperson.Size = new System.Drawing.Size(100, 20);
+            this.tbx_kontaktperson.TabIndex = 48;
             // 
-            // textBox1
+            // tbx_kontakpersonnr
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 458);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(160, 20);
-            this.textBox1.TabIndex = 47;
+            this.tbx_kontakpersonnr.Location = new System.Drawing.Point(15, 458);
+            this.tbx_kontakpersonnr.Name = "tbx_kontakpersonnr";
+            this.tbx_kontakpersonnr.Size = new System.Drawing.Size(160, 20);
+            this.tbx_kontakpersonnr.TabIndex = 47;
             // 
             // cBoxJa
             // 
@@ -492,7 +488,7 @@
             this.groupBox1.Controls.Add(this.btnHämta);
             this.groupBox1.Controls.Add(this.rbtn_träningsgrupp);
             this.groupBox1.Controls.Add(this.rbtn_Person);
-            this.groupBox1.Location = new System.Drawing.Point(353, 124);
+            this.groupBox1.Location = new System.Drawing.Point(42, 103);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(343, 129);
             this.groupBox1.TabIndex = 3;
@@ -570,10 +566,27 @@
             this.checkBox5.Text = "checkBox5";
             this.checkBox5.UseVisualStyleBackColor = true;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.rbt_uppdrag);
+            this.groupBox2.Controls.Add(this.rbt_ledare);
+            this.groupBox2.Controls.Add(this.rbt_cirkusvan);
+            this.groupBox2.Controls.Add(this.rbt_ledareansvarig);
+            this.groupBox2.Controls.Add(this.rbt_provapa);
+            this.groupBox2.Controls.Add(this.rbt_medlem);
+            this.groupBox2.Controls.Add(this.rbt_styrelse);
+            this.groupBox2.Location = new System.Drawing.Point(275, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(200, 286);
+            this.groupBox2.TabIndex = 52;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Typ av medlem:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1445, 973);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.listboxPersoner);
@@ -587,6 +600,8 @@
             this.groupBox1.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -601,20 +616,20 @@
         private System.Windows.Forms.RadioButton rbtn_träningsgrupp;
         private System.Windows.Forms.RadioButton rbtn_träning;
         private System.Windows.Forms.RadioButton rbtn_Person;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbt_styrelse;
+        private System.Windows.Forms.RadioButton rbt_ledareansvarig;
+        private System.Windows.Forms.RadioButton rbt_uppdrag;
+        private System.Windows.Forms.RadioButton rbt_ledare;
+        private System.Windows.Forms.RadioButton rbt_cirkusvan;
+        private System.Windows.Forms.RadioButton rbt_provapa;
+        private System.Windows.Forms.RadioButton rbt_medlem;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbx_kontaktperson;
+        private System.Windows.Forms.TextBox tbx_kontakpersonnr;
         private System.Windows.Forms.CheckBox cBoxJa;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -641,6 +656,7 @@
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
 

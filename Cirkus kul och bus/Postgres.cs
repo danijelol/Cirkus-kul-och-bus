@@ -133,14 +133,14 @@ namespace Cirkus_kul_och_bus
         }
 
 
-       public void LäggTillPerson(int personnummer, string fornamn, string efternamn, string postnummer, string adress, string email, string telefonnummer, string kon, bool foto)
+       public void LäggTillPerson(int personnummer, string fornamn, string efternamn, string postnummer, string adress, string email, string telefonnummer, string kon, bool foto, string kontaktpersonNamn, string kontaktTele, int medlemstyp)
         {
             _conn = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["cirkus"].ConnectionString);
             {
                 _conn.Open();
                 sqlNonQuery("begin");           
                 
-                _cmd = new NpgsqlCommand("insert into person (person_nr, förnamn, efternamn, post_nr, adress, email, telenr, kön, foto_ok) values(@person_nr, @fornamn, @efternamn, @postnummer, @adress, @email, @telefonnummer, @kon, @foto)", _conn);
+                _cmd = new NpgsqlCommand("insert into person (person_nr, förnamn, efternamn, post_nr, adress, email, telenr, kön, foto_ok, kontaktperson_namn, kontaktperson_tele, medlemstyp) values(@person_nr, @fornamn, @efternamn, @postnummer, @adress, @email, @telefonnummer, @kon, @foto, @kontaktperson_namn, @kontaktperson_tele, @medlemstyp)", _conn);
 
                 _cmd.Parameters.AddWithValue("@person_nr", personnummer);
                 _cmd.Parameters.AddWithValue("@fornamn", fornamn);
@@ -151,6 +151,9 @@ namespace Cirkus_kul_och_bus
                 _cmd.Parameters.AddWithValue("@telefonnummer", telefonnummer);
                 _cmd.Parameters.AddWithValue("@kon", kon);
                 _cmd.Parameters.AddWithValue("@foto", foto);
+                _cmd.Parameters.AddWithValue("@kontaktperson_namn", kontaktpersonNamn);
+                _cmd.Parameters.AddWithValue("@kontaktperson_tele", kontaktTele);
+                _cmd.Parameters.AddWithValue("@medlemstyp", medlemstyp);
                 
                 _cmd.ExecuteNonQuery();
                 sqlNonQuery("commit");

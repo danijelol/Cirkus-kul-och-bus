@@ -59,31 +59,77 @@ namespace Cirkus_kul_och_bus
 
         private void btn_läggTillPers_Click(object sender, EventArgs e)
         {
+            try
+            {
+                int medlemstyp;
+                Person nymedlemstyp = new Person();
+                medlemstyp = nymedlemstyp.Medlemstyp;
 
-            personlista = new List<Person>();
-            listboxPersoner.DataSource = null;
+                if (rbt_medlem.Checked)
+                {
+                    medlemstyp = 1;
+                }
+                else if (rbt_provapa.Checked)
+                {
+                    medlemstyp = 2;
+                }
+                else if (rbt_cirkusvan.Checked)
+                {
+                    medlemstyp = 3;
+                }
+                else if (rbt_ledare.Checked)
+                {
+                    medlemstyp = 4;
+                }
+                else if (rbt_uppdrag.Checked)
+                {
+                    medlemstyp = 5;
+                }
+                else if (rbt_ledareansvarig.Checked)
+                {
+                    medlemstyp = 6;
+                }
+                else if (rbt_styrelse.Checked)
+                {
+                    medlemstyp = 7;
+                }
+                else
+                {
+                    MessageBox.Show("Välj en medlemstyp!");
+                }
 
-            string fnamn, enamn, postAdress, email, kon, postNr, teleNr;
-            int personNr;
-            bool fotoOk;
 
-            fnamn = tbx_fornamn.Text;
-            enamn = tbx_efternamn.Text;
-            postAdress = tbx_adress.Text;
-            email = tbx_email.Text;
-            postNr = tbx_postNr.Text;
-            kon = tbx_kon.Text;
-            teleNr = tbx_teleNr.Text;
+                personlista = new List<Person>();
+                listboxPersoner.DataSource = null;
 
-            personNr = int.Parse(tbx_personNr.Text);
-            fotoOk = cBoxJa.Checked;
+                string fnamn, enamn, postAdress, email, kon, postNr, teleNr, kontaktperson, kontaktpersonNr;
+                int personNr;
+                bool fotoOk;
 
-            pg.LäggTillPerson(personNr, fnamn, enamn, postNr, postAdress, email, teleNr, kon, fotoOk);
+                fnamn = tbx_fornamn.Text;
+                enamn = tbx_efternamn.Text;
+                postAdress = tbx_adress.Text;
+                email = tbx_email.Text;
+                postNr = tbx_postNr.Text;
+                kon = tbx_kon.Text;
+                teleNr = tbx_teleNr.Text;
+                personNr = int.Parse(tbx_personNr.Text);
+                fotoOk = cBoxJa.Checked;
+                kontaktperson = tbx_kontaktperson.Text;
+                kontaktpersonNr = tbx_kontakpersonnr.Text;
+                pg.LäggTillPerson(personNr, fnamn, enamn, postNr, postAdress, email, teleNr, kon, fotoOk, kontaktperson, kontaktpersonNr, medlemstyp);
 
-            personlista = pg.HämtaPerson();
+                personlista = pg.HämtaPerson();
 
-            listboxPersoner.DataSource = personlista;
-            listboxPersoner.DisplayMember = "FullständigaPersonUpp";
+                listboxPersoner.DataSource = personlista;
+                listboxPersoner.DisplayMember = "FullständigaPersonUpp";
+            }
+            catch
+            {
+                MessageBox.Show("Tomma fält?");
+               
+            }
+            
 
         }
 
