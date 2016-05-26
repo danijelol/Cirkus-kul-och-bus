@@ -74,12 +74,13 @@ namespace Cirkus_kul_och_bus
                  PostNr = _dr["postnummer"].ToString(),
                  TelefonNr =  _dr["telefonnummer"].ToString(),
                  Kon = _dr["kön"].ToString(),
+                 Foto = Convert.ToBoolean(_dr["foto_ok"]),
                  Email = _dr["email"].ToString(),
                  Kontaktperson = _dr["Kontaktperson"].ToString(),
                  KontaktpersonTelenr = _dr["Telefonnummer kontaktperson"].ToString(),
-                 Medlemstyp = (int)_dr["Typ av medlem"],
-
-                 //Foto = _dr["foto"]
+                 Medlemstyp = (int)_dr["Typ av medlem"]
+                 
+                 
              };
              personlista.Add(nyperson);
             }
