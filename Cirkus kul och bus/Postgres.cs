@@ -131,6 +131,7 @@ namespace Cirkus_kul_och_bus
             }
             return träningsgrupp;
         }
+     
 
         public List<Träningstillfälle> HämtaNärvaro()
         {
@@ -157,7 +158,30 @@ namespace Cirkus_kul_och_bus
             return närvarolista;
         }
 
+        public void LäggTillTräningstillfälle(int datum, string plats, int starttid, int sluttid, string sammanfattning, int träningsgrupp)
+        {
 
+            _conn = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["cirkus"].ConnectionString);
+            {
+                _conn.Open();
+                sqlNonQuery("begin");
+               
+                _cmd = new NpgsqlCommand("insert into träningstillfälle (datum, plats, starttid, sluttid, sammanfattning, träningsgrupps_id) values( @datum, @plats, @starttid, @sluttid, @sammanfattning, @träningsgrupps_id)", _conn);
+
+                
+                _cmd.Parameters.AddWithValue("@datum", datum);
+                _cmd.Parameters.AddWithValue("@plats", plats);
+                _cmd.Parameters.AddWithValue("@starttid", starttid);
+                _cmd.Parameters.AddWithValue("@sluttid", sluttid);
+                _cmd.Parameters.AddWithValue("@sammanfattning", sammanfattning);
+                _cmd.Parameters.AddWithValue("@träningsgrupps_id", träningsgrupp);
+
+
+                _cmd.ExecuteNonQuery();
+                sqlNonQuery("commit");
+
+            }
+        }
 
        public void LäggTillPerson(int personnummer, string fornamn, string efternamn, string postnummer, string adress, string email, string telefonnummer, string kon, bool foto, string kontaktpersonNamn, string kontaktTele, int medlemstyp)
         {

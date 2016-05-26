@@ -201,6 +201,27 @@ namespace Cirkus_kul_och_bus
 
         }
 
+        private void btn_träningstillfälle_Click(object sender, EventArgs e)
+        {
+            string plats, sammanfattning;
+            int datum, starttid, sluttid,träningsgruppsid;
+
+            plats = tbx_plats.Text;
+            sammanfattning = tbx_sammanfattning.Text;
+            datum = int.Parse(tbx_datum.Text);
+            starttid = int.Parse(tbx_starttid.Text);
+            sluttid = int.Parse(tbx_sluttid.Text);
+            träningsgruppsid = int.Parse(tbx_träningsgruppsid.Text);
+
+            pg.LäggTillTräningstillfälle(datum, plats, starttid, sluttid, sammanfattning, träningsgruppsid);
+
+            träningstillfällen = pg.HämtaTräningsTillfälle();
+
+            listboxPersoner.DataSource = träningstillfällen;
+            listboxPersoner.DisplayMember = "TräningstillfällesInfo";
+
+        }
+
     
      
 

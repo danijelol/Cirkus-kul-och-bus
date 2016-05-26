@@ -77,12 +77,27 @@
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tbx_datum = new System.Windows.Forms.TextBox();
+            this.tbx_plats = new System.Windows.Forms.TextBox();
+            this.tbx_starttid = new System.Windows.Forms.TextBox();
+            this.tbx_sluttid = new System.Windows.Forms.TextBox();
+            this.tbx_sammanfattning = new System.Windows.Forms.TextBox();
+            this.tbx_träningsgruppsid = new System.Windows.Forms.TextBox();
+            this.Datum = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.btn_träningstillfälle = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // listboxPersoner
@@ -249,6 +264,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -582,6 +598,135 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Typ av medlem:";
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.btn_träningstillfälle);
+            this.tabPage4.Controls.Add(this.label17);
+            this.tabPage4.Controls.Add(this.label16);
+            this.tabPage4.Controls.Add(this.label15);
+            this.tabPage4.Controls.Add(this.label14);
+            this.tabPage4.Controls.Add(this.label13);
+            this.tabPage4.Controls.Add(this.Datum);
+            this.tabPage4.Controls.Add(this.tbx_träningsgruppsid);
+            this.tabPage4.Controls.Add(this.tbx_sammanfattning);
+            this.tabPage4.Controls.Add(this.tbx_sluttid);
+            this.tabPage4.Controls.Add(this.tbx_starttid);
+            this.tabPage4.Controls.Add(this.tbx_plats);
+            this.tabPage4.Controls.Add(this.tbx_datum);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(529, 592);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Skapa träningstillfälle";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tbx_datum
+            // 
+            this.tbx_datum.Location = new System.Drawing.Point(27, 74);
+            this.tbx_datum.Name = "tbx_datum";
+            this.tbx_datum.Size = new System.Drawing.Size(100, 20);
+            this.tbx_datum.TabIndex = 0;
+            // 
+            // tbx_plats
+            // 
+            this.tbx_plats.Location = new System.Drawing.Point(27, 117);
+            this.tbx_plats.Name = "tbx_plats";
+            this.tbx_plats.Size = new System.Drawing.Size(100, 20);
+            this.tbx_plats.TabIndex = 1;
+            // 
+            // tbx_starttid
+            // 
+            this.tbx_starttid.Location = new System.Drawing.Point(27, 160);
+            this.tbx_starttid.Name = "tbx_starttid";
+            this.tbx_starttid.Size = new System.Drawing.Size(100, 20);
+            this.tbx_starttid.TabIndex = 2;
+            // 
+            // tbx_sluttid
+            // 
+            this.tbx_sluttid.Location = new System.Drawing.Point(27, 203);
+            this.tbx_sluttid.Name = "tbx_sluttid";
+            this.tbx_sluttid.Size = new System.Drawing.Size(100, 20);
+            this.tbx_sluttid.TabIndex = 3;
+            // 
+            // tbx_sammanfattning
+            // 
+            this.tbx_sammanfattning.Location = new System.Drawing.Point(27, 246);
+            this.tbx_sammanfattning.Name = "tbx_sammanfattning";
+            this.tbx_sammanfattning.Size = new System.Drawing.Size(100, 20);
+            this.tbx_sammanfattning.TabIndex = 4;
+            // 
+            // tbx_träningsgruppsid
+            // 
+            this.tbx_träningsgruppsid.Location = new System.Drawing.Point(27, 289);
+            this.tbx_träningsgruppsid.Name = "tbx_träningsgruppsid";
+            this.tbx_träningsgruppsid.Size = new System.Drawing.Size(100, 20);
+            this.tbx_träningsgruppsid.TabIndex = 5;
+            // 
+            // Datum
+            // 
+            this.Datum.AutoSize = true;
+            this.Datum.Location = new System.Drawing.Point(24, 58);
+            this.Datum.Name = "Datum";
+            this.Datum.Size = new System.Drawing.Size(38, 13);
+            this.Datum.TabIndex = 6;
+            this.Datum.Text = "Datum";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(24, 230);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(83, 13);
+            this.label13.TabIndex = 7;
+            this.label13.Text = "Sammanfattning";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(24, 187);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(36, 13);
+            this.label14.TabIndex = 8;
+            this.label14.Text = "Sluttid";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(24, 273);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(75, 13);
+            this.label15.TabIndex = 9;
+            this.label15.Text = "Träningsgrupp";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(24, 101);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(30, 13);
+            this.label16.TabIndex = 10;
+            this.label16.Text = "Plats";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(22, 140);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(40, 13);
+            this.label17.TabIndex = 11;
+            this.label17.Text = "Starttid";
+            // 
+            // btn_träningstillfälle
+            // 
+            this.btn_träningstillfälle.Location = new System.Drawing.Point(25, 330);
+            this.btn_träningstillfälle.Name = "btn_träningstillfälle";
+            this.btn_träningstillfälle.Size = new System.Drawing.Size(131, 23);
+            this.btn_träningstillfälle.TabIndex = 12;
+            this.btn_träningstillfälle.Text = "Lägg till träningstillfälle";
+            this.btn_träningstillfälle.UseVisualStyleBackColor = true;
+            this.btn_träningstillfälle.Click += new System.EventHandler(this.btn_träningstillfälle_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -602,6 +747,8 @@
             this.tabPage3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -657,6 +804,20 @@
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TextBox tbx_datum;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label Datum;
+        private System.Windows.Forms.TextBox tbx_träningsgruppsid;
+        private System.Windows.Forms.TextBox tbx_sammanfattning;
+        private System.Windows.Forms.TextBox tbx_sluttid;
+        private System.Windows.Forms.TextBox tbx_starttid;
+        private System.Windows.Forms.TextBox tbx_plats;
+        private System.Windows.Forms.Button btn_träningstillfälle;
     }
 }
 
