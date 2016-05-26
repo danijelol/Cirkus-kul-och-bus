@@ -72,8 +72,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ledare.cs" />
-    <Compile Include="Medlem.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Postgres.cs" />
     <Compile Include="Program.cs" />

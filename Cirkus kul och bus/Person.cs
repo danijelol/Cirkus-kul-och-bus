@@ -17,8 +17,13 @@ namespace Cirkus_kul_och_bus
         public string TelefonNr { get; set; }       //telenr
         public string Kon { get; set; }             //kön
         public bool Foto { get; set; }              //foto_ok
-        private string Fotostring { get; set; } 
-      
+        private string Fotostring { get; set; }
+
+        public int MedlemsNr { get; set; }
+        public string Kontaktperson { get; set; }
+        public string KontaktpersonTelenr { get; set; }
+        public int Medlemstyp { get; set; }
+
         public string FullständigaPersonUpp
         {
             get 
