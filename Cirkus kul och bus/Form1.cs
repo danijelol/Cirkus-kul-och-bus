@@ -107,7 +107,6 @@ namespace Cirkus_kul_och_bus
             try
             {
                 
-
                 personlista = new List<Person>();
                 listboxPersoner.DataSource = null;
 
@@ -126,6 +125,7 @@ namespace Cirkus_kul_och_bus
                 fotoOk = cBoxJa.Checked;
                 kontaktperson = tbx_kontaktperson.Text;
                 kontaktpersonNr = tbx_kontakpersonnr.Text;
+
                 pg.LäggTillPerson(personNr, fnamn, enamn, postNr, postAdress, email, teleNr, kon, fotoOk, kontaktperson, kontaktpersonNr, MedlemsTyp());
 
                 personlista = pg.HämtaPerson();
@@ -157,14 +157,10 @@ namespace Cirkus_kul_och_bus
             int personNr = int.Parse(tbx_personNr.Text);
             pg.TaBortPerson(personNr);
 
-
-
-
             personlista = pg.HämtaPerson();
 
             listboxPersoner.DataSource = personlista;
             listboxPersoner.DisplayMember = "FullständigaPersonUpp";
-
 
         }
 
@@ -203,35 +199,33 @@ namespace Cirkus_kul_och_bus
 
         private void btn_träningstillfälle_Click(object sender, EventArgs e)
         {
-            string plats, sammanfattning;
-            int datum, starttid, sluttid,träningsgruppsid;
+            personlista = new List<Person>();
+            listboxPersoner.DataSource = null;
+            träningstillfällen = new List<Träningstillfälle>();
 
+            listboxPersoner.DataSource = null;
+
+            string plats, sammanfattning;
+            int datum, starttid, sluttid, träningstillfälleid,träningsgrupp;
+          
             plats = tbx_plats.Text;
             sammanfattning = tbx_sammanfattning.Text;
             datum = int.Parse(tbx_datum.Text);
             starttid = int.Parse(tbx_starttid.Text);
             sluttid = int.Parse(tbx_sluttid.Text);
-            träningsgruppsid = int.Parse(tbx_träningsgruppsid.Text);
+            träningsgrupp = int.Parse(tbx_träningsgruppsid.Text);
+            träningstillfälleid = int.Parse(tbx_träningstillfälle.Text);
 
-            pg.LäggTillTräningstillfälle(datum, plats, starttid, sluttid, sammanfattning, träningsgruppsid);
+            
 
+            pg.LäggTillTräningstillfälle(träningstillfälleid,datum,plats,starttid,sluttid,sammanfattning,träningsgrupp);
+            
             träningstillfällen = pg.HämtaTräningsTillfälle();
 
             listboxPersoner.DataSource = träningstillfällen;
             listboxPersoner.DisplayMember = "TräningstillfällesInfo";
 
         }
-
-    
-     
-
-      
-
-      
-
-       
-       
-
-
     }
 }
+

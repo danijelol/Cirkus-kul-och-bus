@@ -91,6 +91,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.btn_träningstillfälle = new System.Windows.Forms.Button();
+            this.tbx_träningstillfälle = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -600,6 +601,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.tbx_träningstillfälle);
             this.tabPage4.Controls.Add(this.btn_träningstillfälle);
             this.tabPage4.Controls.Add(this.label17);
             this.tabPage4.Controls.Add(this.label16);
@@ -727,6 +729,13 @@
             this.btn_träningstillfälle.UseVisualStyleBackColor = true;
             this.btn_träningstillfälle.Click += new System.EventHandler(this.btn_träningstillfälle_Click);
             // 
+            // tbx_träningstillfälle
+            // 
+            this.tbx_träningstillfälle.Location = new System.Drawing.Point(303, 132);
+            this.tbx_träningstillfälle.Name = "tbx_träningstillfälle";
+            this.tbx_träningstillfälle.Size = new System.Drawing.Size(100, 20);
+            this.tbx_träningstillfälle.TabIndex = 13;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -818,6 +827,7 @@
         private System.Windows.Forms.TextBox tbx_starttid;
         private System.Windows.Forms.TextBox tbx_plats;
         private System.Windows.Forms.Button btn_träningstillfälle;
+        private System.Windows.Forms.TextBox tbx_träningstillfälle;
     }
 }
 
