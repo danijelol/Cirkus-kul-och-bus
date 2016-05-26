@@ -144,15 +144,12 @@ namespace Cirkus_kul_och_bus
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+    
+     
 
-        }
+      
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            
-        }
+      
 
        
        

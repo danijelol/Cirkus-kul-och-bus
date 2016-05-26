@@ -56,8 +56,10 @@ namespace Cirkus_kul_och_bus
 
         public List<Person> HämtaPerson() 
         {
+             
+
             Person nyperson;
-            string fråga = "select förnamn as\"förnamn\", efternamn as \"efternamn\", person_nr as \"personnummer\", adress as \"adress\", post_nr as \"postnummer\", telenr as \"telefonnummer\", kön as \"kön\", email as \"email\" from person";
+            string fråga = "select förnamn as\"förnamn\", efternamn as \"efternamn\", person_nr as \"personnummer\", adress as \"adress\", post_nr as \"postnummer\", telenr as \"telefonnummer\", kön as \"kön\", foto_ok as \"foto_ok\", email as \"email\", kontaktperson_namn as \"Kontaktperson\", kontaktperson_tele as \"Telefonnummer kontaktperson\", medlemstyp as \"Typ av medlem\" from person";
             _dr = sqlFråga(fråga);
             List<Person> personlista = new List<Person>();
             
@@ -73,6 +75,10 @@ namespace Cirkus_kul_och_bus
                  TelefonNr =  _dr["telefonnummer"].ToString(),
                  Kon = _dr["kön"].ToString(),
                  Email = _dr["email"].ToString(),
+                 Kontaktperson = _dr["Kontaktperson"].ToString(),
+                 KontaktpersonTelenr = _dr["Telefonnummer kontaktperson"].ToString(),
+                 Medlemstyp = (int)_dr["Typ av medlem"],
+
                  //Foto = _dr["foto"]
              };
              personlista.Add(nyperson);

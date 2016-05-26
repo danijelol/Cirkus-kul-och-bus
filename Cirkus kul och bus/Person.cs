@@ -19,7 +19,6 @@ namespace Cirkus_kul_och_bus
         public bool Foto { get; set; }              //foto_ok
         private string Fotostring { get; set; }
 
-        public int MedlemsNr { get; set; }
         public string Kontaktperson { get; set; }
         public string KontaktpersonTelenr { get; set; }
         public int Medlemstyp { get; set; }
@@ -31,13 +30,14 @@ namespace Cirkus_kul_och_bus
                 if (Foto == true)
                 {
                     Fotostring = "JA";
-                    return Fornamn + "\t" + Efternamn + "\t" + PersonNr.ToString() + "\t" + PostNr + "\t" + Adress + "\t" + Email + "\t" + TelefonNr + "\t" + Kon + "\t" + Fotostring;
+                    return Fornamn + "\t" + Efternamn + "\t" + PersonNr.ToString() + "\t" + PostNr + "\t" + Adress + "\t" + Email + "\t" + TelefonNr + "\t" + Kon + "\t" + Fotostring + "\t" + Kontaktperson + "\t" +KontaktpersonTelenr + "\t" +Medlemstyp;
                 }
 
                 else
                 {
                     Fotostring = "NEJ";
-                    return Fornamn + "\t" + Efternamn + "\t" + PersonNr.ToString() + "\t" + PostNr + "\t" + Adress + "\t" + Email + "\t" + TelefonNr + "\t" + Kon + "\t" + Fotostring;
+                    return Fornamn + "\t" + Efternamn + "\t" + PersonNr.ToString() + "\t" + PostNr + "\t" + Adress + "\t" + Email + "\t" + TelefonNr + "\t" + Kon + "\t" + Fotostring + "\t" + Kontaktperson + "\t" + KontaktpersonTelenr + "\t" + Medlemstyp;
+
                 }
             }
         }
