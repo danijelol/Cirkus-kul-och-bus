@@ -26,7 +26,8 @@ namespace Cirkus_kul_och_bus
 
         private void button1_Click(object sender, EventArgs e)
         {
-            personlista = new List<Person>();    
+            personlista = new List<Person>();  
+  
          
             personlista = pg.HämtaPerson();
                                           
@@ -39,7 +40,10 @@ namespace Cirkus_kul_och_bus
 
         private void btn_läggTillPers_Click(object sender, EventArgs e)
         {
-            
+
+            personlista = new List<Person>();
+            listboxPersoner.DataSource = null;
+
             string fnamn, enamn, postAdress, email, kon, postNr, teleNr;
             int personNr;
             bool fotoOk;
@@ -56,6 +60,12 @@ namespace Cirkus_kul_och_bus
             fotoOk = cBoxJa.Checked;
 
             pg.LäggTillPerson(personNr, fnamn, enamn, postNr, postAdress, email, teleNr, kon, fotoOk);
+
+            personlista = pg.HämtaPerson();
+
+            listboxPersoner.DataSource = personlista;
+            listboxPersoner.DisplayMember = "FullständigtNamn";
+
         }
 
         private void listboxPersoner_SelectedIndexChanged(object sender, EventArgs e)
@@ -67,17 +77,20 @@ namespace Cirkus_kul_och_bus
 
         private void btn_tabort_Click(object sender, EventArgs e)
         {
-
+            personlista = new List<Person>();
             listboxPersoner.DataSource = null;
 
             int personNr = int.Parse(tbx_personNr.Text);
             pg.TaBortPerson(personNr);
 
-           
+
+
+
             personlista = pg.HämtaPerson();
 
             listboxPersoner.DataSource = personlista;
             listboxPersoner.DisplayMember = "FullständigtNamn";
+
 
         }
 
@@ -86,6 +99,11 @@ namespace Cirkus_kul_och_bus
             string fnamn, enamn, postAdress, email, kon, postNr, teleNr;
             int personNr;
             bool fotoOk;
+
+
+            personlista = new List<Person>();
+            listboxPersoner.DataSource = null;
+
 
             fnamn = tbx_fornamn.Text;
             enamn = tbx_efternamn.Text;
@@ -99,6 +117,22 @@ namespace Cirkus_kul_och_bus
             fotoOk = cBoxJa.Checked;
 
             pg.UppdateraPerson(fnamn, enamn, postNr, postAdress, email, teleNr, fotoOk, personNr);
+
+            personlista = pg.HämtaPerson();
+
+            listboxPersoner.DataSource = personlista;
+            listboxPersoner.DisplayMember = "FullständigtNamn";
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            
         }
 
        
