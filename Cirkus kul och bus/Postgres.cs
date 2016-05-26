@@ -102,7 +102,7 @@ namespace Cirkus_kul_och_bus
                 
                 _cmd.ExecuteNonQuery();
                 sqlNonQuery("commit");
-                _conn.Close();
+                //_conn.Close(); tar bort denna för att den ligger i metoden HämtaPerson()
             }
        } 
 
@@ -118,7 +118,6 @@ namespace Cirkus_kul_och_bus
                 
                 _cmd.ExecuteNonQuery();
                 sqlNonQuery("commit");
-                _conn.Close();
             }
         }
 
@@ -142,7 +141,6 @@ namespace Cirkus_kul_och_bus
 
                _cmd.ExecuteNonQuery();
                sqlNonQuery("commit");
-               _conn.Close();
            }
        }
    }
