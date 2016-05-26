@@ -36,30 +36,31 @@ namespace Cirkus_kul_och_bus
            }
         }
 
-        private NpgsqlDataReader sqlFråga(string fråga) 
-        {
-            try
-            {
-                _cmd = new NpgsqlCommand(fråga, _conn);
-                _dr = _cmd.ExecuteReader();
+       private NpgsqlDataReader sqlFråga(string fråga)
+       {
+           try
+           {
+               _cmd = new NpgsqlCommand(fråga, _conn);
+               _dr = _cmd.ExecuteReader();
 
-                return _dr;
-            }
+               return _dr;
+           }
 
-            catch (NpgsqlException ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+           catch (NpgsqlException ex)
+           {
+               System.Windows.Forms.MessageBox.Show(ex.Message);
 
-                return null;
-            }
-        }
+               return null;
+           }
+       }
 
         public List<Person> HämtaPerson() 
         {
+            Person nyperson;
             string fråga = "select förnamn as\"förnamn\", efternamn as \"efternamn\", person_nr as \"personnummer\", adress as \"adress\", post_nr as \"postnummer\", telenr as \"telefonnummer\", kön as \"kön\", email as \"email\" from person";
             _dr = sqlFråga(fråga);
-            Person nyperson;
             List<Person> personlista = new List<Person>();
+            
             while (_dr.Read())
             {
                 nyperson = new Person()
@@ -73,15 +74,12 @@ namespace Cirkus_kul_och_bus
                  Kon = _dr["kön"].ToString(),
                  Email = _dr["email"].ToString(),
                  //Foto = _dr["foto"]
-
              };
 
              personlista.Add(nyperson);
-         }
+            }
             return personlista;
-        }
-        
-
+        }        
 
        public void LäggTillPerson(int personnummer, string fornamn, string efternamn, string postnummer, string adress, string email, string telefonnummer, string kon, bool foto)
         {
@@ -113,12 +111,10 @@ namespace Cirkus_kul_och_bus
             _conn = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["cirkus"].ConnectionString);
             {
                 _conn.Open();
-                sqlNonQuery("begin");           
-                
+                sqlNonQuery("begin"); 
+           
                 _cmd = new NpgsqlCommand("DELETE FROM person WHERE person_nr=@person_nr", _conn);
-
                 _cmd.Parameters.AddWithValue("@person_nr", personnummer);
-
                 
                 _cmd.ExecuteNonQuery();
                 sqlNonQuery("commit");
