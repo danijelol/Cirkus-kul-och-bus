@@ -135,7 +135,7 @@ namespace Cirkus_kul_och_bus
         public List<Träningstillfälle> HämtaNärvaro()
         {
             Träningstillfälle närvarande;
-            string fråga = "select person_nr as\"Personnummer\", as \"Namn\" from träningsgrupp";
+            string fråga = "select n.träningtillfälles_id as \"Träningstillfälle\", p.person_nr as \"Personnummer\", p.förnamn as \"Fornamn\", p.efternamn as \"Efternamn\", tt.datum as \"Datum\", tt.starttid as \"Starttid\", tt.sluttid as \"Sluttid\", tt.sammanfattning as \"Sammanfattning\" from närvaro n inner join träningstillfälle tt on tt.träningstillfälles_id = n.träningtillfälles_id inner join person p on p.person_nr = n.person_nr";
             _dr = sqlFråga(fråga);
             List<Träningstillfälle> närvarolista = new List<Träningstillfälle>();
 
@@ -143,16 +143,16 @@ namespace Cirkus_kul_och_bus
             {
                 närvarande = new Träningstillfälle()
                 {
-                    PersonNr = (int)_dr["Personnummer"],
                     Id = (int)_dr["Träningstillfälle"],
-                    Träningsgrupps_id = (int)_dr["Träningsgrupp"],
+                    PersonNr = (int)_dr["Personnummer"],
+                    Fornamn = _dr["Fornamn"].ToString(),
+                    Efternamn = _dr["Efternamn"].ToString(),
                     Datum = (int)_dr["Datum"],
                     StartTid = (int)_dr["Starttid"],
                     SlutTid = (int)_dr["Sluttid"],
                     Sammanfattning = _dr["Sammanfattning"].ToString(),
-                    Fornamn = _dr["Fornamn"].ToString(),
-                    Efternamn = _dr["Efternamn"].ToString(),
-                    Medlemstyp = (int)_dr["Medlemstyp"]
+                    
+                    
 
                 };
                 närvarolista.Add(närvarande);

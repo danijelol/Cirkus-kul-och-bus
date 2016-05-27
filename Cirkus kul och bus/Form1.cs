@@ -249,7 +249,7 @@ namespace Cirkus_kul_och_bus
             utskrift = pg.HämtaNärvaro();
             listboxPersoner.DataSource = utskrift;
 
-            listboxPersoner.DisplayMember = "FullständigaPersonUpp";
+            listboxPersoner.DisplayMember = "UtskriftsInfo";
             
         }
     }
