@@ -15,7 +15,7 @@ namespace Cirkus_kul_och_bus
         {
             get
             {
-                return "Träningsgrupp: "+ Id + "\t"+"Namn " + Namn;
+                return "Träningsgrupp: "+ Id + "\t"+"Namn: " + Namn;
             }
         }
     }
