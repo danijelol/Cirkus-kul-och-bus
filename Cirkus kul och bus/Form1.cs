@@ -148,28 +148,31 @@ namespace Cirkus_kul_och_bus
         {
             Person aktuellPerson = new Person();
 
-            aktuellPerson = (Person)listboxPersoner.SelectedItem;
-
-
-            if (aktuellPerson != null)
+            try
             {
-
-                tbx_fornamn.Text = aktuellPerson.Fornamn;
-                tbx_efternamn.Text = aktuellPerson.Efternamn;
-                tbx_adress.Text = aktuellPerson.Adress;
-                tbx_email.Text = aktuellPerson.Email;
-                tbx_personNr.Text = aktuellPerson.PersonNr.ToString();
-
-                tbx_postNr.Text = aktuellPerson.PostNr;
-                tbx_kon.Text = aktuellPerson.Kon;
-                tbx_teleNr.Text = aktuellPerson.TelefonNr;
-                cBoxJa.Checked = aktuellPerson.Foto;
-                tbx_kontaktperson.Text = aktuellPerson.Kontaktperson;
-                tbx_kontakpersonnr.Text = aktuellPerson.KontaktpersonTelenr;
+                aktuellPerson = (Person)listboxPersoner.SelectedItem;
 
 
+                if (aktuellPerson != null)
+                {
+
+                    tbx_fornamn.Text = aktuellPerson.Fornamn;
+                    tbx_efternamn.Text = aktuellPerson.Efternamn;
+                    tbx_adress.Text = aktuellPerson.Adress;
+                    tbx_email.Text = aktuellPerson.Email;
+                    tbx_personNr.Text = aktuellPerson.PersonNr.ToString();
+
+                    tbx_postNr.Text = aktuellPerson.PostNr;
+                    tbx_kon.Text = aktuellPerson.Kon;
+                    tbx_teleNr.Text = aktuellPerson.TelefonNr;
+                    cBoxJa.Checked = aktuellPerson.Foto;
+                    tbx_kontaktperson.Text = aktuellPerson.Kontaktperson;
+                    tbx_kontakpersonnr.Text = aktuellPerson.KontaktpersonTelenr;
+
+
+                }
             }
-
+            catch { }
 
         }
 
@@ -350,6 +353,11 @@ namespace Cirkus_kul_och_bus
         }
 
         private void rbt_provapa_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
         {
 
         }
