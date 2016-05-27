@@ -52,6 +52,9 @@
             this.label13 = new System.Windows.Forms.Label();
             this.Datum = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.listboxLedare = new System.Windows.Forms.ListBox();
             this.btn_hämtaNärvaro = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -98,9 +101,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.listboxLedare = new System.Windows.Forms.ListBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
+            this.tbx_startdatum = new System.Windows.Forms.TextBox();
+            this.tbx_slutdatum = new System.Windows.Forms.TextBox();
+            this.btn_datum = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -329,6 +332,9 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.btn_datum);
+            this.tabPage3.Controls.Add(this.tbx_slutdatum);
+            this.tabPage3.Controls.Add(this.tbx_startdatum);
             this.tabPage3.Controls.Add(this.label21);
             this.tabPage3.Controls.Add(this.label20);
             this.tabPage3.Controls.Add(this.listboxLedare);
@@ -345,6 +351,35 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Närvaro";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(11, 221);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(190, 23);
+            this.label21.TabIndex = 13;
+            this.label21.Text = "Hämta närvaro och ledare";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(11, 35);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(123, 23);
+            this.label20.TabIndex = 12;
+            this.label20.Text = "Lägg till närvaro:";
+            this.label20.Click += new System.EventHandler(this.label20_Click);
+            // 
+            // listboxLedare
+            // 
+            this.listboxLedare.FormattingEnabled = true;
+            this.listboxLedare.Location = new System.Drawing.Point(315, 0);
+            this.listboxLedare.Name = "listboxLedare";
+            this.listboxLedare.Size = new System.Drawing.Size(208, 342);
+            this.listboxLedare.TabIndex = 11;
             // 
             // btn_hämtaNärvaro
             // 
@@ -797,34 +832,29 @@
             this.tabControl1.Size = new System.Drawing.Size(537, 618);
             this.tabControl1.TabIndex = 30;
             // 
-            // listboxLedare
+            // tbx_startdatum
             // 
-            this.listboxLedare.FormattingEnabled = true;
-            this.listboxLedare.Location = new System.Drawing.Point(315, 0);
-            this.listboxLedare.Name = "listboxLedare";
-            this.listboxLedare.Size = new System.Drawing.Size(208, 342);
-            this.listboxLedare.TabIndex = 11;
+            this.tbx_startdatum.Location = new System.Drawing.Point(40, 371);
+            this.tbx_startdatum.Name = "tbx_startdatum";
+            this.tbx_startdatum.Size = new System.Drawing.Size(100, 20);
+            this.tbx_startdatum.TabIndex = 14;
             // 
-            // label20
+            // tbx_slutdatum
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(11, 35);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(123, 23);
-            this.label20.TabIndex = 12;
-            this.label20.Text = "Lägg till närvaro:";
-            this.label20.Click += new System.EventHandler(this.label20_Click);
+            this.tbx_slutdatum.Location = new System.Drawing.Point(169, 371);
+            this.tbx_slutdatum.Name = "tbx_slutdatum";
+            this.tbx_slutdatum.Size = new System.Drawing.Size(100, 20);
+            this.tbx_slutdatum.TabIndex = 15;
             // 
-            // label21
+            // btn_datum
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(11, 221);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(190, 23);
-            this.label21.TabIndex = 13;
-            this.label21.Text = "Hämta närvaro och ledare";
+            this.btn_datum.Location = new System.Drawing.Point(315, 367);
+            this.btn_datum.Name = "btn_datum";
+            this.btn_datum.Size = new System.Drawing.Size(75, 23);
+            this.btn_datum.TabIndex = 16;
+            this.btn_datum.Text = "button1";
+            this.btn_datum.UseVisualStyleBackColor = true;
+            this.btn_datum.Click += new System.EventHandler(this.btn_datum_Click);
             // 
             // Form1
             // 
@@ -933,6 +963,9 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.ListBox listboxLedare;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Button btn_datum;
+        private System.Windows.Forms.TextBox tbx_slutdatum;
+        private System.Windows.Forms.TextBox tbx_startdatum;
     }
 }
 

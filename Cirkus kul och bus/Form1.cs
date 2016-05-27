@@ -267,6 +267,24 @@ namespace Cirkus_kul_och_bus
         {
 
         }
+
+        private void btn_datum_Click(object sender, EventArgs e)
+        {
+            int startdatum, slutdatum;
+
+            utskrift = new List<Träningstillfälle>();
+                
+                startdatum = int.Parse(tbx_startdatum.Text);
+            slutdatum = int.Parse(tbx_slutdatum.Text);
+
+            utskrift = pg.HämtaNärvaroDatum(startdatum, slutdatum);
+
+            utskrift = pg.HämtaNärvaro();
+            listboxPersoner.DataSource = utskrift;
+            listboxPersoner.DisplayMember = "UtskriftsInfo";
+
+
+        }
     }
 }
 
