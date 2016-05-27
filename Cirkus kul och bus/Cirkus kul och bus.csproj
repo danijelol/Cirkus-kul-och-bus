@@ -122,6 +122,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Mono.Security.dll" />
+    <Content Include="Npgsql.dll" />
     <Content Include="Postgres\Mono.Security.dll" />
     <Content Include="Postgres\Npgsql.dll" />
   </ItemGroup>

@@ -52,6 +52,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.Datum = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btn_hämtaNärvaro = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.tbx_närvaroId = new System.Windows.Forms.TextBox();
@@ -97,7 +98,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.btn_hämtaNärvaro = new System.Windows.Forms.Button();
+            this.listboxLedare = new System.Windows.Forms.ListBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -326,17 +329,15 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.label21);
+            this.tabPage3.Controls.Add(this.label20);
+            this.tabPage3.Controls.Add(this.listboxLedare);
             this.tabPage3.Controls.Add(this.btn_hämtaNärvaro);
             this.tabPage3.Controls.Add(this.label19);
             this.tabPage3.Controls.Add(this.label18);
             this.tabPage3.Controls.Add(this.tbx_närvaroId);
             this.tabPage3.Controls.Add(this.tbx_närvaroPers);
             this.tabPage3.Controls.Add(this.btn_närvaro);
-            this.tabPage3.Controls.Add(this.checkBox5);
-            this.tabPage3.Controls.Add(this.checkBox4);
-            this.tabPage3.Controls.Add(this.checkBox3);
-            this.tabPage3.Controls.Add(this.checkBox2);
-            this.tabPage3.Controls.Add(this.checkBox1);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -345,10 +346,20 @@
             this.tabPage3.Text = "Närvaro";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // btn_hämtaNärvaro
+            // 
+            this.btn_hämtaNärvaro.Location = new System.Drawing.Point(59, 257);
+            this.btn_hämtaNärvaro.Name = "btn_hämtaNärvaro";
+            this.btn_hämtaNärvaro.Size = new System.Drawing.Size(75, 23);
+            this.btn_hämtaNärvaro.TabIndex = 10;
+            this.btn_hämtaNärvaro.Text = "Hämta";
+            this.btn_hämtaNärvaro.UseVisualStyleBackColor = true;
+            this.btn_hämtaNärvaro.Click += new System.EventHandler(this.btn_hämtaNärvaro_Click);
+            // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(272, 373);
+            this.label19.Location = new System.Drawing.Point(12, 68);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(71, 13);
             this.label19.TabIndex = 9;
@@ -357,7 +368,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(149, 364);
+            this.label18.Location = new System.Drawing.Point(12, 114);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(76, 13);
             this.label18.TabIndex = 8;
@@ -365,21 +376,21 @@
             // 
             // tbx_närvaroId
             // 
-            this.tbx_närvaroId.Location = new System.Drawing.Point(152, 380);
+            this.tbx_närvaroId.Location = new System.Drawing.Point(15, 130);
             this.tbx_närvaroId.Name = "tbx_närvaroId";
             this.tbx_närvaroId.Size = new System.Drawing.Size(100, 20);
             this.tbx_närvaroId.TabIndex = 7;
             // 
             // tbx_närvaroPers
             // 
-            this.tbx_närvaroPers.Location = new System.Drawing.Point(275, 389);
+            this.tbx_närvaroPers.Location = new System.Drawing.Point(15, 84);
             this.tbx_närvaroPers.Name = "tbx_närvaroPers";
             this.tbx_närvaroPers.Size = new System.Drawing.Size(100, 20);
             this.tbx_närvaroPers.TabIndex = 6;
             // 
             // btn_närvaro
             // 
-            this.btn_närvaro.Location = new System.Drawing.Point(125, 454);
+            this.btn_närvaro.Location = new System.Drawing.Point(40, 167);
             this.btn_närvaro.Name = "btn_närvaro";
             this.btn_närvaro.Size = new System.Drawing.Size(75, 23);
             this.btn_närvaro.TabIndex = 5;
@@ -390,7 +401,7 @@
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(125, 286);
+            this.checkBox5.Location = new System.Drawing.Point(1021, 653);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(80, 17);
             this.checkBox5.TabIndex = 4;
@@ -400,7 +411,7 @@
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(223, 267);
+            this.checkBox4.Location = new System.Drawing.Point(1119, 634);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(80, 17);
             this.checkBox4.TabIndex = 3;
@@ -410,7 +421,7 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(223, 218);
+            this.checkBox3.Location = new System.Drawing.Point(1119, 585);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(80, 17);
             this.checkBox3.TabIndex = 2;
@@ -420,7 +431,7 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(223, 161);
+            this.checkBox2.Location = new System.Drawing.Point(1119, 528);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(80, 17);
             this.checkBox2.TabIndex = 1;
@@ -430,7 +441,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(223, 114);
+            this.checkBox1.Location = new System.Drawing.Point(1119, 481);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(80, 17);
             this.checkBox1.TabIndex = 0;
@@ -786,15 +797,34 @@
             this.tabControl1.Size = new System.Drawing.Size(537, 618);
             this.tabControl1.TabIndex = 30;
             // 
-            // btn_hämtaNärvaro
+            // listboxLedare
             // 
-            this.btn_hämtaNärvaro.Location = new System.Drawing.Point(300, 454);
-            this.btn_hämtaNärvaro.Name = "btn_hämtaNärvaro";
-            this.btn_hämtaNärvaro.Size = new System.Drawing.Size(75, 23);
-            this.btn_hämtaNärvaro.TabIndex = 10;
-            this.btn_hämtaNärvaro.Text = "Hämta Lista";
-            this.btn_hämtaNärvaro.UseVisualStyleBackColor = true;
-            this.btn_hämtaNärvaro.Click += new System.EventHandler(this.btn_hämtaNärvaro_Click);
+            this.listboxLedare.FormattingEnabled = true;
+            this.listboxLedare.Location = new System.Drawing.Point(315, 0);
+            this.listboxLedare.Name = "listboxLedare";
+            this.listboxLedare.Size = new System.Drawing.Size(208, 342);
+            this.listboxLedare.TabIndex = 11;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(11, 35);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(123, 23);
+            this.label20.TabIndex = 12;
+            this.label20.Text = "Lägg till närvaro:";
+            this.label20.Click += new System.EventHandler(this.label20_Click);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(11, 221);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(190, 23);
+            this.label21.TabIndex = 13;
+            this.label21.Text = "Hämta närvaro och ledare";
             // 
             // Form1
             // 
@@ -805,6 +835,11 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.listboxPersoner);
+            this.Controls.Add(this.checkBox4);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.checkBox5);
+            this.Controls.Add(this.checkBox3);
             this.Name = "Form1";
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
@@ -819,6 +854,7 @@
             this.groupBox2.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -894,6 +930,9 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button btn_hämtaNärvaro;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.ListBox listboxLedare;
+        private System.Windows.Forms.Label label21;
     }
 }
 
