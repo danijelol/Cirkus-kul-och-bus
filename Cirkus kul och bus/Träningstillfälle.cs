@@ -20,7 +20,7 @@ namespace Cirkus_kul_och_bus
         {
             get
             {
-                return Id + "\t" + Datum + "\t" + Plats + "\t" + StartTid + "\t" + SlutTid + "\t" + Sammanfattning + "\t" + Träningsgrupps_id;
+                return "Träningstillfälle: "+ Id + "\t"+"Datum: " + Datum + "\t"+ "Plats: " + Plats + "\t"+"Starttid: " + StartTid + "\t"+"Sluttid: " + SlutTid + "\t" + "Sammanfattning: "+ Sammanfattning + "\t"+"Träningsgrupp: " + Träningsgrupps_id;
             }
         }
 
@@ -28,7 +28,7 @@ namespace Cirkus_kul_och_bus
          {
             get
              {
-                 return Id + "\t" + Datum + "\t" + StartTid + "\t" + SlutTid + "\t" + Sammanfattning  + "\t" + PersonNr + "\t" + Fornamn + "\t" + Efternamn;
+                 return "Träningstillfälle: " + Id + "\t" + "Datum: " + Datum + "\t" + "Starttid: " + StartTid + "\t" +"Sluttid: " +SlutTid + "\t" +"Sammanfattning: "+ Sammanfattning + "\t"+"PersonNr: " + PersonNr + "\t"+"Förnamn: " + Fornamn + "\t"+ "Efternamn: " + Efternamn;
              }
          }
 
@@ -36,7 +36,7 @@ namespace Cirkus_kul_och_bus
         {
             get
             {
-                return Fornamn + "\t" + Efternamn + "\t" + Id;
+                return "Förnamn: "+Fornamn + "\t"+"Efetrnamn: " + Efternamn + "\t"+"Träningstillfälle " + Id;
             }
         }
 

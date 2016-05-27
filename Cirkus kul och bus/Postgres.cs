@@ -78,8 +78,7 @@ namespace Cirkus_kul_och_bus
                  Kontaktperson = _dr["Kontaktperson"].ToString(),
                  KontaktpersonTelenr = _dr["Telefonnummer kontaktperson"].ToString(),
                  Medlemstyp = (int)_dr["Typ av medlem"]
-                 
-                 
+                                
              };
              personlista.Add(nyperson);
             }
@@ -150,9 +149,7 @@ namespace Cirkus_kul_och_bus
                     Datum = (int)_dr["Datum"],
                     StartTid = (int)_dr["Starttid"],
                     SlutTid = (int)_dr["Sluttid"],
-                    Sammanfattning = _dr["Sammanfattning"].ToString(),
-                    
-                    
+                    Sammanfattning = _dr["Sammanfattning"].ToString(),                                    
 
                 };
                 närvarolista.Add(närvarande);
@@ -180,8 +177,6 @@ namespace Cirkus_kul_och_bus
                     SlutTid = (int)_dr["Sluttid"],
                     Sammanfattning = _dr["Sammanfattning"].ToString(),
 
-
-
                 };
                 närvarolista.Add(närvarande);
             }
@@ -207,8 +202,6 @@ namespace Cirkus_kul_och_bus
                     StartTid = (int)_dr["Starttid"],
                     SlutTid = (int)_dr["Sluttid"],
                     Sammanfattning = _dr["Sammanfattning"].ToString(),
-
-
 
                 };
                 närvarolista.Add(närvarande);
@@ -236,8 +229,6 @@ namespace Cirkus_kul_och_bus
                     StartTid = (int)_dr["Starttid"],
                     SlutTid = (int)_dr["Sluttid"],
                     Sammanfattning = _dr["Sammanfattning"].ToString(),
-
-
 
                 };
                 närvarolista.Add(närvarande);
@@ -284,7 +275,6 @@ namespace Cirkus_kul_och_bus
 
             }
         }
-
 
 
         public void LäggTillTräningstillfälle(int t, int datum, string plats, int starttid, int sluttid, string sammanfattning, int träningsgrupp)

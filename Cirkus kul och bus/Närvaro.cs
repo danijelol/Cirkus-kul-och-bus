@@ -15,7 +15,7 @@ namespace Cirkus_kul_och_bus
         {
             get
             {
-                return PersonNummer + "\t" + Träningstillfälle_id;
+                return "PersonNr: " + PersonNummer + "\t" + "Träningstillfälle "+Träningstillfälle_id;
             }
         }
     }
