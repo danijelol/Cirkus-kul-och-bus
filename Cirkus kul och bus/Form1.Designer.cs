@@ -34,7 +34,6 @@
             this.rbtn_träning = new System.Windows.Forms.RadioButton();
             this.rbtn_Person = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tbx_sok = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label12 = new System.Windows.Forms.Label();
             this.tbx_träningstillfälle = new System.Windows.Forms.TextBox();
@@ -69,11 +68,6 @@
             this.tbx_närvaroId = new System.Windows.Forms.TextBox();
             this.tbx_närvaroPers = new System.Windows.Forms.TextBox();
             this.btn_närvaro = new System.Windows.Forms.Button();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rbt_uppdrag = new System.Windows.Forms.RadioButton();
@@ -173,7 +167,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.tbx_sok);
             this.groupBox1.Controls.Add(this.rbtn_träning);
             this.groupBox1.Controls.Add(this.btnHämta);
             this.groupBox1.Controls.Add(this.rbtn_träningsgrupp);
@@ -183,13 +176,6 @@
             this.groupBox1.Size = new System.Drawing.Size(343, 129);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
-            // 
-            // tbx_sok
-            // 
-            this.tbx_sok.Location = new System.Drawing.Point(31, 20);
-            this.tbx_sok.Name = "tbx_sok";
-            this.tbx_sok.Size = new System.Drawing.Size(100, 20);
-            this.tbx_sok.TabIndex = 3;
             // 
             // tabPage4
             // 
@@ -219,15 +205,15 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(269, 167);
+            this.label12.Location = new System.Drawing.Point(24, 318);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(41, 13);
+            this.label12.Size = new System.Drawing.Size(76, 13);
             this.label12.TabIndex = 14;
-            this.label12.Text = "label12";
+            this.label12.Text = "Träningstillfälle";
             // 
             // tbx_träningstillfälle
             // 
-            this.tbx_träningstillfälle.Location = new System.Drawing.Point(272, 203);
+            this.tbx_träningstillfälle.Location = new System.Drawing.Point(27, 338);
             this.tbx_träningstillfälle.Name = "tbx_träningstillfälle";
             this.tbx_träningstillfälle.Size = new System.Drawing.Size(100, 20);
             this.tbx_träningstillfälle.TabIndex = 13;
@@ -276,7 +262,7 @@
             // 
             // btn_träningstillfälle
             // 
-            this.btn_träningstillfälle.Location = new System.Drawing.Point(25, 330);
+            this.btn_träningstillfälle.Location = new System.Drawing.Point(27, 364);
             this.btn_träningstillfälle.Name = "btn_träningstillfälle";
             this.btn_träningstillfälle.Size = new System.Drawing.Size(131, 23);
             this.btn_träningstillfälle.TabIndex = 12;
@@ -464,6 +450,7 @@
             this.listboxLedare.Name = "listboxLedare";
             this.listboxLedare.Size = new System.Drawing.Size(208, 342);
             this.listboxLedare.TabIndex = 11;
+            this.listboxLedare.SelectedIndexChanged += new System.EventHandler(this.listboxLedare_SelectedIndexChanged);
             // 
             // btn_hämtaNärvaro
             // 
@@ -516,56 +503,6 @@
             this.btn_närvaro.Text = "Lägg Till";
             this.btn_närvaro.UseVisualStyleBackColor = true;
             this.btn_närvaro.Click += new System.EventHandler(this.btn_närvaro_Click);
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(1021, 653);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(80, 17);
-            this.checkBox5.TabIndex = 4;
-            this.checkBox5.Text = "checkBox5";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(1119, 634);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(80, 17);
-            this.checkBox4.TabIndex = 3;
-            this.checkBox4.Text = "checkBox4";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(1119, 585);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(80, 17);
-            this.checkBox3.TabIndex = 2;
-            this.checkBox3.Text = "checkBox3";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(1119, 528);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(80, 17);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(1119, 481);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // tabPage1
             // 
@@ -624,10 +561,10 @@
             this.rbt_uppdrag.AutoSize = true;
             this.rbt_uppdrag.Location = new System.Drawing.Point(19, 171);
             this.rbt_uppdrag.Name = "rbt_uppdrag";
-            this.rbt_uppdrag.Size = new System.Drawing.Size(114, 17);
+            this.rbt_uppdrag.Size = new System.Drawing.Size(111, 17);
             this.rbt_uppdrag.TabIndex = 4;
             this.rbt_uppdrag.TabStop = true;
-            this.rbt_uppdrag.Text = "Uppdrags ansvarig";
+            this.rbt_uppdrag.Text = "Uppdragsansvarig";
             this.rbt_uppdrag.UseVisualStyleBackColor = true;
             // 
             // rbt_ledare
@@ -646,10 +583,10 @@
             this.rbt_cirkusvan.AutoSize = true;
             this.rbt_cirkusvan.Location = new System.Drawing.Point(19, 105);
             this.rbt_cirkusvan.Name = "rbt_cirkusvan";
-            this.rbt_cirkusvan.Size = new System.Drawing.Size(81, 17);
+            this.rbt_cirkusvan.Size = new System.Drawing.Size(78, 17);
             this.rbt_cirkusvan.TabIndex = 2;
             this.rbt_cirkusvan.TabStop = true;
-            this.rbt_cirkusvan.Text = "Cirkus vänn";
+            this.rbt_cirkusvan.Text = "Cirkusvänn";
             this.rbt_cirkusvan.UseVisualStyleBackColor = true;
             // 
             // rbt_ledareansvarig
@@ -671,8 +608,9 @@
             this.rbt_provapa.Size = new System.Drawing.Size(68, 17);
             this.rbt_provapa.TabIndex = 1;
             this.rbt_provapa.TabStop = true;
-            this.rbt_provapa.Text = "Prova på";
+            this.rbt_provapa.Text = "Prova-på";
             this.rbt_provapa.UseVisualStyleBackColor = true;
+            this.rbt_provapa.CheckedChanged += new System.EventHandler(this.rbt_provapa_CheckedChanged);
             // 
             // rbt_medlem
             // 
@@ -764,7 +702,7 @@
             // 
             // tbx_email
             // 
-            this.tbx_email.Location = new System.Drawing.Point(16, 313);
+            this.tbx_email.Location = new System.Drawing.Point(19, 313);
             this.tbx_email.Name = "tbx_email";
             this.tbx_email.Size = new System.Drawing.Size(100, 20);
             this.tbx_email.TabIndex = 34;
@@ -872,7 +810,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 293);
+            this.label4.Location = new System.Drawing.Point(18, 293);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 40;
@@ -881,7 +819,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 336);
+            this.label3.Location = new System.Drawing.Point(18, 336);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 13);
             this.label3.TabIndex = 39;
@@ -951,11 +889,6 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.listboxPersoner);
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox5);
-            this.Controls.Add(this.checkBox3);
             this.Name = "Form1";
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
@@ -970,7 +903,6 @@
             this.groupBox2.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -982,7 +914,6 @@
         private System.Windows.Forms.RadioButton rbtn_träning;
         private System.Windows.Forms.RadioButton rbtn_Person;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox tbx_sok;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox tbx_träningstillfälle;
@@ -1003,11 +934,6 @@
         private System.Windows.Forms.TextBox tbx_närvaroId;
         private System.Windows.Forms.TextBox tbx_närvaroPers;
         private System.Windows.Forms.Button btn_närvaro;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton rbt_uppdrag;

@@ -146,7 +146,29 @@ namespace Cirkus_kul_och_bus
 
         private void listboxPersoner_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Person aktuellPerson = new Person();
 
+            aktuellPerson = (Person)listboxPersoner.SelectedItem;
+
+
+            if (aktuellPerson != null)
+            {
+
+                tbx_fornamn.Text = aktuellPerson.Fornamn;
+                tbx_efternamn.Text = aktuellPerson.Efternamn;
+                tbx_adress.Text = aktuellPerson.Adress;
+                tbx_email.Text = aktuellPerson.Email;
+                tbx_personNr.Text = aktuellPerson.PersonNr.ToString();
+
+                tbx_postNr.Text = aktuellPerson.PostNr;
+                tbx_kon.Text = aktuellPerson.Kon;
+                tbx_teleNr.Text = aktuellPerson.TelefonNr;
+                cBoxJa.Checked = aktuellPerson.Foto;
+                tbx_kontaktperson.Text = aktuellPerson.Kontaktperson;
+                tbx_kontakpersonnr.Text = aktuellPerson.KontaktpersonTelenr;
+
+
+            }
 
 
         }
@@ -320,6 +342,16 @@ namespace Cirkus_kul_och_bus
 
             listboxPersoner.DataSource = utskrift;
             listboxPersoner.DisplayMember = "UtskriftsInfo";
+        }
+
+        private void listboxLedare_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbt_provapa_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
