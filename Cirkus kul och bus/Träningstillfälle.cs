@@ -36,7 +36,7 @@ namespace Cirkus_kul_och_bus
         {
             get
             {
-                return "Förnamn: "+Fornamn + "\t"+"Efetrnamn: " + Efternamn + "\t"+"Träningstillfälle " + Id;
+                return "Förnamn: "+Fornamn + "\t"+"Efternamn: " + Efternamn + "\t"+"Träningstillfälle " + Id;
             }
         }
 
