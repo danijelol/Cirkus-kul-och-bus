@@ -24,6 +24,7 @@ namespace Cirkus_kul_och_bus
         List<Träningsgrupp> träningsgrupper = new List<Träningsgrupp>();
         Postgres pg = new Postgres();
         List<Närvaro> närvarolista = new List<Närvaro>();
+        List<Träningstillfälle> utskrift = new List<Träningstillfälle>(); 
 
 
         private void button1_Click(object sender, EventArgs e)
@@ -239,6 +240,17 @@ namespace Cirkus_kul_och_bus
             listboxPersoner.DataSource = närvarolista;
             listboxPersoner.DisplayMember = "NärvaroInfo";
 
+        }
+
+        private void btn_hämtaNärvaro_Click(object sender, EventArgs e)
+        {
+            utskrift = new List<Träningstillfälle>();
+
+            utskrift = pg.HämtaNärvaro();
+            listboxPersoner.DataSource = utskrift;
+
+            listboxPersoner.DisplayMember = "FullständigaPersonUpp";
+            
         }
     }
 }

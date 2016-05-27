@@ -36,67 +36,68 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tbx_sok = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tbx_datum = new System.Windows.Forms.TextBox();
-            this.tbx_plats = new System.Windows.Forms.TextBox();
-            this.tbx_starttid = new System.Windows.Forms.TextBox();
-            this.tbx_sluttid = new System.Windows.Forms.TextBox();
-            this.tbx_sammanfattning = new System.Windows.Forms.TextBox();
-            this.tbx_träningsgruppsid = new System.Windows.Forms.TextBox();
-            this.Datum = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.btn_träningstillfälle = new System.Windows.Forms.Button();
-            this.tbx_träningstillfälle = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.tbx_träningstillfälle = new System.Windows.Forms.TextBox();
+            this.tbx_träningsgruppsid = new System.Windows.Forms.TextBox();
+            this.tbx_sammanfattning = new System.Windows.Forms.TextBox();
+            this.tbx_sluttid = new System.Windows.Forms.TextBox();
+            this.tbx_starttid = new System.Windows.Forms.TextBox();
+            this.tbx_plats = new System.Windows.Forms.TextBox();
+            this.tbx_datum = new System.Windows.Forms.TextBox();
+            this.btn_träningstillfälle = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.Datum = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.btn_närvaro = new System.Windows.Forms.Button();
-            this.tbx_närvaroPers = new System.Windows.Forms.TextBox();
-            this.tbx_närvaroId = new System.Windows.Forms.TextBox();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tbx_fornamn = new System.Windows.Forms.TextBox();
-            this.tbx_efternamn = new System.Windows.Forms.TextBox();
-            this.tbx_personNr = new System.Windows.Forms.TextBox();
-            this.tbx_postNr = new System.Windows.Forms.TextBox();
-            this.tbx_adress = new System.Windows.Forms.TextBox();
-            this.tbx_email = new System.Windows.Forms.TextBox();
-            this.tbx_teleNr = new System.Windows.Forms.TextBox();
-            this.tbx_kon = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.cBoxJa = new System.Windows.Forms.CheckBox();
-            this.tbx_kontakpersonnr = new System.Windows.Forms.TextBox();
-            this.btn_läggTillPers = new System.Windows.Forms.Button();
-            this.tbx_kontaktperson = new System.Windows.Forms.TextBox();
-            this.btn_tabort = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.btn_ändraPerson = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rbt_styrelse = new System.Windows.Forms.RadioButton();
-            this.rbt_medlem = new System.Windows.Forms.RadioButton();
-            this.rbt_provapa = new System.Windows.Forms.RadioButton();
-            this.rbt_ledareansvarig = new System.Windows.Forms.RadioButton();
-            this.rbt_cirkusvan = new System.Windows.Forms.RadioButton();
-            this.rbt_ledare = new System.Windows.Forms.RadioButton();
-            this.rbt_uppdrag = new System.Windows.Forms.RadioButton();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.tbx_närvaroId = new System.Windows.Forms.TextBox();
+            this.tbx_närvaroPers = new System.Windows.Forms.TextBox();
+            this.btn_närvaro = new System.Windows.Forms.Button();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rbt_uppdrag = new System.Windows.Forms.RadioButton();
+            this.rbt_ledare = new System.Windows.Forms.RadioButton();
+            this.rbt_cirkusvan = new System.Windows.Forms.RadioButton();
+            this.rbt_ledareansvarig = new System.Windows.Forms.RadioButton();
+            this.rbt_provapa = new System.Windows.Forms.RadioButton();
+            this.rbt_medlem = new System.Windows.Forms.RadioButton();
+            this.rbt_styrelse = new System.Windows.Forms.RadioButton();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btn_ändraPerson = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.btn_tabort = new System.Windows.Forms.Button();
+            this.tbx_kontaktperson = new System.Windows.Forms.TextBox();
+            this.tbx_kontakpersonnr = new System.Windows.Forms.TextBox();
+            this.tbx_kon = new System.Windows.Forms.TextBox();
+            this.tbx_teleNr = new System.Windows.Forms.TextBox();
+            this.tbx_email = new System.Windows.Forms.TextBox();
+            this.tbx_adress = new System.Windows.Forms.TextBox();
+            this.tbx_postNr = new System.Windows.Forms.TextBox();
+            this.tbx_personNr = new System.Windows.Forms.TextBox();
+            this.tbx_efternamn = new System.Windows.Forms.TextBox();
+            this.tbx_fornamn = new System.Windows.Forms.TextBox();
+            this.btn_läggTillPers = new System.Windows.Forms.Button();
+            this.cBoxJa = new System.Windows.Forms.CheckBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.btn_hämtaNärvaro = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -201,40 +202,21 @@
             this.tabPage4.Text = "Skapa träningstillfälle";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // tbx_datum
+            // label12
             // 
-            this.tbx_datum.Location = new System.Drawing.Point(27, 74);
-            this.tbx_datum.Name = "tbx_datum";
-            this.tbx_datum.Size = new System.Drawing.Size(100, 20);
-            this.tbx_datum.TabIndex = 0;
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(269, 167);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(41, 13);
+            this.label12.TabIndex = 14;
+            this.label12.Text = "label12";
             // 
-            // tbx_plats
+            // tbx_träningstillfälle
             // 
-            this.tbx_plats.Location = new System.Drawing.Point(27, 117);
-            this.tbx_plats.Name = "tbx_plats";
-            this.tbx_plats.Size = new System.Drawing.Size(100, 20);
-            this.tbx_plats.TabIndex = 1;
-            // 
-            // tbx_starttid
-            // 
-            this.tbx_starttid.Location = new System.Drawing.Point(27, 160);
-            this.tbx_starttid.Name = "tbx_starttid";
-            this.tbx_starttid.Size = new System.Drawing.Size(100, 20);
-            this.tbx_starttid.TabIndex = 2;
-            // 
-            // tbx_sluttid
-            // 
-            this.tbx_sluttid.Location = new System.Drawing.Point(27, 203);
-            this.tbx_sluttid.Name = "tbx_sluttid";
-            this.tbx_sluttid.Size = new System.Drawing.Size(100, 20);
-            this.tbx_sluttid.TabIndex = 3;
-            // 
-            // tbx_sammanfattning
-            // 
-            this.tbx_sammanfattning.Location = new System.Drawing.Point(27, 246);
-            this.tbx_sammanfattning.Name = "tbx_sammanfattning";
-            this.tbx_sammanfattning.Size = new System.Drawing.Size(100, 20);
-            this.tbx_sammanfattning.TabIndex = 4;
+            this.tbx_träningstillfälle.Location = new System.Drawing.Point(272, 203);
+            this.tbx_träningstillfälle.Name = "tbx_träningstillfälle";
+            this.tbx_träningstillfälle.Size = new System.Drawing.Size(100, 20);
+            this.tbx_träningstillfälle.TabIndex = 13;
             // 
             // tbx_träningsgruppsid
             // 
@@ -243,59 +225,40 @@
             this.tbx_träningsgruppsid.Size = new System.Drawing.Size(100, 20);
             this.tbx_träningsgruppsid.TabIndex = 5;
             // 
-            // Datum
+            // tbx_sammanfattning
             // 
-            this.Datum.AutoSize = true;
-            this.Datum.Location = new System.Drawing.Point(24, 58);
-            this.Datum.Name = "Datum";
-            this.Datum.Size = new System.Drawing.Size(38, 13);
-            this.Datum.TabIndex = 6;
-            this.Datum.Text = "Datum";
+            this.tbx_sammanfattning.Location = new System.Drawing.Point(27, 246);
+            this.tbx_sammanfattning.Name = "tbx_sammanfattning";
+            this.tbx_sammanfattning.Size = new System.Drawing.Size(100, 20);
+            this.tbx_sammanfattning.TabIndex = 4;
             // 
-            // label13
+            // tbx_sluttid
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(24, 230);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(83, 13);
-            this.label13.TabIndex = 7;
-            this.label13.Text = "Sammanfattning";
+            this.tbx_sluttid.Location = new System.Drawing.Point(27, 203);
+            this.tbx_sluttid.Name = "tbx_sluttid";
+            this.tbx_sluttid.Size = new System.Drawing.Size(100, 20);
+            this.tbx_sluttid.TabIndex = 3;
             // 
-            // label14
+            // tbx_starttid
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(24, 187);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(36, 13);
-            this.label14.TabIndex = 8;
-            this.label14.Text = "Sluttid";
+            this.tbx_starttid.Location = new System.Drawing.Point(27, 160);
+            this.tbx_starttid.Name = "tbx_starttid";
+            this.tbx_starttid.Size = new System.Drawing.Size(100, 20);
+            this.tbx_starttid.TabIndex = 2;
             // 
-            // label15
+            // tbx_plats
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(24, 273);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(75, 13);
-            this.label15.TabIndex = 9;
-            this.label15.Text = "Träningsgrupp";
+            this.tbx_plats.Location = new System.Drawing.Point(27, 117);
+            this.tbx_plats.Name = "tbx_plats";
+            this.tbx_plats.Size = new System.Drawing.Size(100, 20);
+            this.tbx_plats.TabIndex = 1;
             // 
-            // label16
+            // tbx_datum
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(24, 101);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(30, 13);
-            this.label16.TabIndex = 10;
-            this.label16.Text = "Plats";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(22, 140);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(40, 13);
-            this.label17.TabIndex = 11;
-            this.label17.Text = "Starttid";
+            this.tbx_datum.Location = new System.Drawing.Point(27, 74);
+            this.tbx_datum.Name = "tbx_datum";
+            this.tbx_datum.Size = new System.Drawing.Size(100, 20);
+            this.tbx_datum.TabIndex = 0;
             // 
             // btn_träningstillfälle
             // 
@@ -307,24 +270,63 @@
             this.btn_träningstillfälle.UseVisualStyleBackColor = true;
             this.btn_träningstillfälle.Click += new System.EventHandler(this.btn_träningstillfälle_Click);
             // 
-            // tbx_träningstillfälle
+            // label17
             // 
-            this.tbx_träningstillfälle.Location = new System.Drawing.Point(272, 203);
-            this.tbx_träningstillfälle.Name = "tbx_träningstillfälle";
-            this.tbx_träningstillfälle.Size = new System.Drawing.Size(100, 20);
-            this.tbx_träningstillfälle.TabIndex = 13;
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(22, 140);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(40, 13);
+            this.label17.TabIndex = 11;
+            this.label17.Text = "Starttid";
             // 
-            // label12
+            // label16
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(269, 167);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(41, 13);
-            this.label12.TabIndex = 14;
-            this.label12.Text = "label12";
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(24, 101);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(30, 13);
+            this.label16.TabIndex = 10;
+            this.label16.Text = "Plats";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(24, 273);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(75, 13);
+            this.label15.TabIndex = 9;
+            this.label15.Text = "Träningsgrupp";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(24, 187);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(36, 13);
+            this.label14.TabIndex = 8;
+            this.label14.Text = "Sluttid";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(24, 230);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(83, 13);
+            this.label13.TabIndex = 7;
+            this.label13.Text = "Sammanfattning";
+            // 
+            // Datum
+            // 
+            this.Datum.AutoSize = true;
+            this.Datum.Location = new System.Drawing.Point(24, 58);
+            this.Datum.Name = "Datum";
+            this.Datum.Size = new System.Drawing.Size(38, 13);
+            this.Datum.TabIndex = 6;
+            this.Datum.Text = "Datum";
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.btn_hämtaNärvaro);
             this.tabPage3.Controls.Add(this.label19);
             this.tabPage3.Controls.Add(this.label18);
             this.tabPage3.Controls.Add(this.tbx_närvaroId);
@@ -343,55 +345,37 @@
             this.tabPage3.Text = "Närvaro";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // label19
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(223, 114);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(272, 373);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(71, 13);
+            this.label19.TabIndex = 9;
+            this.label19.Text = "Personummer";
             // 
-            // checkBox2
+            // label18
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(223, 161);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(80, 17);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(149, 364);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(76, 13);
+            this.label18.TabIndex = 8;
+            this.label18.Text = "Träningstillfälle";
             // 
-            // checkBox3
+            // tbx_närvaroId
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(223, 218);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(80, 17);
-            this.checkBox3.TabIndex = 2;
-            this.checkBox3.Text = "checkBox3";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.tbx_närvaroId.Location = new System.Drawing.Point(152, 380);
+            this.tbx_närvaroId.Name = "tbx_närvaroId";
+            this.tbx_närvaroId.Size = new System.Drawing.Size(100, 20);
+            this.tbx_närvaroId.TabIndex = 7;
             // 
-            // checkBox4
+            // tbx_närvaroPers
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(223, 267);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(80, 17);
-            this.checkBox4.TabIndex = 3;
-            this.checkBox4.Text = "checkBox4";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(125, 286);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(80, 17);
-            this.checkBox5.TabIndex = 4;
-            this.checkBox5.Text = "checkBox5";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.tbx_närvaroPers.Location = new System.Drawing.Point(275, 389);
+            this.tbx_närvaroPers.Name = "tbx_närvaroPers";
+            this.tbx_närvaroPers.Size = new System.Drawing.Size(100, 20);
+            this.tbx_närvaroPers.TabIndex = 6;
             // 
             // btn_närvaro
             // 
@@ -403,19 +387,55 @@
             this.btn_närvaro.UseVisualStyleBackColor = true;
             this.btn_närvaro.Click += new System.EventHandler(this.btn_närvaro_Click);
             // 
-            // tbx_närvaroPers
+            // checkBox5
             // 
-            this.tbx_närvaroPers.Location = new System.Drawing.Point(275, 389);
-            this.tbx_närvaroPers.Name = "tbx_närvaroPers";
-            this.tbx_närvaroPers.Size = new System.Drawing.Size(100, 20);
-            this.tbx_närvaroPers.TabIndex = 6;
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Location = new System.Drawing.Point(125, 286);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(80, 17);
+            this.checkBox5.TabIndex = 4;
+            this.checkBox5.Text = "checkBox5";
+            this.checkBox5.UseVisualStyleBackColor = true;
             // 
-            // tbx_närvaroId
+            // checkBox4
             // 
-            this.tbx_närvaroId.Location = new System.Drawing.Point(152, 380);
-            this.tbx_närvaroId.Name = "tbx_närvaroId";
-            this.tbx_närvaroId.Size = new System.Drawing.Size(100, 20);
-            this.tbx_närvaroId.TabIndex = 7;
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(223, 267);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(80, 17);
+            this.checkBox4.TabIndex = 3;
+            this.checkBox4.Text = "checkBox4";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(223, 218);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(80, 17);
+            this.checkBox3.TabIndex = 2;
+            this.checkBox3.Text = "checkBox3";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(223, 161);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(80, 17);
+            this.checkBox2.TabIndex = 1;
+            this.checkBox2.Text = "checkBox2";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(223, 114);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(80, 17);
+            this.checkBox1.TabIndex = 0;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // tabPage1
             // 
@@ -453,215 +473,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Skapa medlem";
             // 
-            // tbx_fornamn
-            // 
-            this.tbx_fornamn.Location = new System.Drawing.Point(19, 28);
-            this.tbx_fornamn.Name = "tbx_fornamn";
-            this.tbx_fornamn.Size = new System.Drawing.Size(100, 20);
-            this.tbx_fornamn.TabIndex = 29;
-            // 
-            // tbx_efternamn
-            // 
-            this.tbx_efternamn.Location = new System.Drawing.Point(21, 72);
-            this.tbx_efternamn.Name = "tbx_efternamn";
-            this.tbx_efternamn.Size = new System.Drawing.Size(100, 20);
-            this.tbx_efternamn.TabIndex = 30;
-            // 
-            // tbx_personNr
-            // 
-            this.tbx_personNr.Location = new System.Drawing.Point(19, 124);
-            this.tbx_personNr.Name = "tbx_personNr";
-            this.tbx_personNr.Size = new System.Drawing.Size(100, 20);
-            this.tbx_personNr.TabIndex = 31;
-            // 
-            // tbx_postNr
-            // 
-            this.tbx_postNr.Location = new System.Drawing.Point(21, 177);
-            this.tbx_postNr.Name = "tbx_postNr";
-            this.tbx_postNr.Size = new System.Drawing.Size(100, 20);
-            this.tbx_postNr.TabIndex = 32;
-            // 
-            // tbx_adress
-            // 
-            this.tbx_adress.Location = new System.Drawing.Point(19, 222);
-            this.tbx_adress.Name = "tbx_adress";
-            this.tbx_adress.Size = new System.Drawing.Size(100, 20);
-            this.tbx_adress.TabIndex = 33;
-            // 
-            // tbx_email
-            // 
-            this.tbx_email.Location = new System.Drawing.Point(16, 313);
-            this.tbx_email.Name = "tbx_email";
-            this.tbx_email.Size = new System.Drawing.Size(100, 20);
-            this.tbx_email.TabIndex = 34;
-            // 
-            // tbx_teleNr
-            // 
-            this.tbx_teleNr.Location = new System.Drawing.Point(19, 270);
-            this.tbx_teleNr.Name = "tbx_teleNr";
-            this.tbx_teleNr.Size = new System.Drawing.Size(100, 20);
-            this.tbx_teleNr.TabIndex = 35;
-            // 
-            // tbx_kon
-            // 
-            this.tbx_kon.Location = new System.Drawing.Point(19, 352);
-            this.tbx_kon.Name = "tbx_kon";
-            this.tbx_kon.Size = new System.Drawing.Size(100, 20);
-            this.tbx_kon.TabIndex = 36;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 13);
-            this.label1.TabIndex = 37;
-            this.label1.Text = "Förnamn:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 206);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
-            this.label2.TabIndex = 38;
-            this.label2.Text = "Adress:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 336);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 13);
-            this.label3.TabIndex = 39;
-            this.label3.Text = "Kön:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 293);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 40;
-            this.label4.Text = "Email:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(18, 161);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 13);
-            this.label5.TabIndex = 41;
-            this.label5.Text = "Postnummer:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 108);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(80, 13);
-            this.label6.TabIndex = 42;
-            this.label6.Text = "Personnummer:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(16, 56);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 13);
-            this.label7.TabIndex = 43;
-            this.label7.Text = "Efternamn:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(137, 320);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(63, 13);
-            this.label8.TabIndex = 44;
-            this.label8.Text = "Foto tilllåtet:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(13, 254);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(83, 13);
-            this.label9.TabIndex = 45;
-            this.label9.Text = "Telefonnummer:";
-            // 
-            // cBoxJa
-            // 
-            this.cBoxJa.AutoSize = true;
-            this.cBoxJa.Location = new System.Drawing.Point(140, 349);
-            this.cBoxJa.Name = "cBoxJa";
-            this.cBoxJa.Size = new System.Drawing.Size(38, 17);
-            this.cBoxJa.TabIndex = 46;
-            this.cBoxJa.Text = "JA";
-            this.cBoxJa.UseVisualStyleBackColor = true;
-            // 
-            // tbx_kontakpersonnr
-            // 
-            this.tbx_kontakpersonnr.Location = new System.Drawing.Point(15, 458);
-            this.tbx_kontakpersonnr.Name = "tbx_kontakpersonnr";
-            this.tbx_kontakpersonnr.Size = new System.Drawing.Size(160, 20);
-            this.tbx_kontakpersonnr.TabIndex = 47;
-            // 
-            // btn_läggTillPers
-            // 
-            this.btn_läggTillPers.Location = new System.Drawing.Point(21, 500);
-            this.btn_läggTillPers.Name = "btn_läggTillPers";
-            this.btn_läggTillPers.Size = new System.Drawing.Size(75, 23);
-            this.btn_läggTillPers.TabIndex = 20;
-            this.btn_läggTillPers.Text = "Lägg Till";
-            this.btn_läggTillPers.UseVisualStyleBackColor = true;
-            this.btn_läggTillPers.Click += new System.EventHandler(this.btn_läggTillPers_Click);
-            // 
-            // tbx_kontaktperson
-            // 
-            this.tbx_kontaktperson.Location = new System.Drawing.Point(15, 416);
-            this.tbx_kontaktperson.Name = "tbx_kontaktperson";
-            this.tbx_kontaktperson.Size = new System.Drawing.Size(100, 20);
-            this.tbx_kontaktperson.TabIndex = 48;
-            // 
-            // btn_tabort
-            // 
-            this.btn_tabort.Location = new System.Drawing.Point(21, 529);
-            this.btn_tabort.Name = "btn_tabort";
-            this.btn_tabort.Size = new System.Drawing.Size(75, 23);
-            this.btn_tabort.TabIndex = 21;
-            this.btn_tabort.Text = "Ta bort";
-            this.btn_tabort.UseVisualStyleBackColor = true;
-            this.btn_tabort.Click += new System.EventHandler(this.btn_tabort_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(16, 400);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(79, 13);
-            this.label10.TabIndex = 49;
-            this.label10.Text = "Kontaktperson:";
-            // 
-            // btn_ändraPerson
-            // 
-            this.btn_ändraPerson.Location = new System.Drawing.Point(21, 558);
-            this.btn_ändraPerson.Name = "btn_ändraPerson";
-            this.btn_ändraPerson.Size = new System.Drawing.Size(75, 23);
-            this.btn_ändraPerson.TabIndex = 22;
-            this.btn_ändraPerson.Text = "Ändra";
-            this.btn_ändraPerson.UseVisualStyleBackColor = true;
-            this.btn_ändraPerson.Click += new System.EventHandler(this.btn_ändraPerson_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(15, 442);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(154, 13);
-            this.label11.TabIndex = 50;
-            this.label11.Text = "Telefonnummer kontaktperson:";
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.rbt_uppdrag);
@@ -678,60 +489,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Typ av medlem:";
             // 
-            // rbt_styrelse
+            // rbt_uppdrag
             // 
-            this.rbt_styrelse.AutoSize = true;
-            this.rbt_styrelse.Location = new System.Drawing.Point(19, 237);
-            this.rbt_styrelse.Name = "rbt_styrelse";
-            this.rbt_styrelse.Size = new System.Drawing.Size(99, 17);
-            this.rbt_styrelse.TabIndex = 6;
-            this.rbt_styrelse.TabStop = true;
-            this.rbt_styrelse.Text = "Styrelseledamot";
-            this.rbt_styrelse.UseVisualStyleBackColor = true;
-            // 
-            // rbt_medlem
-            // 
-            this.rbt_medlem.AutoSize = true;
-            this.rbt_medlem.Location = new System.Drawing.Point(19, 39);
-            this.rbt_medlem.Name = "rbt_medlem";
-            this.rbt_medlem.Size = new System.Drawing.Size(62, 17);
-            this.rbt_medlem.TabIndex = 0;
-            this.rbt_medlem.TabStop = true;
-            this.rbt_medlem.Text = "Medlem";
-            this.rbt_medlem.UseVisualStyleBackColor = true;
-            // 
-            // rbt_provapa
-            // 
-            this.rbt_provapa.AutoSize = true;
-            this.rbt_provapa.Location = new System.Drawing.Point(19, 72);
-            this.rbt_provapa.Name = "rbt_provapa";
-            this.rbt_provapa.Size = new System.Drawing.Size(68, 17);
-            this.rbt_provapa.TabIndex = 1;
-            this.rbt_provapa.TabStop = true;
-            this.rbt_provapa.Text = "Prova på";
-            this.rbt_provapa.UseVisualStyleBackColor = true;
-            // 
-            // rbt_ledareansvarig
-            // 
-            this.rbt_ledareansvarig.AutoSize = true;
-            this.rbt_ledareansvarig.Location = new System.Drawing.Point(19, 204);
-            this.rbt_ledareansvarig.Name = "rbt_ledareansvarig";
-            this.rbt_ledareansvarig.Size = new System.Drawing.Size(101, 17);
-            this.rbt_ledareansvarig.TabIndex = 5;
-            this.rbt_ledareansvarig.TabStop = true;
-            this.rbt_ledareansvarig.Text = "Ledare ansvarig";
-            this.rbt_ledareansvarig.UseVisualStyleBackColor = true;
-            // 
-            // rbt_cirkusvan
-            // 
-            this.rbt_cirkusvan.AutoSize = true;
-            this.rbt_cirkusvan.Location = new System.Drawing.Point(19, 105);
-            this.rbt_cirkusvan.Name = "rbt_cirkusvan";
-            this.rbt_cirkusvan.Size = new System.Drawing.Size(81, 17);
-            this.rbt_cirkusvan.TabIndex = 2;
-            this.rbt_cirkusvan.TabStop = true;
-            this.rbt_cirkusvan.Text = "Cirkus vänn";
-            this.rbt_cirkusvan.UseVisualStyleBackColor = true;
+            this.rbt_uppdrag.AutoSize = true;
+            this.rbt_uppdrag.Location = new System.Drawing.Point(19, 171);
+            this.rbt_uppdrag.Name = "rbt_uppdrag";
+            this.rbt_uppdrag.Size = new System.Drawing.Size(114, 17);
+            this.rbt_uppdrag.TabIndex = 4;
+            this.rbt_uppdrag.TabStop = true;
+            this.rbt_uppdrag.Text = "Uppdrags ansvarig";
+            this.rbt_uppdrag.UseVisualStyleBackColor = true;
             // 
             // rbt_ledare
             // 
@@ -744,16 +511,269 @@
             this.rbt_ledare.Text = "Ledare";
             this.rbt_ledare.UseVisualStyleBackColor = true;
             // 
-            // rbt_uppdrag
+            // rbt_cirkusvan
             // 
-            this.rbt_uppdrag.AutoSize = true;
-            this.rbt_uppdrag.Location = new System.Drawing.Point(19, 171);
-            this.rbt_uppdrag.Name = "rbt_uppdrag";
-            this.rbt_uppdrag.Size = new System.Drawing.Size(114, 17);
-            this.rbt_uppdrag.TabIndex = 4;
-            this.rbt_uppdrag.TabStop = true;
-            this.rbt_uppdrag.Text = "Uppdrags ansvarig";
-            this.rbt_uppdrag.UseVisualStyleBackColor = true;
+            this.rbt_cirkusvan.AutoSize = true;
+            this.rbt_cirkusvan.Location = new System.Drawing.Point(19, 105);
+            this.rbt_cirkusvan.Name = "rbt_cirkusvan";
+            this.rbt_cirkusvan.Size = new System.Drawing.Size(81, 17);
+            this.rbt_cirkusvan.TabIndex = 2;
+            this.rbt_cirkusvan.TabStop = true;
+            this.rbt_cirkusvan.Text = "Cirkus vänn";
+            this.rbt_cirkusvan.UseVisualStyleBackColor = true;
+            // 
+            // rbt_ledareansvarig
+            // 
+            this.rbt_ledareansvarig.AutoSize = true;
+            this.rbt_ledareansvarig.Location = new System.Drawing.Point(19, 204);
+            this.rbt_ledareansvarig.Name = "rbt_ledareansvarig";
+            this.rbt_ledareansvarig.Size = new System.Drawing.Size(101, 17);
+            this.rbt_ledareansvarig.TabIndex = 5;
+            this.rbt_ledareansvarig.TabStop = true;
+            this.rbt_ledareansvarig.Text = "Ledare ansvarig";
+            this.rbt_ledareansvarig.UseVisualStyleBackColor = true;
+            // 
+            // rbt_provapa
+            // 
+            this.rbt_provapa.AutoSize = true;
+            this.rbt_provapa.Location = new System.Drawing.Point(19, 72);
+            this.rbt_provapa.Name = "rbt_provapa";
+            this.rbt_provapa.Size = new System.Drawing.Size(68, 17);
+            this.rbt_provapa.TabIndex = 1;
+            this.rbt_provapa.TabStop = true;
+            this.rbt_provapa.Text = "Prova på";
+            this.rbt_provapa.UseVisualStyleBackColor = true;
+            // 
+            // rbt_medlem
+            // 
+            this.rbt_medlem.AutoSize = true;
+            this.rbt_medlem.Location = new System.Drawing.Point(19, 39);
+            this.rbt_medlem.Name = "rbt_medlem";
+            this.rbt_medlem.Size = new System.Drawing.Size(62, 17);
+            this.rbt_medlem.TabIndex = 0;
+            this.rbt_medlem.TabStop = true;
+            this.rbt_medlem.Text = "Medlem";
+            this.rbt_medlem.UseVisualStyleBackColor = true;
+            // 
+            // rbt_styrelse
+            // 
+            this.rbt_styrelse.AutoSize = true;
+            this.rbt_styrelse.Location = new System.Drawing.Point(19, 237);
+            this.rbt_styrelse.Name = "rbt_styrelse";
+            this.rbt_styrelse.Size = new System.Drawing.Size(99, 17);
+            this.rbt_styrelse.TabIndex = 6;
+            this.rbt_styrelse.TabStop = true;
+            this.rbt_styrelse.Text = "Styrelseledamot";
+            this.rbt_styrelse.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(15, 442);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(154, 13);
+            this.label11.TabIndex = 50;
+            this.label11.Text = "Telefonnummer kontaktperson:";
+            // 
+            // btn_ändraPerson
+            // 
+            this.btn_ändraPerson.Location = new System.Drawing.Point(21, 558);
+            this.btn_ändraPerson.Name = "btn_ändraPerson";
+            this.btn_ändraPerson.Size = new System.Drawing.Size(75, 23);
+            this.btn_ändraPerson.TabIndex = 22;
+            this.btn_ändraPerson.Text = "Ändra";
+            this.btn_ändraPerson.UseVisualStyleBackColor = true;
+            this.btn_ändraPerson.Click += new System.EventHandler(this.btn_ändraPerson_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(16, 400);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(79, 13);
+            this.label10.TabIndex = 49;
+            this.label10.Text = "Kontaktperson:";
+            // 
+            // btn_tabort
+            // 
+            this.btn_tabort.Location = new System.Drawing.Point(21, 529);
+            this.btn_tabort.Name = "btn_tabort";
+            this.btn_tabort.Size = new System.Drawing.Size(75, 23);
+            this.btn_tabort.TabIndex = 21;
+            this.btn_tabort.Text = "Ta bort";
+            this.btn_tabort.UseVisualStyleBackColor = true;
+            this.btn_tabort.Click += new System.EventHandler(this.btn_tabort_Click);
+            // 
+            // tbx_kontaktperson
+            // 
+            this.tbx_kontaktperson.Location = new System.Drawing.Point(15, 416);
+            this.tbx_kontaktperson.Name = "tbx_kontaktperson";
+            this.tbx_kontaktperson.Size = new System.Drawing.Size(100, 20);
+            this.tbx_kontaktperson.TabIndex = 48;
+            // 
+            // tbx_kontakpersonnr
+            // 
+            this.tbx_kontakpersonnr.Location = new System.Drawing.Point(15, 458);
+            this.tbx_kontakpersonnr.Name = "tbx_kontakpersonnr";
+            this.tbx_kontakpersonnr.Size = new System.Drawing.Size(160, 20);
+            this.tbx_kontakpersonnr.TabIndex = 47;
+            // 
+            // tbx_kon
+            // 
+            this.tbx_kon.Location = new System.Drawing.Point(19, 352);
+            this.tbx_kon.Name = "tbx_kon";
+            this.tbx_kon.Size = new System.Drawing.Size(100, 20);
+            this.tbx_kon.TabIndex = 36;
+            // 
+            // tbx_teleNr
+            // 
+            this.tbx_teleNr.Location = new System.Drawing.Point(19, 270);
+            this.tbx_teleNr.Name = "tbx_teleNr";
+            this.tbx_teleNr.Size = new System.Drawing.Size(100, 20);
+            this.tbx_teleNr.TabIndex = 35;
+            // 
+            // tbx_email
+            // 
+            this.tbx_email.Location = new System.Drawing.Point(16, 313);
+            this.tbx_email.Name = "tbx_email";
+            this.tbx_email.Size = new System.Drawing.Size(100, 20);
+            this.tbx_email.TabIndex = 34;
+            // 
+            // tbx_adress
+            // 
+            this.tbx_adress.Location = new System.Drawing.Point(19, 222);
+            this.tbx_adress.Name = "tbx_adress";
+            this.tbx_adress.Size = new System.Drawing.Size(100, 20);
+            this.tbx_adress.TabIndex = 33;
+            // 
+            // tbx_postNr
+            // 
+            this.tbx_postNr.Location = new System.Drawing.Point(21, 177);
+            this.tbx_postNr.Name = "tbx_postNr";
+            this.tbx_postNr.Size = new System.Drawing.Size(100, 20);
+            this.tbx_postNr.TabIndex = 32;
+            // 
+            // tbx_personNr
+            // 
+            this.tbx_personNr.Location = new System.Drawing.Point(19, 124);
+            this.tbx_personNr.Name = "tbx_personNr";
+            this.tbx_personNr.Size = new System.Drawing.Size(100, 20);
+            this.tbx_personNr.TabIndex = 31;
+            // 
+            // tbx_efternamn
+            // 
+            this.tbx_efternamn.Location = new System.Drawing.Point(21, 72);
+            this.tbx_efternamn.Name = "tbx_efternamn";
+            this.tbx_efternamn.Size = new System.Drawing.Size(100, 20);
+            this.tbx_efternamn.TabIndex = 30;
+            // 
+            // tbx_fornamn
+            // 
+            this.tbx_fornamn.Location = new System.Drawing.Point(19, 28);
+            this.tbx_fornamn.Name = "tbx_fornamn";
+            this.tbx_fornamn.Size = new System.Drawing.Size(100, 20);
+            this.tbx_fornamn.TabIndex = 29;
+            // 
+            // btn_läggTillPers
+            // 
+            this.btn_läggTillPers.Location = new System.Drawing.Point(21, 500);
+            this.btn_läggTillPers.Name = "btn_läggTillPers";
+            this.btn_läggTillPers.Size = new System.Drawing.Size(75, 23);
+            this.btn_läggTillPers.TabIndex = 20;
+            this.btn_läggTillPers.Text = "Lägg Till";
+            this.btn_läggTillPers.UseVisualStyleBackColor = true;
+            this.btn_läggTillPers.Click += new System.EventHandler(this.btn_läggTillPers_Click);
+            // 
+            // cBoxJa
+            // 
+            this.cBoxJa.AutoSize = true;
+            this.cBoxJa.Location = new System.Drawing.Point(140, 349);
+            this.cBoxJa.Name = "cBoxJa";
+            this.cBoxJa.Size = new System.Drawing.Size(38, 17);
+            this.cBoxJa.TabIndex = 46;
+            this.cBoxJa.Text = "JA";
+            this.cBoxJa.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(13, 254);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(83, 13);
+            this.label9.TabIndex = 45;
+            this.label9.Text = "Telefonnummer:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(137, 320);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(63, 13);
+            this.label8.TabIndex = 44;
+            this.label8.Text = "Foto tilllåtet:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(16, 56);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(58, 13);
+            this.label7.TabIndex = 43;
+            this.label7.Text = "Efternamn:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(16, 108);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(80, 13);
+            this.label6.TabIndex = 42;
+            this.label6.Text = "Personnummer:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(18, 161);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(68, 13);
+            this.label5.TabIndex = 41;
+            this.label5.Text = "Postnummer:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(13, 293);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 40;
+            this.label4.Text = "Email:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 336);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(29, 13);
+            this.label3.TabIndex = 39;
+            this.label3.Text = "Kön:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(18, 206);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 13);
+            this.label2.TabIndex = 38;
+            this.label2.Text = "Adress:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 13);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "Förnamn:";
             // 
             // tabControl1
             // 
@@ -766,23 +786,15 @@
             this.tabControl1.Size = new System.Drawing.Size(537, 618);
             this.tabControl1.TabIndex = 30;
             // 
-            // label18
+            // btn_hämtaNärvaro
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(149, 364);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(76, 13);
-            this.label18.TabIndex = 8;
-            this.label18.Text = "Träningstillfälle";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(272, 373);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(71, 13);
-            this.label19.TabIndex = 9;
-            this.label19.Text = "Personummer";
+            this.btn_hämtaNärvaro.Location = new System.Drawing.Point(300, 454);
+            this.btn_hämtaNärvaro.Name = "btn_hämtaNärvaro";
+            this.btn_hämtaNärvaro.Size = new System.Drawing.Size(75, 23);
+            this.btn_hämtaNärvaro.TabIndex = 10;
+            this.btn_hämtaNärvaro.Text = "Hämta Lista";
+            this.btn_hämtaNärvaro.UseVisualStyleBackColor = true;
+            this.btn_hämtaNärvaro.Click += new System.EventHandler(this.btn_hämtaNärvaro_Click);
             // 
             // Form1
             // 
@@ -881,6 +893,7 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Button btn_hämtaNärvaro;
     }
 }
 

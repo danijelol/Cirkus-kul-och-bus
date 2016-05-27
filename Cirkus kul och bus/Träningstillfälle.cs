@@ -24,6 +24,14 @@ namespace Cirkus_kul_och_bus
             }
         }
 
+        public string UtskriftsInfo
+         {
+            get
+             {
+                 return Id + "\t" + Datum + "\t" + StartTid + "\t" + SlutTid + "\t" + Sammanfattning + "\t" + Träningsgrupps_id + "\t" + PersonNr + "\t" + Fornamn + "\t" + Efternamn + "\t" + Medlemstyp;
+             }
+         }
+
   
     }
 }
