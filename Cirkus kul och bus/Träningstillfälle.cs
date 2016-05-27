@@ -32,6 +32,14 @@ namespace Cirkus_kul_och_bus
              }
          }
 
+        public string LedareInfo
+        {
+            get
+            {
+                return Fornamn + "\t" + Efternamn + "\t" + Id;
+            }
+        }
+
   
     }
 }
