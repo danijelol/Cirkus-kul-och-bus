@@ -206,9 +206,8 @@ namespace Cirkus_kul_och_bus
             listboxPersoner.DisplayMember = "FullständigaPersonUpp";
         }
 
-        private void btn_träningstillfälle_Click(object sender, EventArgs e)
-        {
-           
+        private void btn_träningstillfälle_Click(object sender, EventArgs e) // Skapar träningstillfällen och lägger till i databas
+        {           
             listboxPersoner.DataSource = null;
             träningstillfällen = new List<Träningstillfälle>();
 
@@ -223,19 +222,16 @@ namespace Cirkus_kul_och_bus
             träningsgrupp = int.Parse(tbx_träningsgruppsid.Text);
             träningstillfälleid = int.Parse(tbx_träningstillfälle.Text);
            
-
             pg.LäggTillTräningstillfälle(träningstillfälleid,datum,plats,starttid,sluttid,sammanfattning,träningsgrupp);
             
             träningstillfällen = pg.HämtaTräningsTillfälle();
 
             listboxPersoner.DataSource = träningstillfällen;
             listboxPersoner.DisplayMember = "TräningstillfällesInfo";
-
         }
 
-        private void btn_närvaro_Click(object sender, EventArgs e)
-        {
-            
+        private void btn_närvaro_Click(object sender, EventArgs e) // Lägger till personer till träningstillfällen
+        {            
             listboxPersoner.DataSource = null;
             närvarolista = new List<Närvaro>();
 
@@ -247,10 +243,9 @@ namespace Cirkus_kul_och_bus
 
             listboxPersoner.DataSource = närvarolista;
             listboxPersoner.DisplayMember = "NärvaroInfo";
-
         }
 
-        private void btn_hämtaNärvaro_Click(object sender, EventArgs e)
+        private void btn_hämtaNärvaro_Click(object sender, EventArgs e) // Hämtar närvarolistan samt ledar för träningstillfälle
         {
             utskrift = new List<Träningstillfälle>();
 
@@ -264,18 +259,10 @@ namespace Cirkus_kul_och_bus
             lett = pg.HämtaAktuellLedareFörTräningstillfälle();
 
             listboxLedare.DataSource = lett;
-            listboxLedare.DisplayMember = "LedareInfo";
-
-            
-            
+            listboxLedare.DisplayMember = "LedareInfo";          
         }
 
-        private void label20_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_datum_Click(object sender, EventArgs e)
+        private void btn_datum_Click(object sender, EventArgs e) // Hämtar och skriver ut närvarolista efter valt datum 
         {
             int startdatum, slutdatum;
 
@@ -284,65 +271,42 @@ namespace Cirkus_kul_och_bus
             startdatum = int.Parse(tbx_startdatum.Text);
             slutdatum = int.Parse(tbx_slutdatum.Text);
 
-
             utskrift = pg.HämtaNärvaro();
             utskrift = pg.HämtaNärvaroDatum(startdatum, slutdatum);
-
             
             listboxPersoner.DataSource = utskrift;
             listboxPersoner.DisplayMember = "UtskriftsInfo";
-
-
         }
 
-        private void btn_närvaroTräningsgruppid_Click(object sender, EventArgs e)
+        private void btn_närvaroTräningsgruppid_Click(object sender, EventArgs e) // Hämtar och skriver ut närvarolista efter vald träningsgrupp
         {
             string id;
+            id = tbx_träningsgruppidhämta.Text;
 
             utskrift = new List<Träningstillfälle>();
-
-            id = tbx_träningsgruppidhämta.Text;
 
             utskrift = pg.HämtaNärvaro();
 
             utskrift = pg.HämtaNärvaroTräningsgrupp(id);
-
-            
+           
             listboxPersoner.DataSource = utskrift;
             listboxPersoner.DisplayMember = "UtskriftsInfo";
         }
 
-        private void btn_sledare_Click(object sender, EventArgs e)
+        private void btn_sledare_Click(object sender, EventArgs e) // Hämtar och skriver ut närvarolista efter vald ledare
         {
             string id;
+            id = tbx_ledarID.Text;
 
             utskrift = new List<Träningstillfälle>();
-
-            id = tbx_ledarID.Text;
 
             utskrift = pg.HämtaNärvaro();
 
             utskrift = pg.HämtaTräningsgruppLedare(id);
 
-
             listboxPersoner.DataSource = utskrift;
             listboxPersoner.DisplayMember = "UtskriftsInfo";
-        }
-
-        private void listboxLedare_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rbt_provapa_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage3_Click(object sender, EventArgs e)
-        {
-
-        }
+        }   
     }
 }
 

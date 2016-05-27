@@ -361,7 +361,7 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Närvaro";
             this.tabPage3.UseVisualStyleBackColor = true;
-            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+           
             // 
             // btn_sledare
             // 
@@ -458,7 +458,7 @@
             this.label20.Size = new System.Drawing.Size(123, 23);
             this.label20.TabIndex = 12;
             this.label20.Text = "Lägg till närvaro:";
-            this.label20.Click += new System.EventHandler(this.label20_Click);
+           
             // 
             // listboxLedare
             // 
@@ -467,7 +467,7 @@
             this.listboxLedare.Name = "listboxLedare";
             this.listboxLedare.Size = new System.Drawing.Size(526, 186);
             this.listboxLedare.TabIndex = 11;
-            this.listboxLedare.SelectedIndexChanged += new System.EventHandler(this.listboxLedare_SelectedIndexChanged);
+            
             // 
             // btn_hämtaNärvaro
             // 
@@ -628,7 +628,7 @@
             this.rbt_provapa.TabStop = true;
             this.rbt_provapa.Text = "Prova-på";
             this.rbt_provapa.UseVisualStyleBackColor = true;
-            this.rbt_provapa.CheckedChanged += new System.EventHandler(this.rbt_provapa_CheckedChanged);
+            
             // 
             // rbt_medlem
             // 
