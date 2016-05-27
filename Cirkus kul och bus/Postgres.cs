@@ -158,17 +158,17 @@ namespace Cirkus_kul_och_bus
         }
 
 
-        public void LäggTillPersonerTillTräningstillfällen(int träningstillfälle, int personnummer)
+        public void LäggTillPersonerTillTräningstillfällen(int T, int personnummer)
         {
             _conn = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["cirkus"].ConnectionString);
             {
                 _conn.Open();
                 sqlNonQuery("begin");
 
-                _cmd = new NpgsqlCommand("insert into närvaro (träningstillfälles_id, person_nr) values(@T,@Personnummer)", _conn);
+                _cmd = new NpgsqlCommand("insert into närvaro (träningtillfälles_id, person_nr) values(@T,@personnummer)", _conn);
 
-                _cmd.Parameters.AddWithValue("@T", träningstillfälle);
-                _cmd.Parameters.AddWithValue("@Personnummer", personnummer);
+                _cmd.Parameters.AddWithValue("@T", T);
+                _cmd.Parameters.AddWithValue("@personnummer", personnummer);
                
                 _cmd.ExecuteNonQuery();
                 sqlNonQuery("commit");

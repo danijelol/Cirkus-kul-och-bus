@@ -48,10 +48,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Security">
-      <HintPath>H:\Databas och datamodellering\Uppgift 8 Grupp\Mono.Security.dll</HintPath>
+      <HintPath>H:\Databas\Mono.Security.dll</HintPath>
     </Reference>
     <Reference Include="Npgsql">
-      <HintPath>H:\Databas och datamodellering\Uppgift 8 Grupp\Npgsql.dll</HintPath>
+      <HintPath>H:\Databas\Npgsql.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -124,6 +124,9 @@
   <ItemGroup>
     <Content Include="Postgres\Mono.Security.dll" />
     <Content Include="Postgres\Npgsql.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
