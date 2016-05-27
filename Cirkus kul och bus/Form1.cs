@@ -304,6 +304,23 @@ namespace Cirkus_kul_och_bus
             listboxPersoner.DataSource = utskrift;
             listboxPersoner.DisplayMember = "UtskriftsInfo";
         }
+
+        private void btn_sledare_Click(object sender, EventArgs e)
+        {
+            string id;
+
+            utskrift = new List<Träningstillfälle>();
+
+            id = tbx_ledarID.Text;
+
+            utskrift = pg.HämtaNärvaro();
+
+            utskrift = pg.HämtaTräningsgruppLedare(id);
+
+
+            listboxPersoner.DataSource = utskrift;
+            listboxPersoner.DisplayMember = "UtskriftsInfo";
+        }
     }
 }
 

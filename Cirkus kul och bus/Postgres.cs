@@ -216,6 +216,35 @@ namespace Cirkus_kul_och_bus
             return närvarolista;
         }
 
+
+        public List<Träningstillfälle> HämtaTräningsgruppLedare(string id)
+        {
+            Träningstillfälle närvarande;
+            string fråga = "select n.träningtillfälles_id as \"Träningstillfälle\", p.person_nr as \"Personnummer\", p.förnamn as \"Fornamn\", p.efternamn as \"Efternamn\", tt.datum as \"Datum\", tt.starttid as \"Starttid\", tt.sluttid as \"Sluttid\", tt.sammanfattning as \"Sammanfattning\" from närvaro n inner join träningstillfälle tt on tt.träningstillfälles_id = n.träningtillfälles_id inner join person p on p.person_nr = n.person_nr inner join leder l ON l.träningsgrupps_id = tt.träningsgrupps_id WHERE l.person_nr IN(" + id + ")";
+            _dr = sqlFråga(fråga);
+            List<Träningstillfälle> närvarolista = new List<Träningstillfälle>();
+
+            while (_dr.Read())
+            {
+                närvarande = new Träningstillfälle()
+                {
+                    Id = (int)_dr["Träningstillfälle"],
+                    PersonNr = (int)_dr["Personnummer"],
+                    Fornamn = _dr["Fornamn"].ToString(),
+                    Efternamn = _dr["Efternamn"].ToString(),
+                    Datum = (int)_dr["Datum"],
+                    StartTid = (int)_dr["Starttid"],
+                    SlutTid = (int)_dr["Sluttid"],
+                    Sammanfattning = _dr["Sammanfattning"].ToString(),
+
+
+
+                };
+                närvarolista.Add(närvarande);
+            }
+            return närvarolista;
+        }
+
         public List<Träningstillfälle> HämtaAktuellLedareFörTräningstillfälle()
         {
             Träningstillfälle lett;
