@@ -19,16 +19,15 @@ namespace Cirkus_kul_och_bus
             InitializeComponent();
         }
 
+        Postgres pg = new Postgres();
         List<Person> personlista = new List<Person>();
         List<Träningstillfälle> träningstillfällen = new List<Träningstillfälle>();
-        List<Träningsgrupp> träningsgrupper = new List<Träningsgrupp>();
-        Postgres pg = new Postgres();
+        List<Träningsgrupp> träningsgrupper = new List<Träningsgrupp>();       
         List<Närvaro> närvarolista = new List<Närvaro>();
         List<Träningstillfälle> utskrift = new List<Träningstillfälle>();
         List<Träningstillfälle> lett = new List<Träningstillfälle>();
 
-
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // Anropar metod för att hämta person och skriva ut i listboxperson
         {
             personlista = new List<Person>();  
             träningstillfällen  = new List<Träningstillfälle>();                   
@@ -53,15 +52,11 @@ namespace Cirkus_kul_och_bus
 
                 listboxPersoner.DataSource = träningsgrupper;
                 listboxPersoner.DisplayMember = "TräningsgruppsInfo";
-            
-            
             }
-            
-
         }
-        public int MedlemsTyp()
-            {
-            
+
+        public int MedlemsTyp() // If-sats för att välja medlemstyp
+            {            
                 int medlemstyp =0;
                 Person nymedlemstyp = new Person();
                 medlemstyp = nymedlemstyp.Medlemstyp;
@@ -101,14 +96,10 @@ namespace Cirkus_kul_och_bus
             return medlemstyp;
             }
 
-
-
-        private void btn_läggTillPers_Click(object sender, EventArgs e)
-        {
-            
+        private void btn_läggTillPers_Click(object sender, EventArgs e) // Anropar metod för att lägga till personer till persontabellen i databasen
+        {           
             try
-            {
-                
+            {               
                 personlista = new List<Person>();
                 listboxPersoner.DataSource = null;
 
@@ -137,14 +128,11 @@ namespace Cirkus_kul_och_bus
             }
             catch
             {
-                MessageBox.Show("Tomma fält?");
-               
+                MessageBox.Show("Tomma fält?");               
             }
-            
-
         }
 
-        private void listboxPersoner_SelectedIndexChanged(object sender, EventArgs e)
+        private void listboxPersoner_SelectedIndexChanged(object sender, EventArgs e) // Skriver ut valt personobjekt i textboxarna
         {
             Person aktuellPerson = new Person();
 
@@ -152,10 +140,8 @@ namespace Cirkus_kul_och_bus
             {
                 aktuellPerson = (Person)listboxPersoner.SelectedItem;
 
-
                 if (aktuellPerson != null)
                 {
-
                     tbx_fornamn.Text = aktuellPerson.Fornamn;
                     tbx_efternamn.Text = aktuellPerson.Efternamn;
                     tbx_adress.Text = aktuellPerson.Adress;
@@ -168,15 +154,15 @@ namespace Cirkus_kul_och_bus
                     cBoxJa.Checked = aktuellPerson.Foto;
                     tbx_kontaktperson.Text = aktuellPerson.Kontaktperson;
                     tbx_kontakpersonnr.Text = aktuellPerson.KontaktpersonTelenr;
-
-
                 }
             }
-            catch { }
-
+            catch 
+            {
+            
+            }
         }
 
-        private void btn_tabort_Click(object sender, EventArgs e)
+        private void btn_tabort_Click(object sender, EventArgs e) // Tar bort person ur databasen genom personnummer
         {
             personlista = new List<Person>();
             listboxPersoner.DataSource = null;
@@ -188,19 +174,16 @@ namespace Cirkus_kul_och_bus
 
             listboxPersoner.DataSource = personlista;
             listboxPersoner.DisplayMember = "FullständigaPersonUpp";
-
         }
 
-        private void btn_ändraPerson_Click(object sender, EventArgs e)
+        private void btn_ändraPerson_Click(object sender, EventArgs e) // Ändara personuppgifter i databasen genom personnummer
         {
             string fnamn, enamn, postAdress, email, kon, postNr, teleNr,kontaktNamn,kontaktTele;
             int personNr;
             bool fotoOk;
 
-
             personlista = new List<Person>();
             listboxPersoner.DataSource = null;
-
 
             fnamn = tbx_fornamn.Text;
             enamn = tbx_efternamn.Text;
@@ -221,7 +204,6 @@ namespace Cirkus_kul_och_bus
 
             listboxPersoner.DataSource = personlista;
             listboxPersoner.DisplayMember = "FullständigaPersonUpp";
-
         }
 
         private void btn_träningstillfälle_Click(object sender, EventArgs e)

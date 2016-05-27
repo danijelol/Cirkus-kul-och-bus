@@ -14,15 +14,14 @@ namespace Cirkus_kul_och_bus
         private NpgsqlConnection _conn;
         private NpgsqlCommand _cmd;
         private NpgsqlDataReader _dr;
-        
-        public Postgres() 
+       
+        public Postgres() //Skapar koppling mot databas
         {
             _conn = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["cirkus"].ConnectionString);
-            _conn.Open();
-                 
+            _conn.Open();             
         }
 
-       private void sqlNonQuery(string fråga)
+        private void sqlNonQuery(string fråga) // Ger möjlighet att ställa frågor mot databas
         {
            try
            {
@@ -36,7 +35,7 @@ namespace Cirkus_kul_och_bus
            }
         }
 
-       private NpgsqlDataReader sqlFråga(string fråga)
+        private NpgsqlDataReader sqlFråga(string fråga) // Skickar in fråga och retunerar från databas
        {
            try
            {
@@ -54,9 +53,8 @@ namespace Cirkus_kul_och_bus
            }
        }
 
-        public List<Person> HämtaPerson() 
-        {
-             
+        public List<Person> HämtaPerson() // Hämtar personer från persontabellen
+        {            
             Person nyperson;
             string fråga = "select förnamn as\"förnamn\", efternamn as \"efternamn\", person_nr as \"personnummer\", adress as \"adress\", post_nr as \"postnummer\", telenr as \"telefonnummer\", kön as \"kön\", foto_ok as \"foto_ok\", email as \"email\", kontaktperson_namn as \"Kontaktperson\", kontaktperson_tele as \"Telefonnummer kontaktperson\", medlemstyp as \"Typ av medlem\" from person";
             _dr = sqlFråga(fråga);
@@ -77,15 +75,14 @@ namespace Cirkus_kul_och_bus
                  Email = _dr["email"].ToString(),
                  Kontaktperson = _dr["Kontaktperson"].ToString(),
                  KontaktpersonTelenr = _dr["Telefonnummer kontaktperson"].ToString(),
-                 Medlemstyp = (int)_dr["Typ av medlem"]
-                                
+                 Medlemstyp = (int)_dr["Typ av medlem"]                               
              };
              personlista.Add(nyperson);
             }
             return personlista;
         }
 
-        public List<Träningstillfälle> HämtaTräningsTillfälle()
+        public List<Träningstillfälle> HämtaTräningsTillfälle() // Hämtar träningstillfällen
         {
            Träningstillfälle nyttTräningstillfälle;
            string fråga = "select träningstillfälles_id as\"Träningstillfälle\", datum as \"Datum\", plats as \"Plats\", starttid as \"Starttid\", sluttid as \"Sluttid\", sammanfattning as \"Sammanfattning\", träningsgrupps_id as \"Träningsgrupp\" from träningstillfälle";
@@ -110,7 +107,7 @@ namespace Cirkus_kul_och_bus
         
         }
 
-        public List<Träningsgrupp> HämtaTräningsgrupp()
+        public List<Träningsgrupp> HämtaTräningsgrupp() // Hämtar träningsgrupper
         {
             Träningsgrupp nyträningsgrupp;
             string fråga = "select träningsgrupps_id as\"Träningsgrupp\", namn as \"Namn\" from träningsgrupp";
@@ -122,16 +119,14 @@ namespace Cirkus_kul_och_bus
                 nyträningsgrupp = new Träningsgrupp()
                 {
                     Id = (int)_dr["Träningsgrupp"],
-                    Namn= _dr["Namn"].ToString(),
-                
+                    Namn= _dr["Namn"].ToString(),               
                 };
                 träningsgrupp.Add(nyträningsgrupp);
             }
             return träningsgrupp;
         }
 
-
-        public List<Träningstillfälle> HämtaNärvaro()
+        public List<Träningstillfälle> HämtaNärvaro() // Hämtar närvarolista
         {
             Träningstillfälle närvarande;
             string fråga = "select n.träningtillfälles_id as \"Träningstillfälle\", p.person_nr as \"Personnummer\", p.förnamn as \"Fornamn\", p.efternamn as \"Efternamn\", tt.datum as \"Datum\", tt.starttid as \"Starttid\", tt.sluttid as \"Sluttid\", tt.sammanfattning as \"Sammanfattning\" from närvaro n inner join träningstillfälle tt on tt.träningstillfälles_id = n.träningtillfälles_id inner join person p on p.person_nr = n.person_nr";
@@ -157,7 +152,7 @@ namespace Cirkus_kul_och_bus
             return närvarolista;
         }
 
-        public List<Träningstillfälle> HämtaNärvaroDatum(int startdatum, int slutdatum)
+        public List<Träningstillfälle> HämtaNärvaroDatum(int startdatum, int slutdatum) // Filtrerar närvaro efter datum 
         {
             Träningstillfälle närvarande;
             string fråga = "select n.träningtillfälles_id as \"Träningstillfälle\", p.person_nr as \"Personnummer\", p.förnamn as \"Fornamn\", p.efternamn as \"Efternamn\", tt.datum as \"Datum\", tt.starttid as \"Starttid\", tt.sluttid as \"Sluttid\", tt.sammanfattning as \"Sammanfattning\" from närvaro n inner join träningstillfälle tt on tt.träningstillfälles_id = n.träningtillfälles_id inner join person p on p.person_nr = n.person_nr where tt.datum between " + startdatum + " and " + slutdatum;
@@ -183,7 +178,7 @@ namespace Cirkus_kul_och_bus
             return närvarolista;
         }
 
-        public List<Träningstillfälle> HämtaNärvaroTräningsgrupp(string id)
+        public List<Träningstillfälle> HämtaNärvaroTräningsgrupp(string id) // Hämtar närvaro för en specifik träningsgrupp
         {
             Träningstillfälle närvarande;
             string fråga = "select n.träningtillfälles_id as \"Träningstillfälle\", p.person_nr as \"Personnummer\", p.förnamn as \"Fornamn\", p.efternamn as \"Efternamn\", tt.datum as \"Datum\", tt.starttid as \"Starttid\", tt.sluttid as \"Sluttid\", tt.sammanfattning as \"Sammanfattning\" from närvaro n inner join träningstillfälle tt on tt.träningstillfälles_id = n.träningtillfälles_id inner join person p on p.person_nr = n.person_nr where tt.träningsgrupps_id in (" + id + ")";
@@ -209,8 +204,7 @@ namespace Cirkus_kul_och_bus
             return närvarolista;
         }
 
-
-        public List<Träningstillfälle> HämtaTräningsgruppLedare(string id)
+        public List<Träningstillfälle> HämtaTräningsgruppLedare(string id) // Hämtar närvaro för specifik ledare 
         {
             Träningstillfälle närvarande;
             string fråga = "select n.träningtillfälles_id as \"Träningstillfälle\", p.person_nr as \"Personnummer\", p.förnamn as \"Fornamn\", p.efternamn as \"Efternamn\", tt.datum as \"Datum\", tt.starttid as \"Starttid\", tt.sluttid as \"Sluttid\", tt.sammanfattning as \"Sammanfattning\" from närvaro n inner join träningstillfälle tt on tt.träningstillfälles_id = n.träningtillfälles_id inner join person p on p.person_nr = n.person_nr inner join leder l ON l.träningsgrupps_id = tt.träningsgrupps_id WHERE l.person_nr IN(" + id + ")";
@@ -229,14 +223,13 @@ namespace Cirkus_kul_och_bus
                     StartTid = (int)_dr["Starttid"],
                     SlutTid = (int)_dr["Sluttid"],
                     Sammanfattning = _dr["Sammanfattning"].ToString(),
-
                 };
                 närvarolista.Add(närvarande);
             }
             return närvarolista;
         }
 
-        public List<Träningstillfälle> HämtaAktuellLedareFörTräningstillfälle()
+        public List<Träningstillfälle> HämtaAktuellLedareFörTräningstillfälle() // Hämtar vilken/vilka ledare som lett specifikt träningstillfälle
         {
             Träningstillfälle lett;
             string fråga = "select p.förnamn as \"Förnamn\", p.efternamn as \"Efternamn\", tt.träningstillfälles_id as \"Träningstillfälle\" from träningstillfälle tt inner join leder l on l.träningsgrupps_id = tt.träningsgrupps_id inner join person p on p.person_nr = l.person_nr";
@@ -249,16 +242,14 @@ namespace Cirkus_kul_och_bus
                 {
                    Fornamn = _dr["Förnamn"].ToString(),
                     Efternamn = _dr["Efternamn"].ToString(),
-                    Id= (int)_dr["Träningstillfälle"],
-                    
+                    Id= (int)_dr["Träningstillfälle"],                   
                 };
                 ledare.Add(lett);
             }
             return ledare;
         }
 
-
-        public void LäggTillPersonerTillTräningstillfällen(int T, int personnummer)
+        public void LäggTillPersonerTillTräningstillfällen(int T, int personnummer) // Lägger till medlemmar till träningstillfälle
         {
             _conn = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["cirkus"].ConnectionString);
             {
@@ -272,12 +263,10 @@ namespace Cirkus_kul_och_bus
                
                 _cmd.ExecuteNonQuery();
                 sqlNonQuery("commit");
-
             }
         }
 
-
-        public void LäggTillTräningstillfälle(int t, int datum, string plats, int starttid, int sluttid, string sammanfattning, int träningsgrupp)
+        public void LäggTillTräningstillfälle(int t, int datum, string plats, int starttid, int sluttid, string sammanfattning, int träningsgrupp) // Skapar träningstillfällen
         {
 
             _conn = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["cirkus"].ConnectionString);
@@ -296,12 +285,11 @@ namespace Cirkus_kul_och_bus
                 _cmd.Parameters.AddWithValue("@Traningsgrupp", träningsgrupp);
 
                 _cmd.ExecuteNonQuery();
-                sqlNonQuery("commit");
-             
+                sqlNonQuery("commit");             
             }
         }
 
-       public void LäggTillPerson(int personnummer, string fornamn, string efternamn, string postnummer, string adress, string email, string telefonnummer, string kon, bool foto, string kontaktpersonNamn, string kontaktTele, int medlemstyp)
+        public void LäggTillPerson(int personnummer, string fornamn, string efternamn, string postnummer, string adress, string email, string telefonnummer, string kon, bool foto, string kontaktpersonNamn, string kontaktTele, int medlemstyp) // Skapar medlem
         {
             _conn = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["cirkus"].ConnectionString);
             {
@@ -325,11 +313,10 @@ namespace Cirkus_kul_och_bus
                 
                 _cmd.ExecuteNonQuery();
                 sqlNonQuery("commit");
-                //_conn.Close(); tar bort denna för att den ligger i metoden HämtaPerson()
             }
        } 
 
-       public void TaBortPerson(int personnummer)
+        public void TaBortPerson(int personnummer)
         {
             _conn = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["cirkus"].ConnectionString);
             {
@@ -342,9 +329,9 @@ namespace Cirkus_kul_och_bus
                 _cmd.ExecuteNonQuery();
                 sqlNonQuery("commit");
             }
-        }
+        } // Tar bort medlemmar
 
-       public void UppdateraPerson (string fornamn, string efternamn, string postnummer, string adress, string email, string telefonnummer, bool foto, int personnummer, string kontaktpersonNamn, string kontaktTele, int medlemstyp)
+        public void UppdateraPerson (string fornamn, string efternamn, string postnummer, string adress, string email, string telefonnummer, bool foto, int personnummer, string kontaktpersonNamn, string kontaktTele, int medlemstyp) // Ändrar personuppgifter
        {
            _conn = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["cirkus"].ConnectionString);
            {
