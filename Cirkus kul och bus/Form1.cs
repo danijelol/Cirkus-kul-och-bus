@@ -274,7 +274,7 @@ namespace Cirkus_kul_och_bus
 
             utskrift = new List<Träningstillfälle>();
                 
-                startdatum = int.Parse(tbx_startdatum.Text);
+            startdatum = int.Parse(tbx_startdatum.Text);
             slutdatum = int.Parse(tbx_slutdatum.Text);
 
             utskrift = pg.HämtaNärvaroDatum(startdatum, slutdatum);
@@ -284,6 +284,22 @@ namespace Cirkus_kul_och_bus
             listboxPersoner.DisplayMember = "UtskriftsInfo";
 
 
+        }
+
+        private void btn_närvaroTräningsgruppid_Click(object sender, EventArgs e)
+        {
+            int id;
+
+            utskrift = new List<Träningstillfälle>();
+
+            id = int.Parse(tbx_träningsgruppidhämta.Text);
+
+
+            utskrift = pg.HämtaNärvaroTräningsgrupp(id);
+
+            utskrift = pg.HämtaNärvaro();
+            listboxPersoner.DataSource = utskrift;
+            listboxPersoner.DisplayMember = "UtskriftsInfo";
         }
     }
 }

@@ -104,6 +104,11 @@
             this.tbx_startdatum = new System.Windows.Forms.TextBox();
             this.tbx_slutdatum = new System.Windows.Forms.TextBox();
             this.btn_datum = new System.Windows.Forms.Button();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.tbx_träningsgruppidhämta = new System.Windows.Forms.TextBox();
+            this.btn_närvaroTräningsgruppid = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -332,6 +337,11 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.btn_närvaroTräningsgruppid);
+            this.tabPage3.Controls.Add(this.tbx_träningsgruppidhämta);
+            this.tabPage3.Controls.Add(this.label24);
+            this.tabPage3.Controls.Add(this.label23);
+            this.tabPage3.Controls.Add(this.label22);
             this.tabPage3.Controls.Add(this.btn_datum);
             this.tabPage3.Controls.Add(this.tbx_slutdatum);
             this.tabPage3.Controls.Add(this.tbx_startdatum);
@@ -856,6 +866,50 @@
             this.btn_datum.UseVisualStyleBackColor = true;
             this.btn_datum.Click += new System.EventHandler(this.btn_datum_Click);
             // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(40, 352);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(58, 13);
+            this.label22.TabIndex = 17;
+            this.label22.Text = "Startdatum";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(166, 352);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(54, 13);
+            this.label23.TabIndex = 18;
+            this.label23.Text = "Slutdatum";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(40, 421);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(75, 13);
+            this.label24.TabIndex = 19;
+            this.label24.Text = "Träningsgrupp";
+            // 
+            // tbx_träningsgruppidhämta
+            // 
+            this.tbx_träningsgruppidhämta.Location = new System.Drawing.Point(43, 438);
+            this.tbx_träningsgruppidhämta.Name = "tbx_träningsgruppidhämta";
+            this.tbx_träningsgruppidhämta.Size = new System.Drawing.Size(100, 20);
+            this.tbx_träningsgruppidhämta.TabIndex = 20;
+            // 
+            // btn_närvaroTräningsgruppid
+            // 
+            this.btn_närvaroTräningsgruppid.Location = new System.Drawing.Point(194, 432);
+            this.btn_närvaroTräningsgruppid.Name = "btn_närvaroTräningsgruppid";
+            this.btn_närvaroTräningsgruppid.Size = new System.Drawing.Size(75, 23);
+            this.btn_närvaroTräningsgruppid.TabIndex = 21;
+            this.btn_närvaroTräningsgruppid.Text = "button1";
+            this.btn_närvaroTräningsgruppid.UseVisualStyleBackColor = true;
+            this.btn_närvaroTräningsgruppid.Click += new System.EventHandler(this.btn_närvaroTräningsgruppid_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -966,6 +1020,11 @@
         private System.Windows.Forms.Button btn_datum;
         private System.Windows.Forms.TextBox tbx_slutdatum;
         private System.Windows.Forms.TextBox tbx_startdatum;
+        private System.Windows.Forms.Button btn_närvaroTräningsgruppid;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox tbx_träningsgruppidhämta;
     }
 }
 
