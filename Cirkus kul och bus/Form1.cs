@@ -252,6 +252,11 @@ namespace Cirkus_kul_och_bus
             listboxPersoner.DisplayMember = "UtskriftsInfo";
             
         }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
