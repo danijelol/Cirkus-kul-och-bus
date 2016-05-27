@@ -288,16 +288,17 @@ namespace Cirkus_kul_och_bus
 
         private void btn_närvaroTräningsgruppid_Click(object sender, EventArgs e)
         {
-            int id;
+            string id;
 
             utskrift = new List<Träningstillfälle>();
 
-            id = int.Parse(tbx_träningsgruppidhämta.Text);
+            id = tbx_träningsgruppidhämta.Text;
 
+            utskrift = pg.HämtaNärvaro();
 
             utskrift = pg.HämtaNärvaroTräningsgrupp(id);
 
-            utskrift = pg.HämtaNärvaro();
+            
             listboxPersoner.DataSource = utskrift;
             listboxPersoner.DisplayMember = "UtskriftsInfo";
         }

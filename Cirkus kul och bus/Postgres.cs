@@ -188,7 +188,7 @@ namespace Cirkus_kul_och_bus
             return närvarolista;
         }
 
-        public List<Träningstillfälle> HämtaNärvaroTräningsgrupp(int id)
+        public List<Träningstillfälle> HämtaNärvaroTräningsgrupp(string id)
         {
             Träningstillfälle närvarande;
             string fråga = "select n.träningtillfälles_id as \"Träningstillfälle\", p.person_nr as \"Personnummer\", p.förnamn as \"Fornamn\", p.efternamn as \"Efternamn\", tt.datum as \"Datum\", tt.starttid as \"Starttid\", tt.sluttid as \"Sluttid\", tt.sammanfattning as \"Sammanfattning\" from närvaro n inner join träningstillfälle tt on tt.träningstillfälles_id = n.träningtillfälles_id inner join person p on p.person_nr = n.person_nr where tt.träningsgrupps_id in (" + id + ")";
