@@ -277,9 +277,11 @@ namespace Cirkus_kul_och_bus
             startdatum = int.Parse(tbx_startdatum.Text);
             slutdatum = int.Parse(tbx_slutdatum.Text);
 
-            utskrift = pg.HämtaNärvaroDatum(startdatum, slutdatum);
 
             utskrift = pg.HämtaNärvaro();
+            utskrift = pg.HämtaNärvaroDatum(startdatum, slutdatum);
+
+            
             listboxPersoner.DataSource = utskrift;
             listboxPersoner.DisplayMember = "UtskriftsInfo";
 
