@@ -189,7 +189,7 @@ namespace Cirkus_kul_och_bus
                 _conn.Open();
                 sqlNonQuery("begin");
                
-                _cmd = new NpgsqlCommand("insert into träningstillfälle (träningtillfälles_id, datum, plats, starttid, sluttid, sammanfattning, träningsgrupps_id) values(@Traningstillfalles,@Datum, @Plats, @Starttid, @Sluttid, @Sammanfattning,@Traningsgrupp)", _conn);
+                _cmd = new NpgsqlCommand("insert into träningstillfälle (träningstillfälles_id, datum, plats, starttid, sluttid, sammanfattning, träningsgrupps_id) values(@Traningstillfalles,@Datum, @Plats, @Starttid, @Sluttid, @Sammanfattning,@Traningsgrupp)", _conn);
 
                 _cmd.Parameters.AddWithValue("@Traningstillfalles", t);
                 _cmd.Parameters.AddWithValue("@Datum", datum);
