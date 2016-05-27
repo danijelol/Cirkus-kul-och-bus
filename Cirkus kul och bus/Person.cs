@@ -30,13 +30,13 @@ namespace Cirkus_kul_och_bus
                 if (Foto == true)
                 {
                     Fotostring = "JA";
-                    return "Förnamn: "+ Fornamn + "\t" + "Efternamn:  "+ Efternamn + "\t" + "PersonNr: " + PersonNr.ToString() + "\t" + "PostNr: " + PostNr + "\t" + "Adress: "+ Adress + "\n" +"Email "+ Email + "\t"+"TelefonNr: " + TelefonNr + "\t"+"Kön: " + Kon + "\t"+"Foto? " + Fotostring + "\t"+"Kontaktperson " + Kontaktperson + "\t"+"KontaktpersonteleNr " +KontaktpersonTelenr + "\t"+"Medlemstyp: " +Medlemstyp + "\n\n";
+                    return "Förnamn: "+ Fornamn + "\t" + "Efternamn:  "+ Efternamn + "\t" + "PersonNr: " + PersonNr.ToString() + "\t" + "PostNr: " + PostNr + "\t" + "Adress: "+ Adress + "\r" +"Email "+ Email + "\t"+"TelefonNr: " + TelefonNr + "\t"+"Kön: " + Kon + "\t"+"Foto? " + Fotostring + "\t"+"Kontaktperson " + Kontaktperson + "\t"+"KontaktpersonteleNr " +KontaktpersonTelenr + "\t"+"Medlemstyp: " +Medlemstyp + "\n\n";
                 }
 
                 else
                 {
                     Fotostring = "NEJ";
-                    return "Förnamn: " + Fornamn + "\t" + "Efternamn:  " + Efternamn + "\t" + "PersonNr: " + PersonNr.ToString() + "\t" + "PostNr: " + PostNr + "\t" + "Adress: " + Adress + "\n" + "Email " + Email + "\t" + "TelefonNr: " + TelefonNr + "\t" + "Kön: " + Kon + "\t" + "Foto? " + Fotostring + "\t" + "Kontaktperson " + Kontaktperson + "\t" + "KontaktpersonteleNr " + KontaktpersonTelenr + "\t" + "Medlemstyp: " + Medlemstyp + "\n\n";
+                    return "Förnamn: " + Fornamn + "\t" + "Efternamn:  " + Efternamn + "\t" + "PersonNr: " + PersonNr.ToString() + "\t" + "PostNr: " + PostNr + "\t" + "Adress: " + Adress + "\r" + "Email " + Email + "\t" + "TelefonNr: " + TelefonNr + "\t" + "Kön: " + Kon + "\t" + "Foto? " + Fotostring + "\t" + "Kontaktperson " + Kontaktperson + "\t" + "KontaktpersonteleNr " + KontaktpersonTelenr + "\t" + "Medlemstyp: " + Medlemstyp + "\n\n";
 
                 }
             }

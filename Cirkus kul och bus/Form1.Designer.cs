@@ -34,7 +34,9 @@
             this.rbtn_träning = new System.Windows.Forms.RadioButton();
             this.rbtn_Person = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label30 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label24 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.tbx_träningstillfälle = new System.Windows.Forms.TextBox();
             this.tbx_träningsgruppsid = new System.Windows.Forms.TextBox();
@@ -51,25 +53,30 @@
             this.label13 = new System.Windows.Forms.Label();
             this.Datum = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.btn_sledare = new System.Windows.Forms.Button();
-            this.tbx_ledarID = new System.Windows.Forms.TextBox();
-            this.btn_närvaroTräningsgruppid = new System.Windows.Forms.Button();
-            this.tbx_träningsgruppidhämta = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.btn_datum = new System.Windows.Forms.Button();
-            this.tbx_slutdatum = new System.Windows.Forms.TextBox();
-            this.tbx_startdatum = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
             this.listboxLedare = new System.Windows.Forms.ListBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
             this.btn_hämtaNärvaro = new System.Windows.Forms.Button();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.btn_sledare = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.tbx_ledarID = new System.Windows.Forms.TextBox();
             this.tbx_närvaroId = new System.Windows.Forms.TextBox();
+            this.btn_närvaroTräningsgruppid = new System.Windows.Forms.Button();
             this.tbx_närvaroPers = new System.Windows.Forms.TextBox();
+            this.tbx_träningsgruppidhämta = new System.Windows.Forms.TextBox();
             this.btn_närvaro = new System.Windows.Forms.Button();
+            this.label23 = new System.Windows.Forms.Label();
+            this.tbx_startdatum = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.tbx_slutdatum = new System.Windows.Forms.TextBox();
+            this.btn_datum = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rbt_uppdrag = new System.Windows.Forms.RadioButton();
             this.rbt_ledare = new System.Windows.Forms.RadioButton();
@@ -104,13 +111,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -122,6 +122,7 @@
             // listboxPersoner
             // 
             this.listboxPersoner.FormattingEnabled = true;
+            this.listboxPersoner.HorizontalScrollbar = true;
             this.listboxPersoner.Location = new System.Drawing.Point(7, 12);
             this.listboxPersoner.Name = "listboxPersoner";
             this.listboxPersoner.Size = new System.Drawing.Size(1267, 225);
@@ -183,6 +184,16 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(-4, 1);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(122, 23);
+            this.label30.TabIndex = 28;
+            this.label30.Text = "Hämta uppgifter ";
+            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.label24);
@@ -208,6 +219,16 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Skapa träningstillfälle";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(21, 16);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(153, 23);
+            this.label24.TabIndex = 28;
+            this.label24.Text = "Skapa träningstillfälle";
             // 
             // label12
             // 
@@ -361,83 +382,24 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Närvaro";
             this.tabPage3.UseVisualStyleBackColor = true;
-           
             // 
-            // btn_sledare
+            // label28
             // 
-            this.btn_sledare.Location = new System.Drawing.Point(254, 466);
-            this.btn_sledare.Name = "btn_sledare";
-            this.btn_sledare.Size = new System.Drawing.Size(75, 23);
-            this.btn_sledare.TabIndex = 24;
-            this.btn_sledare.Text = "Sök ";
-            this.btn_sledare.UseVisualStyleBackColor = true;
-            this.btn_sledare.Click += new System.EventHandler(this.btn_sledare_Click);
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(250, 414);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(85, 23);
+            this.label28.TabIndex = 27;
+            this.label28.Text = "Sök ledare";
             // 
-            // tbx_ledarID
+            // listboxLedare
             // 
-            this.tbx_ledarID.Location = new System.Drawing.Point(254, 440);
-            this.tbx_ledarID.Name = "tbx_ledarID";
-            this.tbx_ledarID.Size = new System.Drawing.Size(100, 20);
-            this.tbx_ledarID.TabIndex = 23;
-            // 
-            // btn_närvaroTräningsgruppid
-            // 
-            this.btn_närvaroTräningsgruppid.Location = new System.Drawing.Point(254, 375);
-            this.btn_närvaroTräningsgruppid.Name = "btn_närvaroTräningsgruppid";
-            this.btn_närvaroTräningsgruppid.Size = new System.Drawing.Size(75, 23);
-            this.btn_närvaroTräningsgruppid.TabIndex = 21;
-            this.btn_närvaroTräningsgruppid.Text = "Sök";
-            this.btn_närvaroTräningsgruppid.UseVisualStyleBackColor = true;
-            this.btn_närvaroTräningsgruppid.Click += new System.EventHandler(this.btn_närvaroTräningsgruppid_Click);
-            // 
-            // tbx_träningsgruppidhämta
-            // 
-            this.tbx_träningsgruppidhämta.Location = new System.Drawing.Point(254, 349);
-            this.tbx_träningsgruppidhämta.Name = "tbx_träningsgruppidhämta";
-            this.tbx_träningsgruppidhämta.Size = new System.Drawing.Size(100, 20);
-            this.tbx_träningsgruppidhämta.TabIndex = 20;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(359, 235);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(54, 13);
-            this.label23.TabIndex = 18;
-            this.label23.Text = "Slutdatum";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(256, 235);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(58, 13);
-            this.label22.TabIndex = 17;
-            this.label22.Text = "Startdatum";
-            // 
-            // btn_datum
-            // 
-            this.btn_datum.Location = new System.Drawing.Point(252, 279);
-            this.btn_datum.Name = "btn_datum";
-            this.btn_datum.Size = new System.Drawing.Size(75, 23);
-            this.btn_datum.TabIndex = 16;
-            this.btn_datum.Text = "Sök";
-            this.btn_datum.UseVisualStyleBackColor = true;
-            this.btn_datum.Click += new System.EventHandler(this.btn_datum_Click);
-            // 
-            // tbx_slutdatum
-            // 
-            this.tbx_slutdatum.Location = new System.Drawing.Point(362, 254);
-            this.tbx_slutdatum.Name = "tbx_slutdatum";
-            this.tbx_slutdatum.Size = new System.Drawing.Size(100, 20);
-            this.tbx_slutdatum.TabIndex = 15;
-            // 
-            // tbx_startdatum
-            // 
-            this.tbx_startdatum.Location = new System.Drawing.Point(256, 254);
-            this.tbx_startdatum.Name = "tbx_startdatum";
-            this.tbx_startdatum.Size = new System.Drawing.Size(100, 20);
-            this.tbx_startdatum.TabIndex = 14;
+            this.listboxLedare.FormattingEnabled = true;
+            this.listboxLedare.Location = new System.Drawing.Point(2, 3);
+            this.listboxLedare.Name = "listboxLedare";
+            this.listboxLedare.Size = new System.Drawing.Size(526, 186);
+            this.listboxLedare.TabIndex = 11;
             // 
             // label21
             // 
@@ -449,25 +411,15 @@
             this.label21.TabIndex = 13;
             this.label21.Text = "Hämta närvaro och ledare";
             // 
-            // label20
+            // label27
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(6, 268);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(123, 23);
-            this.label20.TabIndex = 12;
-            this.label20.Text = "Lägg till närvaro:";
-           
-            // 
-            // listboxLedare
-            // 
-            this.listboxLedare.FormattingEnabled = true;
-            this.listboxLedare.Location = new System.Drawing.Point(2, 3);
-            this.listboxLedare.Name = "listboxLedare";
-            this.listboxLedare.Size = new System.Drawing.Size(526, 186);
-            this.listboxLedare.TabIndex = 11;
-            
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(250, 323);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(137, 23);
+            this.label27.TabIndex = 26;
+            this.label27.Text = "Sök träningsgrupp";
             // 
             // btn_hämtaNärvaro
             // 
@@ -478,6 +430,36 @@
             this.btn_hämtaNärvaro.Text = "Hämta";
             this.btn_hämtaNärvaro.UseVisualStyleBackColor = true;
             this.btn_hämtaNärvaro.Click += new System.EventHandler(this.btn_hämtaNärvaro_Click);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(6, 268);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(123, 23);
+            this.label20.TabIndex = 12;
+            this.label20.Text = "Lägg till närvaro:";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(252, 204);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(135, 23);
+            this.label26.TabIndex = 25;
+            this.label26.Text = "Sök datumintervall";
+            // 
+            // btn_sledare
+            // 
+            this.btn_sledare.Location = new System.Drawing.Point(254, 466);
+            this.btn_sledare.Name = "btn_sledare";
+            this.btn_sledare.Size = new System.Drawing.Size(75, 23);
+            this.btn_sledare.TabIndex = 24;
+            this.btn_sledare.Text = "Sök ";
+            this.btn_sledare.UseVisualStyleBackColor = true;
+            this.btn_sledare.Click += new System.EventHandler(this.btn_sledare_Click);
             // 
             // label19
             // 
@@ -497,6 +479,13 @@
             this.label18.TabIndex = 8;
             this.label18.Text = "Träningstillfälle";
             // 
+            // tbx_ledarID
+            // 
+            this.tbx_ledarID.Location = new System.Drawing.Point(254, 440);
+            this.tbx_ledarID.Name = "tbx_ledarID";
+            this.tbx_ledarID.Size = new System.Drawing.Size(100, 20);
+            this.tbx_ledarID.TabIndex = 23;
+            // 
             // tbx_närvaroId
             // 
             this.tbx_närvaroId.Location = new System.Drawing.Point(10, 369);
@@ -504,12 +493,29 @@
             this.tbx_närvaroId.Size = new System.Drawing.Size(100, 20);
             this.tbx_närvaroId.TabIndex = 7;
             // 
+            // btn_närvaroTräningsgruppid
+            // 
+            this.btn_närvaroTräningsgruppid.Location = new System.Drawing.Point(254, 375);
+            this.btn_närvaroTräningsgruppid.Name = "btn_närvaroTräningsgruppid";
+            this.btn_närvaroTräningsgruppid.Size = new System.Drawing.Size(75, 23);
+            this.btn_närvaroTräningsgruppid.TabIndex = 21;
+            this.btn_närvaroTräningsgruppid.Text = "Sök";
+            this.btn_närvaroTräningsgruppid.UseVisualStyleBackColor = true;
+            this.btn_närvaroTräningsgruppid.Click += new System.EventHandler(this.btn_närvaroTräningsgruppid_Click);
+            // 
             // tbx_närvaroPers
             // 
             this.tbx_närvaroPers.Location = new System.Drawing.Point(10, 323);
             this.tbx_närvaroPers.Name = "tbx_närvaroPers";
             this.tbx_närvaroPers.Size = new System.Drawing.Size(100, 20);
             this.tbx_närvaroPers.TabIndex = 6;
+            // 
+            // tbx_träningsgruppidhämta
+            // 
+            this.tbx_träningsgruppidhämta.Location = new System.Drawing.Point(254, 349);
+            this.tbx_träningsgruppidhämta.Name = "tbx_träningsgruppidhämta";
+            this.tbx_träningsgruppidhämta.Size = new System.Drawing.Size(100, 20);
+            this.tbx_träningsgruppidhämta.TabIndex = 20;
             // 
             // btn_närvaro
             // 
@@ -520,6 +526,48 @@
             this.btn_närvaro.Text = "Lägg Till";
             this.btn_närvaro.UseVisualStyleBackColor = true;
             this.btn_närvaro.Click += new System.EventHandler(this.btn_närvaro_Click);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(359, 235);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(54, 13);
+            this.label23.TabIndex = 18;
+            this.label23.Text = "Slutdatum";
+            // 
+            // tbx_startdatum
+            // 
+            this.tbx_startdatum.Location = new System.Drawing.Point(256, 254);
+            this.tbx_startdatum.Name = "tbx_startdatum";
+            this.tbx_startdatum.Size = new System.Drawing.Size(100, 20);
+            this.tbx_startdatum.TabIndex = 14;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(256, 235);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(58, 13);
+            this.label22.TabIndex = 17;
+            this.label22.Text = "Startdatum";
+            // 
+            // tbx_slutdatum
+            // 
+            this.tbx_slutdatum.Location = new System.Drawing.Point(362, 254);
+            this.tbx_slutdatum.Name = "tbx_slutdatum";
+            this.tbx_slutdatum.Size = new System.Drawing.Size(100, 20);
+            this.tbx_slutdatum.TabIndex = 15;
+            // 
+            // btn_datum
+            // 
+            this.btn_datum.Location = new System.Drawing.Point(252, 279);
+            this.btn_datum.Name = "btn_datum";
+            this.btn_datum.Size = new System.Drawing.Size(75, 23);
+            this.btn_datum.TabIndex = 16;
+            this.btn_datum.Text = "Sök";
+            this.btn_datum.UseVisualStyleBackColor = true;
+            this.btn_datum.Click += new System.EventHandler(this.btn_datum_Click);
             // 
             // tabPage1
             // 
@@ -558,6 +606,26 @@
             this.tabPage1.Size = new System.Drawing.Size(529, 511);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Skapa medlem";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(190, 14);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(139, 23);
+            this.label29.TabIndex = 53;
+            this.label29.Text = "Välj typ av medlem";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(3, 14);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(115, 23);
+            this.label25.TabIndex = 29;
+            this.label25.Text = "Skapa medlem";
             // 
             // groupBox2
             // 
@@ -628,7 +696,6 @@
             this.rbt_provapa.TabStop = true;
             this.rbt_provapa.Text = "Prova-på";
             this.rbt_provapa.UseVisualStyleBackColor = true;
-            
             // 
             // rbt_medlem
             // 
@@ -871,76 +938,6 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(537, 537);
             this.tabControl1.TabIndex = 30;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(252, 204);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(135, 23);
-            this.label26.TabIndex = 25;
-            this.label26.Text = "Sök datumintervall";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(250, 323);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(137, 23);
-            this.label27.TabIndex = 26;
-            this.label27.Text = "Sök träningsgrupp";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(250, 414);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(85, 23);
-            this.label28.TabIndex = 27;
-            this.label28.Text = "Sök ledare";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(21, 16);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(153, 23);
-            this.label24.TabIndex = 28;
-            this.label24.Text = "Skapa träningstillfälle";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(3, 14);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(115, 23);
-            this.label25.TabIndex = 29;
-            this.label25.Text = "Skapa medlem";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(190, 14);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(139, 23);
-            this.label29.TabIndex = 53;
-            this.label29.Text = "Välj typ av medlem";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(-4, 1);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(122, 23);
-            this.label30.TabIndex = 28;
-            this.label30.Text = "Hämta uppgifter ";
             // 
             // Form1
             // 
