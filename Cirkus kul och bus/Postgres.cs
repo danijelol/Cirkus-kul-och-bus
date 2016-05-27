@@ -159,6 +159,26 @@ namespace Cirkus_kul_och_bus
             }
             return närvarolista;
         }
+        public List<Träningstillfälle> HämtaAktuellLedareFörTräningstillfälle()
+        {
+            Träningstillfälle lett;
+            string fråga = "select p.förnamn as \"Förnamn\", p.efternamn as \"Efternamn\", tt.träningstillfälles_id as \"Träningstillfälle\" from träningstillfälle tt inner join leder l on l.träningsgrupps_id = tt.träningsgrupps_id inner join person p on p.person_nr = l.person_nr";
+            _dr = sqlFråga(fråga);
+            List<Träningstillfälle> ledare = new List<Träningstillfälle>();
+
+            while (_dr.Read())
+            {
+                lett = new Träningstillfälle()
+                {
+                   Fornamn = _dr["Förnamn"].ToString(),
+                    Efternamn = _dr["Efternamn"].ToString(),
+                    Id= (int)_dr["Träningstillfälle"],
+                    
+                };
+                ledare.Add(lett);
+            }
+            return ledare;
+        }
 
 
         public void LäggTillPersonerTillTräningstillfällen(int T, int personnummer)
