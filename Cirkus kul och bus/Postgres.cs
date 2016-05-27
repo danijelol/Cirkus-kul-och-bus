@@ -150,6 +150,9 @@ namespace Cirkus_kul_och_bus
                     StartTid = (int)_dr["Starttid"],
                     SlutTid = (int)_dr["Sluttid"],
                     Sammanfattning = _dr["Sammanfattning"].ToString(),
+                    Fornamn = _dr["Fornamn"].ToString(),
+                    Efternamn = _dr["Efternamn"].ToString(),
+                    Medlemstyp = (int)_dr["Medlemstyp"]
 
                 };
                 närvarolista.Add(närvarande);
