@@ -12,8 +12,7 @@ using System.Windows.Forms;
 namespace Cirkus_kul_och_bus
 {
     public partial class Form1 : Form
-    {
-        
+    {       
         public Form1()
         {
             InitializeComponent();
