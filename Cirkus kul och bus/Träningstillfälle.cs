@@ -15,6 +15,7 @@ namespace Cirkus_kul_och_bus
         public int SlutTid { get; set; }
         public string Sammanfattning { get; set; }
         public int Träningsgrupps_id { get; set; }
+        public Int64 Antal_närvarande { get; set; }
 
          public string TräningstillfällesInfo
         {
@@ -37,6 +38,14 @@ namespace Cirkus_kul_och_bus
             get
             {
                 return "Förnamn: "+Fornamn + "\t"+"Efternamn: " + Efternamn + "\t"+"Träningstillfälle " + Id;
+            }
+        }
+
+        public string AntalNärvarande
+        {
+            get
+            {
+                return "Träningsgrupp: " + Träningsgrupps_id + "\t" + "Antal Närvarande: " + Antal_närvarande;
             }
         }
 

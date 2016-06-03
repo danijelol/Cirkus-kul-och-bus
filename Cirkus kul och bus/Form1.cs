@@ -274,7 +274,7 @@ namespace Cirkus_kul_och_bus
             utskrift = pg.HämtaNärvaroDatum(startdatum, slutdatum);
             
             listboxPersoner.DataSource = utskrift;
-            listboxPersoner.DisplayMember = "UtskriftsInfo";
+            listboxPersoner.DisplayMember = "AntalNärvarande";
         }
 
         private void btn_närvaroTräningsgruppid_Click(object sender, EventArgs e) // Hämtar och skriver ut närvarolista efter vald träningsgrupp
@@ -289,7 +289,7 @@ namespace Cirkus_kul_och_bus
             utskrift = pg.HämtaNärvaroTräningsgrupp(id);
            
             listboxPersoner.DataSource = utskrift;
-            listboxPersoner.DisplayMember = "UtskriftsInfo";
+            listboxPersoner.DisplayMember = "AntalNärvarande";
         }
 
         private void btn_sledare_Click(object sender, EventArgs e) // Hämtar och skriver ut närvarolista efter vald ledare
