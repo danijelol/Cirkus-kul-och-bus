@@ -129,7 +129,7 @@ namespace Cirkus_kul_och_bus
         public List<Träningstillfälle> HämtaNärvaro() // Hämtar närvarolista
         {
             Träningstillfälle närvarande;
-            string fråga = "select n.träningtillfälles_id as \"Träningstillfälle\", p.person_nr as \"Personnummer\", p.förnamn as \"Fornamn\", p.efternamn as \"Efternamn\", tt.datum as \"Datum\", tt.starttid as \"Starttid\", tt.sluttid as \"Sluttid\", tt.sammanfattning as \"Sammanfattning\" from närvaro n inner join träningstillfälle tt on tt.träningstillfälles_id = n.träningtillfälles_id inner join person p on p.person_nr = n.person_nr";
+            string fråga = "select n.träningtillfälles_id as \"Träningstillfälle\", count(p.person_nr) as \"antal\" from närvaro n inner join träningstillfälle tt on tt.träningstillfälles_id = n.träningtillfälles_id inner join person p on p.person_nr = n.person_nr  group by n.träningtillfälles_id;";
             _dr = sqlFråga(fråga);
             List<Träningstillfälle> närvarolista = new List<Träningstillfälle>();
 
@@ -138,13 +138,8 @@ namespace Cirkus_kul_och_bus
                 närvarande = new Träningstillfälle()
                 {
                     Id = (int)_dr["Träningstillfälle"],
-                    PersonNr = (int)_dr["Personnummer"],
-                    Fornamn = _dr["Fornamn"].ToString(),
-                    Efternamn = _dr["Efternamn"].ToString(),
-                    Datum = (int)_dr["Datum"],
-                    StartTid = (int)_dr["Starttid"],
-                    SlutTid = (int)_dr["Sluttid"],
-                    Sammanfattning = _dr["Sammanfattning"].ToString(),                                    
+                    Antal_närvarande = (Int64)_dr["antal"]
+                                                    
 
                 };
                 närvarolista.Add(närvarande);
@@ -178,6 +173,7 @@ namespace Cirkus_kul_och_bus
         {
             Träningstillfälle närvarande;
             string fråga = "select count(tt.träningstillfälles_id) \"antal\", tt.träningsgrupps_id as \"id\" from träningstillfälle tt inner join närvaro n on n.träningtillfälles_id = tt.träningstillfälles_id where tt.träningsgrupps_id in (" + id + ") group by träningsgrupps_id";
+             
             _dr = sqlFråga(fråga);
             List<Träningstillfälle> närvarolista = new List<Träningstillfälle>();
 
@@ -186,7 +182,8 @@ namespace Cirkus_kul_och_bus
                 närvarande = new Träningstillfälle()
                 {
                     Antal_närvarande = (Int64)_dr["antal"],
-                    Träningsgrupps_id = (int)_dr["id"]
+                    Träningsgrupps_id = (int)_dr["id"],
+                    
 
                 };
                 närvarolista.Add(närvarande);

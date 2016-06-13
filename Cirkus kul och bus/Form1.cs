@@ -251,7 +251,7 @@ namespace Cirkus_kul_och_bus
             utskrift = pg.HämtaNärvaro();
             listboxPersoner.DataSource = utskrift;
 
-            listboxPersoner.DisplayMember = "UtskriftsInfo";
+            listboxPersoner.DisplayMember = "AntalNärvarandepers";
 
             lett = new List<Träningstillfälle>();
 
